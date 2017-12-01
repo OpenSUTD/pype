@@ -3,7 +3,7 @@ from PIL import Image
 allwhites = {}
 allblacks = {}
 
-im = Image.open('s0o0.bmp')
+im = Image.open('C:\Users\Joel\Desktop\Graphic Design\Designs for school\pype\layout_test.png')
 rgb_im = im.convert('RGB')
 
 #file = open("shape2textr.txt","w")
@@ -65,7 +65,13 @@ print allwhites
 donald = ""
 
 for keys in allwhites:
-	print "wire line" + str(keys) +" = (((CounterX>=" + str(allwhites[keys][0]) + ")&(CounterX<=" + str(allwhites[keys][1]) + "))&(CounterY == " + str(keys) + "));"
+	print "line" + str(keys) +" = (((counterh>=" + str(allwhites[keys][0]) + ")&(counterh<=" + str(allwhites[keys][1]) + "))&(counterv == " + str(keys) + "));"
 	donald = donald + "line" + str(keys) + " | "
 
 print donald
+
+string = ""
+for i in range(0, 428):
+	string += "line" + str(i) + " | "
+
+print string

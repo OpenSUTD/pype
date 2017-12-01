@@ -5,7 +5,7 @@
 from PIL import Image
 import numpy as np
 
-im = Image.open("hexbitmap.bmp")
+im = Image.open("C:\Users\Joel\Desktop\Graphic Design\Designs for school\pype\layout_test.png")
 pixels = list(im.getdata())
 width, height = im.size
 pixels = [pixels[i * width:(i + 1) * width] for i in xrange(height)]
@@ -24,7 +24,7 @@ for row in range(1,height+1):
 	color_left_bound = 0
 	color_next_bound = 0
 	current_color = (0, 0, 0)
-	verilog_lines = "wire line" + str(row) + " = ("
+	verilog_lines = "line" + str(row) + " = ("
 	line = str(row) + " "
 
 	for index, pixel_color in enumerate(pixels[row-1]):
@@ -54,8 +54,8 @@ for row in range(1,height+1):
 
 			# if the color changes, write the previous block of color.
 			if index != 0 and current_color != (0, 0, 0):
-				verilog_lines += "((CounterX >= " + str((offset_x + color_left_bound))
-				verilog_lines += ") & (CounterX <= " + str(offset_x + index-1)
+				verilog_lines += "((counterh >= " + str((offset_x + color_left_bound))
+				verilog_lines += ") & (counterh <= " + str(offset_x + index-1)
 				verilog_lines += ")) |"
 
 			# update the left bound
@@ -70,15 +70,14 @@ for row in range(1,height+1):
 			verilog_lines = verilog_lines[:-1]
 			
 			if current_color != (0, 0, 0):
-				verilog_lines += "| ((CounterX >= " + str((offset_x + color_left_bound))
-				verilog_lines += ") & (CounterX <= " + str(offset_x + index)
+				verilog_lines += "| ((counterh >= " + str((offset_x + color_left_bound))
+				verilog_lines += ") & (counterh <= " + str(offset_x + index)
 				verilog_lines += "))"
 
-			verilog_lines += ") & ((CounterY == " + str(offset_y + row) + "));"
+			verilog_lines += ") & ((counterv == " + str(offset_y + row) + "));"
 
 	print verilog_lines
 
-color_display += "wire R = "
 
 for i in range(0, len(list_R)):
 	if i != len(list_R)-1:

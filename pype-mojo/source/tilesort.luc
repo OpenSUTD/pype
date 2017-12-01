@@ -4,8 +4,7 @@ module tilesort (
     output tile2,
     output tile3,
     output tile4,
-    output tile5,
-    output tile6
+    output tile5 
   )
   {
   
@@ -16,7 +15,6 @@ module tilesort (
     tiledraw tilec;
     tiledraw tiled;
     tiledraw tilee;
-    tiledraw tilef;
   }
   
 
@@ -24,27 +22,37 @@ module tilesort (
   
     tilea.horizontaloffset = 0;
     tilea.verticaloffset = 0;
+    tilea.shape = 0;
+    tilea.orientation = 0;
     tile1 = tilea.yellow;
     
-    tileb.horizontaloffset = 270;
+    tileb.horizontaloffset = 120;
     tileb.verticaloffset = 0;
+    tileb.shape = 0;
+    tileb.orientation = 0;
     tile2 = tileb.yellow;
     
-    tilec.horizontaloffset = 390;
+    tilec.horizontaloffset = 240;
     tilec.verticaloffset = 0;
+    tilec.shape = 0;
+    tilec.orientation = 0;
     tile3 = tilec.yellow;
     
-    tiled.horizontaloffset = 510;
+    tiled.horizontaloffset = 360;
     tiled.verticaloffset = 0;
+    tiled.shape = 0;
+    tiled.orientation = 0;
     tile4 = tiled.yellow;
     
-    tilee.horizontaloffset = 630;
+    tilee.horizontaloffset = 480;
     tilee.verticaloffset = 0;
+    tilee.shape = 0;
+    tilee.orientation = 0;
     tile5 = tilee.yellow;
     
-    tilef.horizontaloffset = 200;
-    tilef.verticaloffset = 52;
-    tile6 = tilef.yellow;
+    
+    
+   
     
   }
 }
