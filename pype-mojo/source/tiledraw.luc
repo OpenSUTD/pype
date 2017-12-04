@@ -1,23 +1,28 @@
+// Draws one tile.
+// Chooses between different shapes to draw.
+// Also chooses between different orientations to draw.
+
 module tiledraw (
     input clk,  // clock
     input horizontaloffset[10],
-    input verticaloffset[7],
+    input verticaloffset[9],
     input shape [3],
     input orientation[3],
-    output yellow
+    output bittodraw
   )
   {
   
   .clk(clk) {
     hvsync_generator hvsync;
-    bram bram;
+    shape1draw shape1;
+    shape2draw shape2;
+    //Repeat the same for the other 7 shapes
   }
   
 
   
   sig counterh[11];
   sig counterv[9];
-  sig fullcounter[51];
 
 
 
@@ -25,16 +30,35 @@ module tiledraw (
     counterh = hvsync.CounterX;
     counterv = hvsync.CounterY;
     
-    if (((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset)) &((counterv>=120+verticaloffset)&(counterv<=180+verticaloffset))) {
-        bram.address = counterv-verticaloffset-120;
-        fullcounter = bram.outdata;
-        yellow = fullcounter[51-((counterh-375-horizontaloffset)/2)];
-        
-      }
+    if (shape == 0) {
+        shape1.horizontaloffset = horizontaloffset;
+        shape1.verticaloffset = verticaloffset;
+        shape1.orientation = orientation;
+        shape2.horizontaloffset = 0;
+        shape2.verticaloffset = 0;
+        shape2.orientation = 0;
+        bittodraw = shape1.bitout;
+    
+    }
+      
+    else if (shape == 1) {
+        shape1.horizontaloffset = 0;
+        shape1.verticaloffset = 0;
+        shape1.orientation = 0;
+        shape2.horizontaloffset = horizontaloffset;
+        shape2.verticaloffset = verticaloffset;
+        shape2.orientation = orientation;
+        bittodraw = shape2.bitout;
+    }
     
     else {
-        bram.address = 999;
-        yellow = 0;
+        shape1.horizontaloffset = horizontaloffset;
+        shape1.verticaloffset = verticaloffset;
+        shape1.orientation = orientation;
+        shape2.horizontaloffset = 0;
+        shape2.verticaloffset = 0;
+        shape2.orientation = 0;
+        bittodraw = shape1.bitout;
         
     }
     

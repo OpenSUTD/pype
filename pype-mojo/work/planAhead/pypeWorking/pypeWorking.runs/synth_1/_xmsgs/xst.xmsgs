@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 30: Redeclaration of ansi port <arg fmt="%s" index="1">vga_R</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of <arg fmt="%d" index="1">12</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 20: Assignment to <arg fmt="%s" index="1">CounterX</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v" Line 23: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_h_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v" Line 24: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_v_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v" Line 25: Assignment to <arg fmt="%s" index="1">M_hvsync_inDisplayArea</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_base_36.v" Line 84: Assignment to <arg fmt="%s" index="1">address_reg</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v" Line 47: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v" Line 51: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v" Line 25: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_h_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v" Line 26: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_v_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v" Line 27: Assignment to <arg fmt="%s" index="1">M_hvsync_inDisplayArea</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v" Line 24: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_h_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v" Line 25: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_v_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v" Line 26: Assignment to <arg fmt="%s" index="1">M_hvsync_inDisplayArea</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v" Line 62: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v" Line 66: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 24: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_h_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 25: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_v_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 26: Assignment to <arg fmt="%s" index="1">M_hvsync_inDisplayArea</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 53: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 55: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v" Line 66: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v" Line 58: Assignment to <arg fmt="%s" index="1">counterh</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 21: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_h_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 22: Assignment to <arg fmt="%s" index="1">M_hvsync_vga_v_sync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 23: Assignment to <arg fmt="%s" index="1">M_hvsync_inDisplayArea</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 84: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 99: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 104: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 115: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 126: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 137: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 23: Assignment to <arg fmt="%s" index="1">out</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%d" index="2">23</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">hvsync</arg>&gt; of block &lt;<arg fmt="%s" index="4">hvsync_generator_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">tiledraw_5</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%d" index="2">23</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">banner</arg>&gt; of block &lt;<arg fmt="%s" index="4">bannerdraw_3</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mojo_top_0</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">19</arg>: Output port &lt;<arg fmt="%s" index="3">CounterX</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">syncgen</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">19</arg>: Output port &lt;<arg fmt="%s" index="3">CounterY</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">syncgen</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/mojo_top_0.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">banner</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">center</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v</arg>&quot; line <arg fmt="%s" index="2">21</arg>: Output port &lt;<arg fmt="%s" index="3">vga_h_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v</arg>&quot; line <arg fmt="%s" index="2">21</arg>: Output port &lt;<arg fmt="%s" index="3">vga_v_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/selector_draw_4.v</arg>&quot; line <arg fmt="%s" index="2">21</arg>: Output port &lt;<arg fmt="%s" index="3">inDisplayArea</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;57&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;56&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;55&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;53&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;52&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;50&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;49&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;48&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;47&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;45&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;44&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;43&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;42&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;41&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;40&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;39&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;38&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;37&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;36&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;35&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;34&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;33&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;32&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">outdata&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">CounterX</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">CounterY</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">vga_h_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">vga_v_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/tiledraw_5.v</arg>&quot; line <arg fmt="%s" index="2">23</arg>: Output port &lt;<arg fmt="%s" index="3">inDisplayArea</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">vga_h_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">vga_v_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape1draw_37.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">inDisplayArea</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">vga_h_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">vga_v_sync</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Joel/Desktop/pypeWorking/work/planAhead/pypeWorking/pypeWorking.srcs/sources_1/imports/verilog/shape2draw_38.v</arg>&quot; line <arg fmt="%s" index="2">22</arg>: Output port &lt;<arg fmt="%s" index="3">inDisplayArea</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0078</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_address_reg[5]_GND_69_o_wide_mux_0_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_address_reg[5]_GND_69_o_wide_mux_1_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile25/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile18/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile17/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile12/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_VS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">selector_draw_4</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_HS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">selector_draw_4</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/inDisplayArea</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">selector_draw_4</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_VS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_HS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/inDisplayArea</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_VS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/vga_HS</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hvsync/inDisplayArea</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile24/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile23/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile22/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile21/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile20/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile19/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile16/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile15/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile14/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile13/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile11/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile10/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile9/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile8/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile7/shape1</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape1draw_37</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile6/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile5/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile4/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile3/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile2/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="new" >All outputs of instance &lt;<arg fmt="%s" index="1">tile1/shape2</arg>&gt; of block &lt;<arg fmt="%s" index="2">shape2draw_38</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">tilesort_2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile5/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile5/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile4/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile4/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile3/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile3/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile2/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile2/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile1/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile1/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile23/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile23/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile22/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile22/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile19/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile19/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile14/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile14/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile11/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile11/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile10/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile10/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile8/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile8/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile7/shape2/base/datatoget_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile7/shape2/base/datatoget_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">io_led_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">io_led_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">io_led_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile25/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile25/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile24/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile24/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile21/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile21/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile20/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile20/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile18/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile18/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile17/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile17/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile16/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile16/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile15/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile15/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile13/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile13/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile12/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile12/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile9/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile9/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile6/shape1/base/orientreg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tiles/tile6/shape1/base/orientreg_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_10&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_10&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_10&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_0&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_0&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_0&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_1&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_1&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_1&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_2&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_2&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_2&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_3&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_3&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_3&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_4&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_4&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_4&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_5&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_5&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_5&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_6&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_6&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_6&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_7&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_7&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_7&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_8&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_8&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_8&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterX_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterX_9&gt; &lt;tiles/tile1/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile2/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile3/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile4/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile5/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile6/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile9/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile12/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile13/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile15/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile16/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile17/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile18/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile20/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile21/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile24/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile25/shape1/hvsync/CounterX_9&gt; &lt;tiles/tile7/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile8/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile10/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile11/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile14/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile19/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile22/shape2/hvsync/CounterX_9&gt; &lt;tiles/tile23/shape2/hvsync/CounterX_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_0&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_0&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_0&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_1&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_1&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_1&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_2&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_2&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_2&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_3&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_3&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_3&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_4&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_4&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_4&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_5&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_5&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_5&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_6&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_6&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_6&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_7&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_7&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_7&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">syncgen/CounterY_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tiles/selector/hvsync/CounterY_8&gt; &lt;tiles/tile1/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile2/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile3/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile4/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile5/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile6/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile9/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile12/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile13/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile15/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile16/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile17/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile18/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile20/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile21/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile24/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile25/shape1/hvsync/CounterY_8&gt; &lt;tiles/tile7/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile8/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile10/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile11/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile14/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile19/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile22/shape2/hvsync/CounterY_8&gt; &lt;tiles/tile23/shape2/hvsync/CounterY_8&gt; </arg>
+</msg>
+
+</messages>
