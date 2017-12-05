@@ -1,5 +1,5 @@
 module bannerpart1 (
-    input clk,  // clock
+    input wire clk,  // clock
     input wire [7:0] address,  // reset
     output reg [56:0] outdata
   );

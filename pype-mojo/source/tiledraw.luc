@@ -20,6 +20,8 @@ module tiledraw (
     shape3draw shape3;
     shape4draw shape4;
     shape5draw shape5;
+    shape6draw shape6;
+    shape7draw shape7;
     //Repeat the same for the other 7 shapes
   }
   
@@ -53,6 +55,12 @@ module tiledraw (
         shape5.horizontaloffset = 0;
         shape5.verticaloffset = 0;
         shape5.orientation = 0;
+        shape6.horizontaloffset = 0;
+        shape6.verticaloffset = 0;
+        shape6.orientation = 0;
+        shape7.horizontaloffset = 0;
+        shape7.verticaloffset = 0; 
+        shape7.orientation = 0;
         bittodraw = shape0.bitout;
     
     }
@@ -76,6 +84,12 @@ module tiledraw (
         shape5.horizontaloffset = 0;
         shape5.verticaloffset = 0;
         shape5.orientation = 0;
+        shape6.horizontaloffset = 0;
+        shape6.verticaloffset = 0;
+        shape6.orientation = 0;
+        shape7.horizontaloffset = 0;
+        shape7.verticaloffset = 0; 
+        shape7.orientation = 0;
         bittodraw = shape1.bitout;
     }
       
@@ -98,6 +112,12 @@ module tiledraw (
           shape5.horizontaloffset = 0;
           shape5.verticaloffset = 0;
           shape5.orientation = 0;
+          shape6.horizontaloffset = 0;
+          shape6.verticaloffset = 0;
+          shape6.orientation = 0;
+          shape7.horizontaloffset = 0;
+          shape7.verticaloffset = 0; 
+          shape7.orientation = 0;
           bittodraw = shape2.bitout;
       }
       
@@ -142,6 +162,12 @@ module tiledraw (
           shape5.horizontaloffset = 0;
           shape5.verticaloffset = 0;
           shape5.orientation = 0;
+          shape6.horizontaloffset = 0;
+          shape6.verticaloffset = 0;
+          shape6.orientation = 0;
+          shape7.horizontaloffset = 0;
+          shape7.verticaloffset = 0; 
+          shape7.orientation = 0;
           bittodraw = shape4.bitout;
     }
       
@@ -164,7 +190,72 @@ module tiledraw (
           shape5.horizontaloffset = horizontaloffset;
           shape5.verticaloffset = verticaloffset;
           shape5.orientation = orientation;
+          shape6.horizontaloffset = 0;
+          shape6.verticaloffset = 0;
+          shape6.orientation = 0;
+          shape7.horizontaloffset = 0;
+          shape7.verticaloffset = 0; 
+          shape7.orientation = 0;
           bittodraw = shape5.bitout;
+    }
+      
+    else if (shape == 6) {
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = 0;
+          shape2.verticaloffset = 0;
+          shape2.orientation = 0;
+          shape3.horizontaloffset = 0;
+          shape3.verticaloffset = 0;
+          shape3.orientation = 0;
+          shape4.horizontaloffset = 0;
+          shape4.verticaloffset = 0;
+          shape4.orientation = 0;
+          shape5.horizontaloffset = 0;
+          shape5.verticaloffset = 0;
+          shape5.orientation = 0;
+          shape6.horizontaloffset = horizontaloffset;
+          shape6.verticaloffset = verticaloffset;
+          shape6.orientation = orientation;
+          shape7.horizontaloffset = 0;
+          shape7.verticaloffset = 0; 
+          shape7.orientation = 0;
+          bittodraw = shape6.bitout;
+        
+    }
+      
+    else if (shape == 7) {
+    
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = 0;
+          shape2.verticaloffset = 0;
+          shape2.orientation = 0;
+          shape3.horizontaloffset = 0;
+          shape3.verticaloffset = 0;
+          shape3.orientation = 0;
+          shape4.horizontaloffset = 0;
+          shape4.verticaloffset = 0;
+          shape4.orientation = 0;
+          shape5.horizontaloffset = 0;
+          shape5.verticaloffset = 0;
+          shape5.orientation = 0;
+          shape6.horizontaloffset = 0;
+          shape6.verticaloffset = 0;
+          shape6.orientation = 0;
+          shape7.horizontaloffset = horizontaloffset;
+          shape7.verticaloffset = verticaloffset; 
+          shape7.orientation = orientation;
+      
+          bittodraw = shape7.bitout;
     }
     
     else {
@@ -186,6 +277,12 @@ module tiledraw (
         shape5.horizontaloffset = 0;
         shape5.verticaloffset = 0;
         shape5.orientation = 0;
+        shape6.horizontaloffset = 0;
+        shape6.verticaloffset = 0;
+        shape6.orientation = 0;
+        shape7.horizontaloffset = 0;
+        shape7.verticaloffset = 0; 
+        shape7.orientation = 0;
         bittodraw = 0;
         
     }

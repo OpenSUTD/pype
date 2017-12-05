@@ -1,5 +1,5 @@
 module bannerword3 (
-    input clk,  // clock
+    input wire clk,  // clock
     input wire [4:0] address,  // reset
     output reg [69:0] outdata
   );

@@ -1,6 +1,6 @@
 module shape1base (
     input wire clk,  // clock
-    input [2:0] orientation,
+    input wire [2:0] orientation,
     input wire[5:0] address,
     output reg [50:0] outdata
   );
