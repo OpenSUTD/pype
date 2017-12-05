@@ -13,9 +13,13 @@ module tiledraw (
   {
   
   .clk(clk) {
-    hvsync_generator hvsync;
+    hvsyncpass hvsync;
+    shape0draw shape0;
     shape1draw shape1;
     shape2draw shape2;
+    shape3draw shape3;
+    shape4draw shape4;
+    shape5draw shape5;
     //Repeat the same for the other 7 shapes
   }
   
@@ -27,38 +31,162 @@ module tiledraw (
 
 
   always {
-    counterh = hvsync.CounterX;
-    counterv = hvsync.CounterY;
+    counterh = hvsync.counterX;
+    counterv = hvsync.counterY;
     
     if (shape == 0) {
-        shape1.horizontaloffset = horizontaloffset;
-        shape1.verticaloffset = verticaloffset;
-        shape1.orientation = orientation;
+        shape0.horizontaloffset = horizontaloffset;
+        shape0.verticaloffset = verticaloffset;
+        shape0.orientation = orientation;
+        shape1.horizontaloffset = 0;
+        shape1.verticaloffset = 0;
+        shape1.orientation = 0;
         shape2.horizontaloffset = 0;
         shape2.verticaloffset = 0;
         shape2.orientation = 0;
-        bittodraw = shape1.bitout;
+        shape3.horizontaloffset = 0;
+        shape3.verticaloffset = 0;
+        shape3.orientation = 0;
+        shape4.horizontaloffset = 0;
+        shape4.verticaloffset = 0;
+        shape4.orientation = 0;
+        shape5.horizontaloffset = 0;
+        shape5.verticaloffset = 0;
+        shape5.orientation = 0;
+        bittodraw = shape0.bitout;
     
     }
       
     else if (shape == 1) {
-        shape1.horizontaloffset = 0;
-        shape1.verticaloffset = 0;
-        shape1.orientation = 0;
-        shape2.horizontaloffset = horizontaloffset;
-        shape2.verticaloffset = verticaloffset;
-        shape2.orientation = orientation;
-        bittodraw = shape2.bitout;
-    }
-    
-    else {
+        shape0.horizontaloffset = 0;
+        shape0.verticaloffset = 0;
+        shape0.orientation = 0;
         shape1.horizontaloffset = horizontaloffset;
         shape1.verticaloffset = verticaloffset;
         shape1.orientation = orientation;
         shape2.horizontaloffset = 0;
         shape2.verticaloffset = 0;
         shape2.orientation = 0;
+        shape3.horizontaloffset = 0;
+        shape3.verticaloffset = 0;
+        shape3.orientation = 0;
+        shape4.horizontaloffset = 0;
+        shape4.verticaloffset = 0;
+        shape4.orientation = 0;
+        shape5.horizontaloffset = 0;
+        shape5.verticaloffset = 0;
+        shape5.orientation = 0;
         bittodraw = shape1.bitout;
+    }
+      
+     else if (shape == 2) {
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = horizontaloffset;
+          shape2.verticaloffset = verticaloffset;
+          shape2.orientation = orientation;
+          shape3.horizontaloffset = 0;
+          shape3.verticaloffset = 0;
+          shape3.orientation = 0;
+          shape4.horizontaloffset = 0;
+          shape4.verticaloffset = 0;
+          shape4.orientation = 0;
+          shape5.horizontaloffset = 0;
+          shape5.verticaloffset = 0;
+          shape5.orientation = 0;
+          bittodraw = shape2.bitout;
+      }
+      
+    else if (shape == 3) {
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = 0;
+          shape2.verticaloffset = 0;
+          shape2.orientation = 0;
+          shape3.horizontaloffset = horizontaloffset;
+          shape3.verticaloffset = verticaloffset;
+          shape3.orientation = orientation;
+          shape4.horizontaloffset = 0;
+          shape4.verticaloffset = 0;
+          shape4.orientation = 0;
+          shape5.horizontaloffset = 0;
+          shape5.verticaloffset = 0;
+          shape5.orientation = 0;
+          bittodraw = shape3.bitout;
+    }
+      
+    else if (shape == 4) {
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = 0;
+          shape2.verticaloffset = 0;
+          shape2.orientation = 0;
+          shape3.horizontaloffset = 0;
+          shape3.verticaloffset = 0;
+          shape3.orientation = 0;
+          shape4.horizontaloffset = horizontaloffset;
+          shape4.verticaloffset = verticaloffset;
+          shape4.orientation = orientation;
+          shape5.horizontaloffset = 0;
+          shape5.verticaloffset = 0;
+          shape5.orientation = 0;
+          bittodraw = shape4.bitout;
+    }
+      
+    else if (shape == 5) {
+          shape0.horizontaloffset = 0;
+          shape0.verticaloffset = 0;
+          shape0.orientation = 0;
+          shape1.horizontaloffset = 0;
+          shape1.verticaloffset = 0;
+          shape1.orientation = 0;
+          shape2.horizontaloffset = 0;
+          shape2.verticaloffset = 0;
+          shape2.orientation = 0;
+          shape3.horizontaloffset = 0;
+          shape3.verticaloffset = 0;
+          shape3.orientation = 0;
+          shape4.horizontaloffset = 0;
+          shape4.verticaloffset = 0;
+          shape4.orientation = 0;
+          shape5.horizontaloffset = horizontaloffset;
+          shape5.verticaloffset = verticaloffset;
+          shape5.orientation = orientation;
+          bittodraw = shape5.bitout;
+    }
+    
+    else {
+        shape0.horizontaloffset = 0;
+        shape0.verticaloffset = 0;
+        shape0.orientation = 0;
+        shape1.horizontaloffset = 0;
+        shape1.verticaloffset = 0;
+        shape1.orientation = 0;
+        shape2.horizontaloffset = 0;
+        shape2.verticaloffset = 0;
+        shape2.orientation = 0;
+        shape3.horizontaloffset = 0;
+        shape3.verticaloffset = 0;
+        shape3.orientation = 0;
+        shape4.horizontaloffset = 0;
+        shape4.verticaloffset = 0;
+        shape4.orientation = 0;
+        shape5.horizontaloffset = 0;
+        shape5.verticaloffset = 0;
+        shape5.orientation = 0;
+        bittodraw = 0;
         
     }
     

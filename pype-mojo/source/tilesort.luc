@@ -627,146 +627,146 @@ module tilesort (
     
     tile1.horizontaloffset = 0;
     tile1.verticaloffset = 0;
-    tile1.shape = 0;
+    tile1.shape = 4;
     tile1.orientation = 0;
     tile1_out = tile1.bittodraw;
     
     tile2.horizontaloffset = 120;
     tile2.verticaloffset = 0;
-    tile2.shape = 0;
-    tile2.orientation = 0;
+    tile2.shape = 4;
+    tile2.orientation = 1;
     tile2_out = tile2.bittodraw;
     
     tile3.horizontaloffset = 240;
     tile3.verticaloffset = 0;
-    tile3.shape = 0;
-    tile3.orientation = 0;
+    tile3.shape = 4;
+    tile3.orientation = 2;
     tile3_out = tile3.bittodraw;
     
     tile4.horizontaloffset = 360;
     tile4.verticaloffset = 0;
-    tile4.shape = 0;
-    tile4.orientation = 0;
+    tile4.shape = 4;
+    tile4.orientation = 3;
     tile4_out = tile4.bittodraw;
    
     tile5.horizontaloffset = 480;
     tile5.verticaloffset = 0;
-    tile5.shape = 0;
-    tile5.orientation = 0;
+    tile5.shape = 4;
+    tile5.orientation = 4;
     tile5_out = tile5.bittodraw;
    
     tile6.horizontaloffset = 60;
     tile6.verticaloffset = 52;
-    tile6.shape = 0;
-    tile6.orientation = 0;
+    tile6.shape = 4;
+    tile6.orientation = 5;
     tile6_out = tile6.bittodraw;
     
     tile7.horizontaloffset = 180;
     tile7.verticaloffset = 52;
-    tile7.shape = 1;
+    tile7.shape = 5;
     tile7.orientation = 0;
     tile7_out = tile7.bittodraw;
     
     tile8.horizontaloffset = 300;
     tile8.verticaloffset = 52;
-    tile8.shape = 1;
-    tile8.orientation = 0;
+    tile8.shape = 5;
+    tile8.orientation = 1;
     tile8_out = tile8.bittodraw;
     
     tile9.horizontaloffset = 420;
     tile9.verticaloffset = 52;
-    tile9.shape = 0;
-    tile9.orientation = 0;
+    tile9.shape = 5;
+    tile9.orientation = 2;
     tile9_out = tile9.bittodraw;
     
     tile10.horizontaloffset = 540;
     tile10.verticaloffset = 52;
-    tile10.shape = 1;
-    tile10.orientation = 0;
+    tile10.shape = 5;
+    tile10.orientation = 3;
     tile10_out = tile10.bittodraw;
     
     tile11.horizontaloffset = 0;
     tile11.verticaloffset = 104;
-    tile11.shape = 1;
-    tile11.orientation = 0;
+    tile11.shape = 5;
+    tile11.orientation = 4;
     tile11_out = tile11.bittodraw;
     
     tile12.horizontaloffset = 120;
     tile12.verticaloffset = 104;
-    tile12.shape = 2;
-    tile12.orientation = 0;
+    tile12.shape = 5;
+    tile12.orientation = 5;
     tile12_out = tile12.bittodraw;
     
     tile13.horizontaloffset = 240;
     tile13.verticaloffset = 104;
-    tile13.shape = 0;
+    tile13.shape = 2;
     tile13.orientation = 0;
     tile13_out = tile13.bittodraw;
     
     tile14.horizontaloffset = 360;
     tile14.verticaloffset = 104;
-    tile14.shape = 1;
-    tile14.orientation = 0;
+    tile14.shape = 2;
+    tile14.orientation = 1;
     tile14_out = tile14.bittodraw;
     
     tile15.horizontaloffset = 480;
     tile15.verticaloffset = 104;
-    tile15.shape = 0;
-    tile15.orientation = 0;
+    tile15.shape = 2;
+    tile15.orientation = 2;
     tile15_out = tile15.bittodraw;
     
     tile16.horizontaloffset = 60;
     tile16.verticaloffset = 156;
-    tile16.shape = 0;
-    tile16.orientation = 0;
+    tile16.shape = 2;
+    tile16.orientation = 3;
     tile16_out = tile16.bittodraw;
     
     tile17.horizontaloffset = 180;
     tile17.verticaloffset = 156;
     tile17.shape = 2;
-    tile17.orientation = 0;
+    tile17.orientation = 4;
     tile17_out = tile17.bittodraw;
     
     tile18.horizontaloffset = 300;
     tile18.verticaloffset = 156;
     tile18.shape = 2;
-    tile18.orientation = 0;
+    tile18.orientation = 5;
     tile18_out = tile18.bittodraw;
     
     tile19.horizontaloffset = 420;
     tile19.verticaloffset = 156;
-    tile19.shape = 1;
+    tile19.shape = 3;
     tile19.orientation = 0;
     tile19_out = tile19.bittodraw;
     
     tile20.horizontaloffset = 540;
     tile20.verticaloffset = 156;
-    tile20.shape = 0;
-    tile20.orientation = 0;
+    tile20.shape = 3;
+    tile20.orientation = 1;
     tile20_out = tile20.bittodraw;
     
     tile21.horizontaloffset = 0;
     tile21.verticaloffset = 208;
-    tile21.shape = 0;
-    tile21.orientation = 0;
+    tile21.shape = 3;
+    tile21.orientation = 2;
     tile21_out = tile21.bittodraw;
     
     tile22.horizontaloffset = 120;
     tile22.verticaloffset = 208;
-    tile22.shape = 1;
-    tile22.orientation = 0;
+    tile22.shape = 3;
+    tile22.orientation = 3;
     tile22_out = tile22.bittodraw;
     
     tile23.horizontaloffset = 240;
     tile23.verticaloffset = 208;
-    tile23.shape = 1;
-    tile23.orientation = 0;
+    tile23.shape = 3;
+    tile23.orientation = 4;
     tile23_out = tile23.bittodraw;
     
     tile24.horizontaloffset = 360;
     tile24.verticaloffset = 208;
-    tile24.shape = 0;
-    tile24.orientation = 0;
+    tile24.shape = 3;
+    tile24.orientation = 5;
     tile24_out = tile24.bittodraw;
     
     tile25.horizontaloffset = 480;
