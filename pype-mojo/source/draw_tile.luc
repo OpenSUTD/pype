@@ -1,0 +1,35 @@
+module draw_tile (
+    input clk,  // clock
+    input horizontaloffset[10],
+    input verticaloffset[9],
+    input fullcounter[51],
+    output address,
+    output draw
+  )
+  {
+  
+  .clk(clk) {
+    hvsync_generator hvsync;
+  }
+  
+  sig counterh[11];
+  sig counterv[9];    
+
+  always {
+    counterh = hvsync.CounterX;
+    counterv = hvsync.CounterY;
+    
+    if (((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset)) &((counterv>=120+verticaloffset)&(counterv<=180+verticaloffset))) {
+      // TODO: do logic to select the correct orientation
+      //Reads from top most
+      address = counterv-verticaloffset-120;
+      draw = fullcounter[51-((counterh-375-horizontaloffset)/2)];    
+    }
+    
+    else {
+      draw = 0;
+      address = 999;
+        
+    }
+  }
+}

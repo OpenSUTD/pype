@@ -1,0 +1,1234 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v" into library work
+Parsing module <selector_base_32>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" into library work
+Parsing module <hvsync_generator_1>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" into library work
+Parsing module <vsync_buffer_counter_5>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tile_library_31.v" into library work
+Parsing module <tile_library_31>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" into library work
+Parsing module <selector_draw_3>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" into library work
+Parsing module <hsync_buffer_counter_4>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" into library work
+Parsing module <draw_tile_6>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" into library work
+Parsing module <tilesort_2>.
+Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+WARNING:HDLCompiler:751 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 29: Redeclaration of ansi port vga_R is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <hvsync_generator_1>.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 20: Assignment to CounterX ignored, since the identifier is never used
+
+Elaborating module <tilesort_2>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 65: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 66: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 67: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+
+Elaborating module <selector_draw_3>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 23: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 24: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 25: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+
+Elaborating module <selector_base_32>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v" Line 84: Assignment to address_reg ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 47: Result of 9-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 51: Result of 10-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <hsync_buffer_counter_4>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" Line 24: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" Line 25: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" Line 26: Assignment to M_hvsync_CounterX ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" Line 27: Assignment to M_hvsync_CounterY ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hsync_buffer_counter_4.v" Line 36: Result of 28-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <vsync_buffer_counter_5>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" Line 23: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" Line 25: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" Line 26: Assignment to M_hvsync_CounterX ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" Line 27: Assignment to M_hvsync_CounterY ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/vsync_buffer_counter_5.v" Line 36: Result of 28-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <draw_tile_6>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" Line 25: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" Line 26: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" Line 27: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" Line 40: Result of 9-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" Line 44: Result of 10-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <tile_library_31>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 452: Assignment to counterh ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63. All outputs of instance <hvsync> of block <hvsync_generator_1> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 81. All outputs of instance <hsync_buffer_counter> of block <hsync_buffer_counter_4> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 86. All outputs of instance <vsync_buffer_counter> of block <vsync_buffer_counter_5> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 418. All outputs of instance <tile_library> of block <tile_library_31> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterX> of the instance <syncgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterY> of the instance <syncgen> is unconnected or connected to loadless signal.
+    Register <vga_B> equivalent to <vga_R> has been removed
+    Register <vga_G> equivalent to <vga_R> has been removed
+    Found 1-bit register for signal <vga_R>.
+    Found 9-bit register for signal <io_led>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <hvsync_generator_1>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v".
+    Found 9-bit register for signal <CounterY>.
+    Found 1-bit register for signal <vga_HS>.
+    Found 1-bit register for signal <vga_VS>.
+    Found 1-bit register for signal <inDisplayArea>.
+    Found 11-bit register for signal <CounterX>.
+    Found 11-bit adder for signal <CounterX[10]_GND_2_o_add_2_OUT> created at line 17.
+    Found 9-bit adder for signal <CounterY[8]_GND_2_o_add_6_OUT> created at line 20.
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_15_o> created at line 32
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <hvsync_generator_1> synthesized.
+
+Synthesizing Unit <tilesort_2>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v".
+WARNING:Xst:647 - Input <center> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63: Output port <CounterX> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63: Output port <CounterY> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 63: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 418: Output port <bitmap> of the instance <tile_library> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <M_selected_tile_q>.
+    Found finite state machine <FSM_0> for signal <M_selected_tile_q>.
+    -----------------------------------------------------------------------
+    | States             | 25                                             |
+    | Transitions        | 125                                            |
+    | Inputs             | 4                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <tilesort_2> synthesized.
+
+Synthesizing Unit <selector_draw_3>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v".
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Found 9-bit subtractor for signal <M_hvsync_CounterY[8]_verticaloffset[8]_sub_9_OUT> created at line 47.
+    Found 12-bit subtractor for signal <GND_4_o_GND_4_o_sub_11_OUT> created at line 49.
+    Found 32-bit subtractor for signal <n0036> created at line 49.
+    Found 11-bit adder for signal <n0039> created at line 46.
+    Found 11-bit adder for signal <n0040> created at line 46.
+    Found 9-bit adder for signal <GND_4_o_verticaloffset[8]_add_4_OUT> created at line 46.
+    Found 9-bit adder for signal <GND_4_o_verticaloffset[8]_add_6_OUT> created at line 46.
+    Found 7-bit subtractor for signal <M_hvsync_CounterY[8]_GND_4_o_sub_10_OUT<6:0>> created at line 47.
+    Found 6-bit subtractor for signal <GND_4_o_GND_4_o_sub_13_OUT<5:0>> created at line 49.
+    Found 117-bit shifter logical right for signal <n0038> created at line 49
+    Found 11-bit comparator lessequal for signal <n0001> created at line 46
+    Found 11-bit comparator lessequal for signal <n0004> created at line 46
+    Found 9-bit comparator lessequal for signal <n0008> created at line 46
+    Found 9-bit comparator lessequal for signal <n0011> created at line 46
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <selector_draw_3> synthesized.
+
+Synthesizing Unit <selector_base_32>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v".
+    Set property "rom_style = block" for signal <address_reg>.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outdata<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  25 Latch(s).
+Unit <selector_base_32> synthesized.
+
+Synthesizing Unit <draw_tile_6>.
+    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v".
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" line 23: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" line 23: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/draw_tile_6.v" line 23: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Found 9-bit subtractor for signal <M_hvsync_CounterY[8]_verticaloffset[8]_sub_9_OUT> created at line 40.
+    Found 9-bit subtractor for signal <n0033> created at line 40.
+    Found 12-bit subtractor for signal <GND_67_o_GND_67_o_sub_11_OUT> created at line 41.
+    Found 32-bit subtractor for signal <n0035> created at line 41.
+    Found 11-bit adder for signal <n0038> created at line 39.
+    Found 11-bit adder for signal <n0039> created at line 39.
+    Found 9-bit adder for signal <GND_67_o_verticaloffset[8]_add_4_OUT> created at line 39.
+    Found 9-bit adder for signal <GND_67_o_verticaloffset[8]_add_6_OUT> created at line 39.
+    Found 6-bit subtractor for signal <GND_67_o_GND_67_o_sub_13_OUT<5:0>> created at line 41.
+    Found 101-bit shifter logical right for signal <n0037> created at line 41
+    Found 11-bit comparator lessequal for signal <n0001> created at line 39
+    Found 11-bit comparator lessequal for signal <n0004> created at line 39
+    Found 9-bit comparator lessequal for signal <n0008> created at line 39
+    Found 9-bit comparator lessequal for signal <n0011> created at line 39
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <draw_tile_6> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 288
+ 11-bit adder                                          : 79
+ 12-bit subtractor                                     : 26
+ 32-bit subtractor                                     : 26
+ 6-bit subtractor                                      : 26
+ 7-bit subtractor                                      : 1
+ 9-bit adder                                           : 79
+ 9-bit subtractor                                      : 51
+# Registers                                            : 137
+ 1-bit register                                        : 82
+ 11-bit register                                       : 27
+ 9-bit register                                        : 28
+# Latches                                              : 25
+ 1-bit latch                                           : 25
+# Comparators                                          : 131
+ 11-bit comparator lessequal                           : 52
+ 9-bit comparator greater                              : 27
+ 9-bit comparator lessequal                            : 52
+# Multiplexers                                         : 83
+ 1-bit 2-to-1 multiplexer                              : 82
+ 7-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 26
+ 101-bit shifter logical right                         : 25
+ 117-bit shifter logical right                         : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <hvsync_generator_1>.
+The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
+The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
+Unit <hvsync_generator_1> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 209
+ 1-bit subtractor borrow in                            : 25
+ 11-bit adder                                          : 52
+ 6-bit subtractor                                      : 26
+ 7-bit subtractor                                      : 54
+ 9-bit adder                                           : 52
+# Counters                                             : 54
+ 11-bit up counter                                     : 27
+ 9-bit up counter                                      : 27
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+# Comparators                                          : 131
+ 11-bit comparator lessequal                           : 52
+ 9-bit comparator greater                              : 27
+ 9-bit comparator lessequal                            : 52
+# Multiplexers                                         : 56
+ 1-bit 2-to-1 multiplexer                              : 55
+ 7-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 26
+ 101-bit shifter logical right                         : 25
+ 117-bit shifter logical right                         : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <tile25/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/inDisplayArea> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/vga_HS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/vga_VS> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <hvsync/vga_VS> of sequential type is unconnected in block <selector_draw_3>.
+WARNING:Xst:2677 - Node <hvsync/vga_HS> of sequential type is unconnected in block <selector_draw_3>.
+WARNING:Xst:2677 - Node <hvsync/inDisplayArea> of sequential type is unconnected in block <selector_draw_3>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tiles/FSM_0> on signal <M_selected_tile_q[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 11000 | 11000
+ 00001 | 00001
+ 10100 | 10100
+ 00101 | 00101
+ 00010 | 00010
+ 10101 | 10101
+ 00110 | 00110
+ 00011 | 00011
+ 10110 | 10110
+ 00111 | 00111
+ 00100 | 00100
+ 10111 | 10111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+ 10001 | 10001
+ 10010 | 10010
+ 10011 | 10011
+-------------------
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile25/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile24/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile23/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile22/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile21/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile20/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile19/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile18/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile17/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile16/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile15/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile14/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile13/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile12/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile11/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile10/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile9/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile8/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile7/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile6/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile5/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile4/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile3/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile2/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_8> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_9> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterX_10> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_0> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_1> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_2> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_3> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_4> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_5> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_6> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_7> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <tile1/hvsync/CounterY_8> of sequential type is unconnected in block <tilesort_2>.
+
+Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <tilesort_2> ...
+
+Optimizing unit <selector_draw_3> ...
+
+Optimizing unit <selector_base_32> ...
+WARNING:Xst:1710 - FF/Latch <io_led_6> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_7> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_10> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_0> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_1> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_2> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_3> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_4> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_5> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_6> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_7> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_8> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterX_9> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_0> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_1> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_2> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_3> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_4> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_5> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_6> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_7> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/hvsync/CounterY_8> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 4.
+FlipFlop tiles/M_selected_tile_q_FSM_FFd1 has been replicated 3 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd2 has been replicated 3 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd3 has been replicated 3 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd4 has been replicated 4 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd5 has been replicated 4 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 285
+#      GND                         : 2
+#      INV                         : 4
+#      LUT1                        : 18
+#      LUT2                        : 7
+#      LUT3                        : 8
+#      LUT4                        : 44
+#      LUT5                        : 53
+#      LUT6                        : 92
+#      MUXCY                       : 28
+#      MUXF7                       : 7
+#      VCC                         : 2
+#      XORCY                       : 20
+# FlipFlops/Latches                : 77
+#      FD                          : 32
+#      FDE                         : 9
+#      FDR                         : 11
+#      LD                          : 25
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 5
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              72  out of  11440     0%  
+ Number of Slice LUTs:                  226  out of   5720     3%  
+    Number used as Logic:               226  out of   5720     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    244
+   Number with an unused Flip Flop:     172  out of    244    70%  
+   Number with an unused LUT:            18  out of    244     7%  
+   Number of fully used LUT-FF pairs:    54  out of    244    22%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    102    19%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------+----------------------------------------+-------+
+Clock Signal                                                   | Clock buffer(FF name)                  | Load  |
+---------------------------------------------------------------+----------------------------------------+-------+
+clk                                                            | BUFGP                                  | 52    |
+tiles/selector/base/_n0215<1>(tiles/selector/base/_n0215<1>1:O)| BUFG(*)(tiles/selector/base/outdata_32)| 25    |
+---------------------------------------------------------------+----------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.895ns (Maximum Frequency: 145.033MHz)
+   Minimum input arrival time before clock: 5.983ns
+   Maximum output required time after clock: 5.054ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.895ns (frequency: 145.033MHz)
+  Total number of paths / destination ports: 1763 / 67
+-------------------------------------------------------------------------
+Delay:               6.895ns (Levels of Logic = 8)
+  Source:            tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
+  Destination:       vga_R (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   1.156  M_selected_tile_q_FSM_FFd3_1 (M_selected_tile_q_FSM_FFd3_1)
+     LUT5:I0->O            3   0.254   0.766  M_selected_tile_q__n0379<4>1 (_n0379<4>)
+     begin scope: 'tiles/selector:horizontaloffset<4>'
+     LUT4:I3->O            1   0.254   0.682  Msub_n0036_Madd_lut<0>41 (Msub_n0036_Madd_lut<0>4)
+     LUT6:I5->O            2   0.254   0.834  Msub_n0036_Madd_cy<0>51 (Msub_n0036_Madd_cy<0>4)
+     LUT6:I4->O            2   0.250   0.725  Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11 (GND_4_o_GND_4_o_sub_13_OUT<5>1)
+     end scope: 'tiles/selector:GND_4_o_GND_4_o_sub_13_OUT<5>1'
+     end scope: 'tiles:GND_4_o_GND_4_o_sub_13_OUT<5>1'
+     MUXF7:S->O            1   0.185   0.682  R_inv21_SW0 (N41)
+     LUT6:I5->O            1   0.254   0.000  vga_R_rstpot (vga_R_rstpot)
+     FD:D                      0.074          vga_R
+    ----------------------------------------
+    Total                      6.895ns (2.050ns logic, 4.845ns route)
+                                       (29.7% logic, 70.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 284 / 28
+-------------------------------------------------------------------------
+Offset:              5.983ns (Levels of Logic = 6)
+  Source:            io_button<4> (PAD)
+  Destination:       tiles/M_selected_tile_q_FSM_FFd5 (FF)
+  Destination Clock: clk rising
+
+  Data Path: io_button<4> to tiles/M_selected_tile_q_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   1.328   1.310  io_button_4_IBUF (io_button_4_IBUF)
+     begin scope: 'tiles:right'
+     LUT2:I1->O            1   0.254   0.682  M_selected_tile_q_FSM_FFd5-In3 (M_selected_tile_q_FSM_FFd5-In3)
+     LUT6:I5->O            1   0.254   0.910  M_selected_tile_q_FSM_FFd5-In4 (M_selected_tile_q_FSM_FFd5-In4)
+     LUT6:I3->O            1   0.235   0.682  M_selected_tile_q_FSM_FFd5-In6 (M_selected_tile_q_FSM_FFd5-In6)
+     LUT6:I5->O            5   0.254   0.000  M_selected_tile_q_FSM_FFd5-In8 (M_selected_tile_q_FSM_FFd5-In)
+     FD:D                      0.074          M_selected_tile_q_FSM_FFd5
+    ----------------------------------------
+    Total                      5.983ns (2.399ns logic, 3.584ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              5.054ns (Levels of Logic = 3)
+  Source:            syncgen/vga_HS (FF)
+  Destination:       vga_h_sync (PAD)
+  Source Clock:      clk rising
+
+  Data Path: syncgen/vga_HS to vga_h_sync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  vga_HS (vga_HS)
+     INV:I->O              1   0.255   0.681  vga_h_sync1_INV_0 (vga_h_sync)
+     end scope: 'syncgen:vga_h_sync'
+     OBUF:I->O                 2.912          vga_h_sync_OBUF (vga_h_sync)
+    ----------------------------------------
+    Total                      5.054ns (3.692ns logic, 1.362ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+clk                          |    6.895|         |         |         |
+tiles/selector/base/_n0215<1>|         |    5.137|         |         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tiles/selector/base/_n0215<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   12.570|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.71 secs
+ 
+--> 
+
+Total memory usage is 386380 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  641 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
+
