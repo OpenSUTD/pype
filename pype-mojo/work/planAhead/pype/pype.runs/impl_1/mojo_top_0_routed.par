@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-B47DPOO::  Thu Dec 07 19:42:56 2017
+DESKTOP-B47DPOO::  Thu Dec 07 22:45:18 2017
 
 par -intstyle pa -w -mt on mojo_top_0.ncd mojo_top_0_routed.ncd 
 
@@ -21,30 +21,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   159 out of  11,440    1%
-    Number used as Flip Flops:                  83
-    Number used as Latches:                     76
+  Number of Slice Registers:                 1,794 out of  11,440   15%
+    Number used as Flip Flops:                 494
+    Number used as Latches:                  1,300
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        284 out of   5,720    4%
-    Number used as logic:                      280 out of   5,720    4%
-      Number using O6 output only:             211
-      Number using O5 output only:              37
-      Number using O5 and O6:                   32
+  Number of Slice LUTs:                      3,245 out of   5,720   56%
+    Number used as logic:                    3,223 out of   5,720   56%
+      Number using O6 output only:           2,460
+      Number using O5 output only:              89
+      Number using O5 and O6:                  674
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      4
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         3
-      Number with other load:                    0
+    Number used exclusively as route-thrus:     22
+      Number with same-slice register load:      6
+      Number with same-slice carry load:         4
+      Number with other load:                   12
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   108 out of   1,430    7%
-  Number of MUXCYs used:                        64 out of   2,860    2%
-  Number of LUT Flip Flop pairs used:          318
-    Number with an unused Flip Flop:           166 out of     318   52%
-    Number with an unused LUT:                  34 out of     318   10%
-    Number of fully used LUT-FF pairs:         118 out of     318   37%
+  Number of occupied Slices:                 1,273 out of   1,430   89%
+  Number of MUXCYs used:                       900 out of   2,860   31%
+  Number of LUT Flip Flop pairs used:        3,771
+    Number with an unused Flip Flop:         2,006 out of   3,771   53%
+    Number with an unused LUT:                 526 out of   3,771   13%
+    Number of fully used LUT-FF pairs:       1,239 out of   3,771   32%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -60,12 +60,12 @@ IO Utilization:
     IOB Flip Flops:                              6
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                         1 out of      32    3%
-  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of RAMB16BWERs:                        15 out of      32   46%
+  Number of RAMB8BWERs:                         15 out of      64   23%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
-    Number used as BUFGs:                        3
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   5 out of     200    2%
@@ -96,29 +96,29 @@ PAR will use up to 2 processors
 Starting Multi-threaded Router
 
 
-Phase  1  : 1610 unrouted;      REAL time: 3 secs 
+Phase  1  : 20372 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 1412 unrouted;      REAL time: 3 secs 
+Phase  2  : 18091 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 719 unrouted;      REAL time: 4 secs 
+Phase  3  : 10775 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 719 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 10775 unrouted; (Setup:0, Hold:36, Component Switching Limit:0)     REAL time: 10 secs 
 
 Updating file: mojo_top_0_routed.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:36, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:36, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:36, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:36, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
-Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion (all processors): 5 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 15 secs 
+Total REAL time to Router completion: 15 secs 
+Total CPU time to Router completion (all processors): 21 secs 
 
 Generating "PAR" statistics.
 
@@ -129,13 +129,85 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |  211 |  0.697     |  2.088      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile1_shape0/M |              |      |      |            |             |
+|       _base_en_BUFG |  BUFGMUX_X2Y2| No   |   35 |  0.083     |  1.509      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile9_shape0/M |              |      |      |            |             |
+|       _base_en_BUFG | BUFGMUX_X3Y13| No   |   29 |  0.025     |  1.447      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile2_shape0/M |              |      |      |            |             |
+|       _base_en_BUFG |  BUFGMUX_X2Y3| No   |   41 |  0.016     |  1.469      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile24_shape0/ |              |      |      |            |             |
+|      M_base_en_BUFG |  BUFGMUX_X2Y4| No   |   13 |  0.009     |  1.437      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile3_shape0/M |              |      |      |            |             |
+|       _base_en_BUFG | BUFGMUX_X2Y10| No   |   33 |  0.012     |  1.405      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile5_shape0/M |              |      |      |            |             |
+|       _base_en_BUFG | BUFGMUX_X2Y12| No   |   42 |  0.080     |  1.511      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile15_shape0/ |              |      |      |            |             |
+|      M_base_en_BUFG |  BUFGMUX_X2Y1| No   |   27 |  0.009     |  1.408      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile10_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   41 |  1.105     |  1.765      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile8_shape0/M |              |      |      |            |             |
+|            _base_en |         Local|      |   43 |  1.324     |  1.930      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile23_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   42 |  1.648     |  2.267      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile4_shape0/M |              |      |      |            |             |
+|            _base_en |         Local|      |   43 |  1.599     |  2.185      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile17_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   39 |  1.649     |  2.507      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile18_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   48 |  1.359     |  1.765      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile11_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   39 |  1.900     |  2.518      |
++---------------------+--------------+------+------+------------+-------------+
 |tiles/selector/base/ |              |      |      |            |             |
-|      _n0215<1>_BUFG | BUFGMUX_X3Y13| No   |   10 |  0.014     |  1.438      |
+|           _n0215[1] |         Local|      |    9 |  0.863     |  1.403      |
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   36 |  0.697     |  2.088      |
+|tiles/tile14_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   52 |  1.349     |  2.112      |
 +---------------------+--------------+------+------+------------+-------------+
-|tiles/shape0/M_base_ |              |      |      |            |             |
-|                  en |  BUFGMUX_X2Y3| No   |   13 |  0.004     |  1.406      |
+|tiles/tile22_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   41 |  1.315     |  1.683      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile21_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   39 |  1.505     |  2.153      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile6_shape0/M |              |      |      |            |             |
+|            _base_en |         Local|      |   38 |  1.102     |  1.705      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile19_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   40 |  1.435     |  1.859      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile16_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   38 |  1.140     |  1.572      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile20_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   38 |  1.509     |  2.048      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile12_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   41 |  1.407     |  1.974      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile25_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   28 |  1.412     |  1.759      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile13_shape0/ |              |      |      |            |             |
+|           M_base_en |         Local|      |   31 |  0.486     |  1.058      |
++---------------------+--------------+------+------+------------+-------------+
+|tiles/tile7_shape0/M |              |      |      |            |             |
+|            _base_en |         Local|      |   40 |  1.481     |  2.050      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -155,8 +227,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH | SETUP       |    31.878ns|     8.122ns|       0|           0
-   50%                                      | HOLD        |     0.415ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH | SETUP       |    23.417ns|    16.583ns|       0|           0
+   50%                                      | HOLD        |     0.335ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -167,10 +239,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 5 secs 
-Total CPU time to PAR completion (all processors): 5 secs 
+Total REAL time to PAR completion: 16 secs 
+Total CPU time to PAR completion (all processors): 22 secs 
 
-Peak Memory Usage:  404 MB
+Peak Memory Usage:  454 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -10,7 +10,7 @@ module shape1draw (
   
   .clk(clk) {
     hvsyncpass hvsync;
-    shape1base base;
+    newshape1 base;
   }
   
 
@@ -27,6 +27,7 @@ module shape1draw (
   always {
     counterh = hvsync.counterX;
     counterv = hvsync.counterY;
+    base.en = ((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset));
     
     if (((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset)) &((counterv>=120+verticaloffset)&(counterv<=180+verticaloffset))) {
     
@@ -50,7 +51,7 @@ module shape1draw (
         //Reads from top most
         if (orientation == 3| orientation == 4) {
       
-            base.address = 60-(counterv-verticaloffset-120);
+            base.address = 59-(counterv-verticaloffset-120);
          
         }
       
@@ -58,7 +59,7 @@ module shape1draw (
             base.address = counterv-verticaloffset-120;
         }
        
-        fullcounter = base.outdata;
+        fullcounter = base.bitmap;
       
       
         bitout = fullcounter[51-((counterh-375-horizontaloffset)/2)];

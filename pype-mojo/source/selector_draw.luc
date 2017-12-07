@@ -9,6 +9,7 @@ module selector_draw (
   .clk(clk) {
     hvsync_generator hvsync;
     selector_base base;
+    flash_counter_500ms flash;
   }
   
 
@@ -31,7 +32,7 @@ module selector_draw (
        
         fullcounter = base.outdata;
       
-        bitout = fullcounter[59-((counterh-367-horizontaloffset)/2)];
+        bitout = fullcounter[59-((counterh-367-horizontaloffset)/2)] & flash.inc_state;
       
        
       }

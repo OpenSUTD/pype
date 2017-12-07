@@ -10,7 +10,7 @@ module shape5draw (
   
   .clk(clk) {
     hvsync_generator hvsync;
-    shape5base base;
+    newshape5 base;
   }
   
 
@@ -27,7 +27,7 @@ module shape5draw (
   always {
     counterh = hvsync.CounterX;
     counterv = hvsync.CounterY;
-    
+    base.en = ((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset));    
     if (((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset)) &((counterv>=120+verticaloffset)&(counterv<=180+verticaloffset))) {
     
         if (orientation == 0) {
@@ -49,7 +49,7 @@ module shape5draw (
         //Reads from top most
         if (orientation == 4 | orientation == 5) {
       
-            base.address = 60-(counterv-verticaloffset-120);
+            base.address = 59-(counterv-verticaloffset-120);
          
         }
       
@@ -57,7 +57,7 @@ module shape5draw (
             base.address = counterv-verticaloffset-120;
         }
        
-        fullcounter = base.outdata;
+        fullcounter = base.bitmap;
       
       
         bitout = fullcounter[51-((counterh-375-horizontaloffset)/2)];

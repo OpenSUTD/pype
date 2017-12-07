@@ -11,7 +11,31 @@ module tilesort_2 (
     input left,
     input right,
     input center,
-    output reg shape0_out,
+    output reg tile1_out,
+    output reg tile2_out,
+    output reg tile3_out,
+    output reg tile4_out,
+    output reg tile5_out,
+    output reg tile6_out,
+    output reg tile7_out,
+    output reg tile8_out,
+    output reg tile9_out,
+    output reg tile10_out,
+    output reg tile11_out,
+    output reg tile12_out,
+    output reg tile13_out,
+    output reg tile14_out,
+    output reg tile15_out,
+    output reg tile16_out,
+    output reg tile17_out,
+    output reg tile18_out,
+    output reg tile19_out,
+    output reg tile20_out,
+    output reg tile21_out,
+    output reg tile22_out,
+    output reg tile23_out,
+    output reg tile24_out,
+    output reg tile25_out,
     output reg selector_out,
     output reg debug1,
     output reg debug2,
@@ -24,27 +48,291 @@ module tilesort_2 (
   wire [1-1:0] M_selector_bitout;
   reg [10-1:0] M_selector_horizontaloffset;
   reg [9-1:0] M_selector_verticaloffset;
-  selector_draw_4 selector (
+  selector_draw_3 selector (
     .clk(clk),
     .horizontaloffset(M_selector_horizontaloffset),
     .verticaloffset(M_selector_verticaloffset),
     .bitout(M_selector_bitout)
   );
   wire [1-1:0] M_counter_inc_state;
-  stateCounter_5 counter (
+  stateCounter_4 counter (
     .clk(clk),
     .inc_state(M_counter_inc_state)
   );
-  wire [1-1:0] M_shape0_bitout;
-  reg [10-1:0] M_shape0_horizontaloffset;
-  reg [9-1:0] M_shape0_verticaloffset;
-  reg [3-1:0] M_shape0_orientation;
-  shape0draw_6 shape0 (
+  wire [1-1:0] M_tile1_shape0_bitout;
+  reg [10-1:0] M_tile1_shape0_horizontaloffset;
+  reg [9-1:0] M_tile1_shape0_verticaloffset;
+  reg [3-1:0] M_tile1_shape0_orientation;
+  shape5draw_5 tile1_shape0 (
     .clk(clk),
-    .horizontaloffset(M_shape0_horizontaloffset),
-    .verticaloffset(M_shape0_verticaloffset),
-    .orientation(M_shape0_orientation),
-    .bitout(M_shape0_bitout)
+    .horizontaloffset(M_tile1_shape0_horizontaloffset),
+    .verticaloffset(M_tile1_shape0_verticaloffset),
+    .orientation(M_tile1_shape0_orientation),
+    .bitout(M_tile1_shape0_bitout)
+  );
+  wire [1-1:0] M_tile2_shape0_bitout;
+  reg [10-1:0] M_tile2_shape0_horizontaloffset;
+  reg [9-1:0] M_tile2_shape0_verticaloffset;
+  reg [3-1:0] M_tile2_shape0_orientation;
+  shape1draw_6 tile2_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile2_shape0_horizontaloffset),
+    .verticaloffset(M_tile2_shape0_verticaloffset),
+    .orientation(M_tile2_shape0_orientation),
+    .bitout(M_tile2_shape0_bitout)
+  );
+  wire [1-1:0] M_tile3_shape0_bitout;
+  reg [10-1:0] M_tile3_shape0_horizontaloffset;
+  reg [9-1:0] M_tile3_shape0_verticaloffset;
+  reg [3-1:0] M_tile3_shape0_orientation;
+  shape1draw_6 tile3_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile3_shape0_horizontaloffset),
+    .verticaloffset(M_tile3_shape0_verticaloffset),
+    .orientation(M_tile3_shape0_orientation),
+    .bitout(M_tile3_shape0_bitout)
+  );
+  wire [1-1:0] M_tile4_shape0_bitout;
+  reg [10-1:0] M_tile4_shape0_horizontaloffset;
+  reg [9-1:0] M_tile4_shape0_verticaloffset;
+  reg [3-1:0] M_tile4_shape0_orientation;
+  shape2draw_8 tile4_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile4_shape0_horizontaloffset),
+    .verticaloffset(M_tile4_shape0_verticaloffset),
+    .orientation(M_tile4_shape0_orientation),
+    .bitout(M_tile4_shape0_bitout)
+  );
+  wire [1-1:0] M_tile5_shape0_bitout;
+  reg [10-1:0] M_tile5_shape0_horizontaloffset;
+  reg [9-1:0] M_tile5_shape0_verticaloffset;
+  reg [3-1:0] M_tile5_shape0_orientation;
+  shape1draw_6 tile5_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile5_shape0_horizontaloffset),
+    .verticaloffset(M_tile5_shape0_verticaloffset),
+    .orientation(M_tile5_shape0_orientation),
+    .bitout(M_tile5_shape0_bitout)
+  );
+  wire [1-1:0] M_tile6_shape0_bitout;
+  reg [10-1:0] M_tile6_shape0_horizontaloffset;
+  reg [9-1:0] M_tile6_shape0_verticaloffset;
+  reg [3-1:0] M_tile6_shape0_orientation;
+  shape4draw_10 tile6_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile6_shape0_horizontaloffset),
+    .verticaloffset(M_tile6_shape0_verticaloffset),
+    .orientation(M_tile6_shape0_orientation),
+    .bitout(M_tile6_shape0_bitout)
+  );
+  wire [1-1:0] M_tile7_shape0_bitout;
+  reg [10-1:0] M_tile7_shape0_horizontaloffset;
+  reg [9-1:0] M_tile7_shape0_verticaloffset;
+  reg [3-1:0] M_tile7_shape0_orientation;
+  shape0draw_11 tile7_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile7_shape0_horizontaloffset),
+    .verticaloffset(M_tile7_shape0_verticaloffset),
+    .orientation(M_tile7_shape0_orientation),
+    .bitout(M_tile7_shape0_bitout)
+  );
+  wire [1-1:0] M_tile8_shape0_bitout;
+  reg [10-1:0] M_tile8_shape0_horizontaloffset;
+  reg [9-1:0] M_tile8_shape0_verticaloffset;
+  reg [3-1:0] M_tile8_shape0_orientation;
+  shape4draw_10 tile8_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile8_shape0_horizontaloffset),
+    .verticaloffset(M_tile8_shape0_verticaloffset),
+    .orientation(M_tile8_shape0_orientation),
+    .bitout(M_tile8_shape0_bitout)
+  );
+  wire [1-1:0] M_tile9_shape0_bitout;
+  reg [10-1:0] M_tile9_shape0_horizontaloffset;
+  reg [9-1:0] M_tile9_shape0_verticaloffset;
+  reg [3-1:0] M_tile9_shape0_orientation;
+  shape1draw_6 tile9_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile9_shape0_horizontaloffset),
+    .verticaloffset(M_tile9_shape0_verticaloffset),
+    .orientation(M_tile9_shape0_orientation),
+    .bitout(M_tile9_shape0_bitout)
+  );
+  wire [1-1:0] M_tile10_shape0_bitout;
+  reg [10-1:0] M_tile10_shape0_horizontaloffset;
+  reg [9-1:0] M_tile10_shape0_verticaloffset;
+  reg [3-1:0] M_tile10_shape0_orientation;
+  shape2draw_8 tile10_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile10_shape0_horizontaloffset),
+    .verticaloffset(M_tile10_shape0_verticaloffset),
+    .orientation(M_tile10_shape0_orientation),
+    .bitout(M_tile10_shape0_bitout)
+  );
+  wire [1-1:0] M_tile11_shape0_bitout;
+  reg [10-1:0] M_tile11_shape0_horizontaloffset;
+  reg [9-1:0] M_tile11_shape0_verticaloffset;
+  reg [3-1:0] M_tile11_shape0_orientation;
+  shape3draw_15 tile11_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile11_shape0_horizontaloffset),
+    .verticaloffset(M_tile11_shape0_verticaloffset),
+    .orientation(M_tile11_shape0_orientation),
+    .bitout(M_tile11_shape0_bitout)
+  );
+  wire [1-1:0] M_tile12_shape0_bitout;
+  reg [10-1:0] M_tile12_shape0_horizontaloffset;
+  reg [9-1:0] M_tile12_shape0_verticaloffset;
+  reg [3-1:0] M_tile12_shape0_orientation;
+  shape3draw_15 tile12_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile12_shape0_horizontaloffset),
+    .verticaloffset(M_tile12_shape0_verticaloffset),
+    .orientation(M_tile12_shape0_orientation),
+    .bitout(M_tile12_shape0_bitout)
+  );
+  wire [1-1:0] M_tile13_shape0_bitout;
+  reg [10-1:0] M_tile13_shape0_horizontaloffset;
+  reg [9-1:0] M_tile13_shape0_verticaloffset;
+  reg [3-1:0] M_tile13_shape0_orientation;
+  shape4draw_10 tile13_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile13_shape0_horizontaloffset),
+    .verticaloffset(M_tile13_shape0_verticaloffset),
+    .orientation(M_tile13_shape0_orientation),
+    .bitout(M_tile13_shape0_bitout)
+  );
+  wire [1-1:0] M_tile14_shape0_bitout;
+  reg [10-1:0] M_tile14_shape0_horizontaloffset;
+  reg [9-1:0] M_tile14_shape0_verticaloffset;
+  reg [3-1:0] M_tile14_shape0_orientation;
+  shape4draw_10 tile14_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile14_shape0_horizontaloffset),
+    .verticaloffset(M_tile14_shape0_verticaloffset),
+    .orientation(M_tile14_shape0_orientation),
+    .bitout(M_tile14_shape0_bitout)
+  );
+  wire [1-1:0] M_tile15_shape0_bitout;
+  reg [10-1:0] M_tile15_shape0_horizontaloffset;
+  reg [9-1:0] M_tile15_shape0_verticaloffset;
+  reg [3-1:0] M_tile15_shape0_orientation;
+  shape1draw_6 tile15_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile15_shape0_horizontaloffset),
+    .verticaloffset(M_tile15_shape0_verticaloffset),
+    .orientation(M_tile15_shape0_orientation),
+    .bitout(M_tile15_shape0_bitout)
+  );
+  wire [1-1:0] M_tile16_shape0_bitout;
+  reg [10-1:0] M_tile16_shape0_horizontaloffset;
+  reg [9-1:0] M_tile16_shape0_verticaloffset;
+  reg [3-1:0] M_tile16_shape0_orientation;
+  shape1draw_6 tile16_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile16_shape0_horizontaloffset),
+    .verticaloffset(M_tile16_shape0_verticaloffset),
+    .orientation(M_tile16_shape0_orientation),
+    .bitout(M_tile16_shape0_bitout)
+  );
+  wire [1-1:0] M_tile17_shape0_bitout;
+  reg [10-1:0] M_tile17_shape0_horizontaloffset;
+  reg [9-1:0] M_tile17_shape0_verticaloffset;
+  reg [3-1:0] M_tile17_shape0_orientation;
+  shape2draw_8 tile17_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile17_shape0_horizontaloffset),
+    .verticaloffset(M_tile17_shape0_verticaloffset),
+    .orientation(M_tile17_shape0_orientation),
+    .bitout(M_tile17_shape0_bitout)
+  );
+  wire [1-1:0] M_tile18_shape0_bitout;
+  reg [10-1:0] M_tile18_shape0_horizontaloffset;
+  reg [9-1:0] M_tile18_shape0_verticaloffset;
+  reg [3-1:0] M_tile18_shape0_orientation;
+  shape4draw_10 tile18_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile18_shape0_horizontaloffset),
+    .verticaloffset(M_tile18_shape0_verticaloffset),
+    .orientation(M_tile18_shape0_orientation),
+    .bitout(M_tile18_shape0_bitout)
+  );
+  wire [1-1:0] M_tile19_shape0_bitout;
+  reg [10-1:0] M_tile19_shape0_horizontaloffset;
+  reg [9-1:0] M_tile19_shape0_verticaloffset;
+  reg [3-1:0] M_tile19_shape0_orientation;
+  shape1draw_6 tile19_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile19_shape0_horizontaloffset),
+    .verticaloffset(M_tile19_shape0_verticaloffset),
+    .orientation(M_tile19_shape0_orientation),
+    .bitout(M_tile19_shape0_bitout)
+  );
+  wire [1-1:0] M_tile20_shape0_bitout;
+  reg [10-1:0] M_tile20_shape0_horizontaloffset;
+  reg [9-1:0] M_tile20_shape0_verticaloffset;
+  reg [3-1:0] M_tile20_shape0_orientation;
+  shape3draw_15 tile20_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile20_shape0_horizontaloffset),
+    .verticaloffset(M_tile20_shape0_verticaloffset),
+    .orientation(M_tile20_shape0_orientation),
+    .bitout(M_tile20_shape0_bitout)
+  );
+  wire [1-1:0] M_tile21_shape0_bitout;
+  reg [10-1:0] M_tile21_shape0_horizontaloffset;
+  reg [9-1:0] M_tile21_shape0_verticaloffset;
+  reg [3-1:0] M_tile21_shape0_orientation;
+  shape3draw_15 tile21_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile21_shape0_horizontaloffset),
+    .verticaloffset(M_tile21_shape0_verticaloffset),
+    .orientation(M_tile21_shape0_orientation),
+    .bitout(M_tile21_shape0_bitout)
+  );
+  wire [1-1:0] M_tile22_shape0_bitout;
+  reg [10-1:0] M_tile22_shape0_horizontaloffset;
+  reg [9-1:0] M_tile22_shape0_verticaloffset;
+  reg [3-1:0] M_tile22_shape0_orientation;
+  shape0draw_11 tile22_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile22_shape0_horizontaloffset),
+    .verticaloffset(M_tile22_shape0_verticaloffset),
+    .orientation(M_tile22_shape0_orientation),
+    .bitout(M_tile22_shape0_bitout)
+  );
+  wire [1-1:0] M_tile23_shape0_bitout;
+  reg [10-1:0] M_tile23_shape0_horizontaloffset;
+  reg [9-1:0] M_tile23_shape0_verticaloffset;
+  reg [3-1:0] M_tile23_shape0_orientation;
+  shape2draw_8 tile23_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile23_shape0_horizontaloffset),
+    .verticaloffset(M_tile23_shape0_verticaloffset),
+    .orientation(M_tile23_shape0_orientation),
+    .bitout(M_tile23_shape0_bitout)
+  );
+  wire [1-1:0] M_tile24_shape0_bitout;
+  reg [10-1:0] M_tile24_shape0_horizontaloffset;
+  reg [9-1:0] M_tile24_shape0_verticaloffset;
+  reg [3-1:0] M_tile24_shape0_orientation;
+  shape5draw_5 tile24_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile24_shape0_horizontaloffset),
+    .verticaloffset(M_tile24_shape0_verticaloffset),
+    .orientation(M_tile24_shape0_orientation),
+    .bitout(M_tile24_shape0_bitout)
+  );
+  wire [1-1:0] M_tile25_shape0_bitout;
+  reg [10-1:0] M_tile25_shape0_horizontaloffset;
+  reg [9-1:0] M_tile25_shape0_verticaloffset;
+  reg [3-1:0] M_tile25_shape0_orientation;
+  shape1draw_6 tile25_shape0 (
+    .clk(clk),
+    .horizontaloffset(M_tile25_shape0_horizontaloffset),
+    .verticaloffset(M_tile25_shape0_verticaloffset),
+    .orientation(M_tile25_shape0_orientation),
+    .bitout(M_tile25_shape0_bitout)
   );
   localparam S1_selected_tile = 5'd0;
   localparam S2_selected_tile = 5'd1;
@@ -74,10 +362,58 @@ module tilesort_2 (
   
   reg [4:0] M_selected_tile_d, M_selected_tile_q = S1_selected_tile;
   reg [2:0] M_tile1_orientation_d, M_tile1_orientation_q = 1'h0;
+  reg [2:0] M_tile2_orientation_d, M_tile2_orientation_q = 1'h0;
+  reg [2:0] M_tile3_orientation_d, M_tile3_orientation_q = 1'h0;
+  reg [2:0] M_tile4_orientation_d, M_tile4_orientation_q = 1'h0;
+  reg [2:0] M_tile5_orientation_d, M_tile5_orientation_q = 1'h0;
+  reg [2:0] M_tile6_orientation_d, M_tile6_orientation_q = 1'h0;
+  reg [2:0] M_tile7_orientation_d, M_tile7_orientation_q = 1'h0;
+  reg [2:0] M_tile8_orientation_d, M_tile8_orientation_q = 1'h0;
+  reg [2:0] M_tile9_orientation_d, M_tile9_orientation_q = 1'h0;
+  reg [2:0] M_tile10_orientation_d, M_tile10_orientation_q = 1'h0;
+  reg [2:0] M_tile11_orientation_d, M_tile11_orientation_q = 1'h0;
+  reg [2:0] M_tile12_orientation_d, M_tile12_orientation_q = 1'h0;
+  reg [2:0] M_tile13_orientation_d, M_tile13_orientation_q = 1'h0;
+  reg [2:0] M_tile14_orientation_d, M_tile14_orientation_q = 1'h0;
+  reg [2:0] M_tile15_orientation_d, M_tile15_orientation_q = 1'h0;
+  reg [2:0] M_tile16_orientation_d, M_tile16_orientation_q = 1'h0;
+  reg [2:0] M_tile17_orientation_d, M_tile17_orientation_q = 1'h0;
+  reg [2:0] M_tile18_orientation_d, M_tile18_orientation_q = 1'h0;
+  reg [2:0] M_tile19_orientation_d, M_tile19_orientation_q = 1'h0;
+  reg [2:0] M_tile20_orientation_d, M_tile20_orientation_q = 1'h0;
+  reg [2:0] M_tile21_orientation_d, M_tile21_orientation_q = 1'h0;
+  reg [2:0] M_tile22_orientation_d, M_tile22_orientation_q = 1'h0;
+  reg [2:0] M_tile23_orientation_d, M_tile23_orientation_q = 1'h0;
+  reg [2:0] M_tile24_orientation_d, M_tile24_orientation_q = 1'h0;
+  reg [2:0] M_tile25_orientation_d, M_tile25_orientation_q = 1'h0;
   
   always @* begin
     M_selected_tile_d = M_selected_tile_q;
+    M_tile21_orientation_d = M_tile21_orientation_q;
+    M_tile24_orientation_d = M_tile24_orientation_q;
+    M_tile9_orientation_d = M_tile9_orientation_q;
+    M_tile4_orientation_d = M_tile4_orientation_q;
+    M_tile15_orientation_d = M_tile15_orientation_q;
+    M_tile11_orientation_d = M_tile11_orientation_q;
+    M_tile12_orientation_d = M_tile12_orientation_q;
+    M_tile5_orientation_d = M_tile5_orientation_q;
+    M_tile17_orientation_d = M_tile17_orientation_q;
+    M_tile3_orientation_d = M_tile3_orientation_q;
+    M_tile10_orientation_d = M_tile10_orientation_q;
+    M_tile7_orientation_d = M_tile7_orientation_q;
+    M_tile16_orientation_d = M_tile16_orientation_q;
+    M_tile2_orientation_d = M_tile2_orientation_q;
+    M_tile23_orientation_d = M_tile23_orientation_q;
+    M_tile6_orientation_d = M_tile6_orientation_q;
+    M_tile8_orientation_d = M_tile8_orientation_q;
+    M_tile14_orientation_d = M_tile14_orientation_q;
+    M_tile18_orientation_d = M_tile18_orientation_q;
+    M_tile20_orientation_d = M_tile20_orientation_q;
+    M_tile25_orientation_d = M_tile25_orientation_q;
+    M_tile22_orientation_d = M_tile22_orientation_q;
     M_tile1_orientation_d = M_tile1_orientation_q;
+    M_tile19_orientation_d = M_tile19_orientation_q;
+    M_tile13_orientation_d = M_tile13_orientation_q;
     
     debug1 = 1'h0;
     debug2 = 1'h0;
@@ -86,8 +422,56 @@ module tilesort_2 (
     M_selector_horizontaloffset = 1'h0;
     M_selector_verticaloffset = 1'h0;
     selector_out = M_selector_bitout;
-    M_shape0_horizontaloffset = 1'h0;
-    M_shape0_verticaloffset = 1'h0;
+    M_tile1_shape0_horizontaloffset = 1'h0;
+    M_tile1_shape0_verticaloffset = 1'h0;
+    M_tile2_shape0_horizontaloffset = 7'h78;
+    M_tile2_shape0_verticaloffset = 1'h0;
+    M_tile3_shape0_horizontaloffset = 8'hf0;
+    M_tile3_shape0_verticaloffset = 1'h0;
+    M_tile4_shape0_horizontaloffset = 9'h168;
+    M_tile4_shape0_verticaloffset = 1'h0;
+    M_tile5_shape0_horizontaloffset = 9'h1e0;
+    M_tile5_shape0_verticaloffset = 1'h0;
+    M_tile6_shape0_horizontaloffset = 6'h3c;
+    M_tile6_shape0_verticaloffset = 6'h34;
+    M_tile7_shape0_horizontaloffset = 8'hb4;
+    M_tile7_shape0_verticaloffset = 6'h34;
+    M_tile8_shape0_horizontaloffset = 9'h12c;
+    M_tile8_shape0_verticaloffset = 6'h34;
+    M_tile9_shape0_horizontaloffset = 9'h1a4;
+    M_tile9_shape0_verticaloffset = 6'h34;
+    M_tile10_shape0_horizontaloffset = 10'h21c;
+    M_tile10_shape0_verticaloffset = 6'h34;
+    M_tile11_shape0_horizontaloffset = 1'h0;
+    M_tile11_shape0_verticaloffset = 7'h68;
+    M_tile12_shape0_horizontaloffset = 7'h78;
+    M_tile12_shape0_verticaloffset = 7'h68;
+    M_tile13_shape0_horizontaloffset = 8'hf0;
+    M_tile13_shape0_verticaloffset = 7'h68;
+    M_tile14_shape0_horizontaloffset = 9'h168;
+    M_tile14_shape0_verticaloffset = 7'h68;
+    M_tile15_shape0_horizontaloffset = 9'h1e0;
+    M_tile15_shape0_verticaloffset = 7'h68;
+    M_tile16_shape0_horizontaloffset = 6'h3c;
+    M_tile16_shape0_verticaloffset = 8'h9c;
+    M_tile17_shape0_horizontaloffset = 8'hb4;
+    M_tile17_shape0_verticaloffset = 8'h9c;
+    M_tile18_shape0_horizontaloffset = 9'h12c;
+    M_tile18_shape0_verticaloffset = 8'h9c;
+    M_tile19_shape0_horizontaloffset = 9'h1a4;
+    M_tile19_shape0_verticaloffset = 8'h9c;
+    M_tile20_shape0_horizontaloffset = 10'h21c;
+    M_tile20_shape0_verticaloffset = 8'h9c;
+    M_tile21_shape0_horizontaloffset = 1'h0;
+    M_tile21_shape0_verticaloffset = 8'hd0;
+    M_tile22_shape0_horizontaloffset = 7'h78;
+    M_tile22_shape0_verticaloffset = 8'hd0;
+    M_tile23_shape0_horizontaloffset = 8'hf0;
+    M_tile23_shape0_verticaloffset = 8'hd0;
+    M_tile24_shape0_horizontaloffset = 9'h168;
+    M_tile24_shape0_verticaloffset = 8'hd0;
+    M_tile25_shape0_horizontaloffset = 9'h1e0;
+    M_tile25_shape0_verticaloffset = 8'hd0;
     if (M_tile1_orientation_q > 3'h5) begin
       M_tile1_orientation_d = 1'h0;
     end else begin
@@ -95,8 +479,224 @@ module tilesort_2 (
         M_tile1_orientation_d = 3'h5;
       end
     end
-    M_shape0_orientation = M_tile1_orientation_q;
-    shape0_out = M_shape0_bitout;
+    if (M_tile2_orientation_q > 3'h5) begin
+      M_tile2_orientation_d = 1'h0;
+    end else begin
+      if (M_tile2_orientation_q < 1'h0) begin
+        M_tile2_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile3_orientation_q > 3'h5) begin
+      M_tile3_orientation_d = 1'h0;
+    end else begin
+      if (M_tile3_orientation_q < 1'h0) begin
+        M_tile3_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile4_orientation_q > 3'h5) begin
+      M_tile4_orientation_d = 1'h0;
+    end else begin
+      if (M_tile4_orientation_q < 1'h0) begin
+        M_tile4_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile5_orientation_q > 3'h5) begin
+      M_tile5_orientation_d = 1'h0;
+    end else begin
+      if (M_tile5_orientation_q < 1'h0) begin
+        M_tile5_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile6_orientation_q > 3'h5) begin
+      M_tile6_orientation_d = 1'h0;
+    end else begin
+      if (M_tile6_orientation_q < 1'h0) begin
+        M_tile6_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile7_orientation_q > 3'h5) begin
+      M_tile7_orientation_d = 1'h0;
+    end else begin
+      if (M_tile7_orientation_q < 1'h0) begin
+        M_tile7_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile8_orientation_q > 3'h5) begin
+      M_tile8_orientation_d = 1'h0;
+    end else begin
+      if (M_tile8_orientation_q < 1'h0) begin
+        M_tile8_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile9_orientation_q > 3'h5) begin
+      M_tile9_orientation_d = 1'h0;
+    end else begin
+      if (M_tile9_orientation_q < 1'h0) begin
+        M_tile9_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile10_orientation_q > 3'h5) begin
+      M_tile10_orientation_d = 1'h0;
+    end else begin
+      if (M_tile10_orientation_q < 1'h0) begin
+        M_tile10_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile11_orientation_q > 3'h5) begin
+      M_tile11_orientation_d = 1'h0;
+    end else begin
+      if (M_tile11_orientation_q < 1'h0) begin
+        M_tile11_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile12_orientation_q > 3'h5) begin
+      M_tile12_orientation_d = 1'h0;
+    end else begin
+      if (M_tile12_orientation_q < 1'h0) begin
+        M_tile12_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile13_orientation_q > 3'h5) begin
+      M_tile13_orientation_d = 1'h0;
+    end else begin
+      if (M_tile13_orientation_q < 1'h0) begin
+        M_tile13_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile14_orientation_q > 3'h5) begin
+      M_tile14_orientation_d = 1'h0;
+    end else begin
+      if (M_tile14_orientation_q < 1'h0) begin
+        M_tile14_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile15_orientation_q > 3'h5) begin
+      M_tile15_orientation_d = 1'h0;
+    end else begin
+      if (M_tile15_orientation_q < 1'h0) begin
+        M_tile15_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile16_orientation_q > 3'h5) begin
+      M_tile16_orientation_d = 1'h0;
+    end else begin
+      if (M_tile16_orientation_q < 1'h0) begin
+        M_tile16_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile17_orientation_q > 3'h5) begin
+      M_tile17_orientation_d = 1'h0;
+    end else begin
+      if (M_tile17_orientation_q < 1'h0) begin
+        M_tile17_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile18_orientation_q > 3'h5) begin
+      M_tile18_orientation_d = 1'h0;
+    end else begin
+      if (M_tile18_orientation_q < 1'h0) begin
+        M_tile18_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile19_orientation_q > 3'h5) begin
+      M_tile19_orientation_d = 1'h0;
+    end else begin
+      if (M_tile19_orientation_q < 1'h0) begin
+        M_tile19_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile20_orientation_q > 3'h5) begin
+      M_tile20_orientation_d = 1'h0;
+    end else begin
+      if (M_tile20_orientation_q < 1'h0) begin
+        M_tile20_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile21_orientation_q > 3'h5) begin
+      M_tile21_orientation_d = 1'h0;
+    end else begin
+      if (M_tile21_orientation_q < 1'h0) begin
+        M_tile21_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile22_orientation_q > 3'h5) begin
+      M_tile22_orientation_d = 1'h0;
+    end else begin
+      if (M_tile22_orientation_q < 1'h0) begin
+        M_tile22_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile23_orientation_q > 3'h5) begin
+      M_tile23_orientation_d = 1'h0;
+    end else begin
+      if (M_tile23_orientation_q < 1'h0) begin
+        M_tile23_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile24_orientation_q > 3'h5) begin
+      M_tile24_orientation_d = 1'h0;
+    end else begin
+      if (M_tile24_orientation_q < 1'h0) begin
+        M_tile24_orientation_d = 3'h5;
+      end
+    end
+    if (M_tile25_orientation_q > 3'h5) begin
+      M_tile25_orientation_d = 1'h0;
+    end else begin
+      if (M_tile25_orientation_q < 1'h0) begin
+        M_tile25_orientation_d = 3'h5;
+      end
+    end
+    M_tile1_shape0_orientation = M_tile1_orientation_q;
+    tile1_out = M_tile1_shape0_bitout;
+    M_tile2_shape0_orientation = M_tile2_orientation_q;
+    tile2_out = M_tile2_shape0_bitout;
+    M_tile3_shape0_orientation = M_tile3_orientation_q;
+    tile3_out = M_tile3_shape0_bitout;
+    M_tile4_shape0_orientation = M_tile4_orientation_q;
+    tile4_out = M_tile4_shape0_bitout;
+    M_tile5_shape0_orientation = M_tile5_orientation_q;
+    tile5_out = M_tile5_shape0_bitout;
+    M_tile6_shape0_orientation = M_tile6_orientation_q;
+    tile6_out = M_tile6_shape0_bitout;
+    M_tile7_shape0_orientation = M_tile7_orientation_q;
+    tile7_out = M_tile7_shape0_bitout;
+    M_tile8_shape0_orientation = M_tile8_orientation_q;
+    tile8_out = M_tile8_shape0_bitout;
+    M_tile9_shape0_orientation = M_tile9_orientation_q;
+    tile9_out = M_tile9_shape0_bitout;
+    M_tile10_shape0_orientation = M_tile10_orientation_q;
+    tile10_out = M_tile10_shape0_bitout;
+    M_tile11_shape0_orientation = M_tile11_orientation_q;
+    tile11_out = M_tile11_shape0_bitout;
+    M_tile12_shape0_orientation = M_tile12_orientation_q;
+    tile12_out = M_tile12_shape0_bitout;
+    M_tile13_shape0_orientation = M_tile13_orientation_q;
+    tile13_out = M_tile13_shape0_bitout;
+    M_tile14_shape0_orientation = M_tile14_orientation_q;
+    tile14_out = M_tile14_shape0_bitout;
+    M_tile15_shape0_orientation = M_tile15_orientation_q;
+    tile15_out = M_tile15_shape0_bitout;
+    M_tile16_shape0_orientation = M_tile16_orientation_q;
+    tile16_out = M_tile16_shape0_bitout;
+    M_tile17_shape0_orientation = M_tile17_orientation_q;
+    tile17_out = M_tile17_shape0_bitout;
+    M_tile18_shape0_orientation = M_tile18_orientation_q;
+    tile18_out = M_tile18_shape0_bitout;
+    M_tile19_shape0_orientation = M_tile19_orientation_q;
+    tile19_out = M_tile19_shape0_bitout;
+    M_tile20_shape0_orientation = M_tile20_orientation_q;
+    tile20_out = M_tile20_shape0_bitout;
+    M_tile21_shape0_orientation = M_tile21_orientation_q;
+    tile21_out = M_tile21_shape0_bitout;
+    M_tile22_shape0_orientation = M_tile22_orientation_q;
+    tile22_out = M_tile22_shape0_bitout;
+    M_tile23_shape0_orientation = M_tile23_orientation_q;
+    tile23_out = M_tile23_shape0_bitout;
+    M_tile24_shape0_orientation = M_tile24_orientation_q;
+    tile24_out = M_tile24_shape0_bitout;
+    M_tile25_shape0_orientation = M_tile25_orientation_q;
+    tile25_out = M_tile25_shape0_bitout;
     
     case (M_selected_tile_q)
       S1_selected_tile: begin
@@ -125,8 +725,8 @@ module tilesort_2 (
       S2_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 1'h0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile2_orientation_d = M_tile2_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S1_selected_tile;
@@ -148,8 +748,8 @@ module tilesort_2 (
       S3_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 1'h0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile3_orientation_d = M_tile3_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S2_selected_tile;
@@ -171,8 +771,8 @@ module tilesort_2 (
       S4_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 1'h0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile4_orientation_d = M_tile4_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S3_selected_tile;
@@ -194,8 +794,8 @@ module tilesort_2 (
       S5_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 1'h0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile5_orientation_d = M_tile5_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S4_selected_tile;
@@ -217,8 +817,8 @@ module tilesort_2 (
       S6_selected_tile: begin
         M_selector_horizontaloffset = 6'h3c;
         M_selector_verticaloffset = 6'h34;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile6_orientation_d = M_tile6_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S5_selected_tile;
@@ -240,8 +840,8 @@ module tilesort_2 (
       S7_selected_tile: begin
         M_selector_horizontaloffset = 8'hb4;
         M_selector_verticaloffset = 6'h34;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile7_orientation_d = M_tile7_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S6_selected_tile;
@@ -263,8 +863,8 @@ module tilesort_2 (
       S8_selected_tile: begin
         M_selector_horizontaloffset = 9'h12c;
         M_selector_verticaloffset = 6'h34;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile8_orientation_d = M_tile8_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S7_selected_tile;
@@ -286,8 +886,8 @@ module tilesort_2 (
       S9_selected_tile: begin
         M_selector_horizontaloffset = 9'h1a4;
         M_selector_verticaloffset = 6'h34;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile9_orientation_d = M_tile9_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S8_selected_tile;
@@ -309,8 +909,8 @@ module tilesort_2 (
       S10_selected_tile: begin
         M_selector_horizontaloffset = 10'h21c;
         M_selector_verticaloffset = 6'h34;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile10_orientation_d = M_tile10_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S9_selected_tile;
@@ -332,8 +932,8 @@ module tilesort_2 (
       S11_selected_tile: begin
         M_selector_horizontaloffset = 1'h0;
         M_selector_verticaloffset = 7'h68;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile11_orientation_d = M_tile11_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S10_selected_tile;
@@ -355,8 +955,8 @@ module tilesort_2 (
       S12_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 7'h68;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile12_orientation_d = M_tile12_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S11_selected_tile;
@@ -378,8 +978,8 @@ module tilesort_2 (
       S13_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 7'h68;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile13_orientation_d = M_tile13_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S12_selected_tile;
@@ -401,8 +1001,8 @@ module tilesort_2 (
       S14_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 7'h68;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile14_orientation_d = M_tile14_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S13_selected_tile;
@@ -424,8 +1024,8 @@ module tilesort_2 (
       S15_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 7'h68;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile15_orientation_d = M_tile15_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S14_selected_tile;
@@ -447,8 +1047,8 @@ module tilesort_2 (
       S16_selected_tile: begin
         M_selector_horizontaloffset = 6'h3c;
         M_selector_verticaloffset = 8'h9c;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile16_orientation_d = M_tile16_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S15_selected_tile;
@@ -470,8 +1070,8 @@ module tilesort_2 (
       S17_selected_tile: begin
         M_selector_horizontaloffset = 8'hb4;
         M_selector_verticaloffset = 8'h9c;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile17_orientation_d = M_tile17_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S16_selected_tile;
@@ -493,8 +1093,8 @@ module tilesort_2 (
       S18_selected_tile: begin
         M_selector_horizontaloffset = 9'h12c;
         M_selector_verticaloffset = 8'h9c;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile18_orientation_d = M_tile18_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S17_selected_tile;
@@ -516,8 +1116,8 @@ module tilesort_2 (
       S19_selected_tile: begin
         M_selector_horizontaloffset = 9'h1a4;
         M_selector_verticaloffset = 8'h9c;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile19_orientation_d = M_tile19_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S18_selected_tile;
@@ -539,8 +1139,8 @@ module tilesort_2 (
       S20_selected_tile: begin
         M_selector_horizontaloffset = 10'h21c;
         M_selector_verticaloffset = 8'h9c;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile20_orientation_d = M_tile20_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S19_selected_tile;
@@ -562,8 +1162,8 @@ module tilesort_2 (
       S21_selected_tile: begin
         M_selector_horizontaloffset = 1'h0;
         M_selector_verticaloffset = 8'hd0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile21_orientation_d = M_tile21_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S20_selected_tile;
@@ -585,8 +1185,8 @@ module tilesort_2 (
       S22_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 8'hd0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile22_orientation_d = M_tile22_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S21_selected_tile;
@@ -608,8 +1208,8 @@ module tilesort_2 (
       S23_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 8'hd0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile23_orientation_d = M_tile23_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S22_selected_tile;
@@ -631,8 +1231,8 @@ module tilesort_2 (
       S24_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 8'hd0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile24_orientation_d = M_tile24_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S23_selected_tile;
@@ -654,8 +1254,8 @@ module tilesort_2 (
       S25_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 8'hd0;
-        if (center) begin
-          
+        if (center & M_counter_inc_state) begin
+          M_tile25_orientation_d = M_tile25_orientation_q + 1'h1;
         end
         if (left & M_counter_inc_state) begin
           M_selected_tile_d = S24_selected_tile;
@@ -679,6 +1279,30 @@ module tilesort_2 (
   
   always @(posedge clk) begin
     M_tile1_orientation_q <= M_tile1_orientation_d;
+    M_tile2_orientation_q <= M_tile2_orientation_d;
+    M_tile3_orientation_q <= M_tile3_orientation_d;
+    M_tile4_orientation_q <= M_tile4_orientation_d;
+    M_tile5_orientation_q <= M_tile5_orientation_d;
+    M_tile6_orientation_q <= M_tile6_orientation_d;
+    M_tile7_orientation_q <= M_tile7_orientation_d;
+    M_tile8_orientation_q <= M_tile8_orientation_d;
+    M_tile9_orientation_q <= M_tile9_orientation_d;
+    M_tile10_orientation_q <= M_tile10_orientation_d;
+    M_tile11_orientation_q <= M_tile11_orientation_d;
+    M_tile12_orientation_q <= M_tile12_orientation_d;
+    M_tile13_orientation_q <= M_tile13_orientation_d;
+    M_tile14_orientation_q <= M_tile14_orientation_d;
+    M_tile15_orientation_q <= M_tile15_orientation_d;
+    M_tile16_orientation_q <= M_tile16_orientation_d;
+    M_tile17_orientation_q <= M_tile17_orientation_d;
+    M_tile18_orientation_q <= M_tile18_orientation_d;
+    M_tile19_orientation_q <= M_tile19_orientation_d;
+    M_tile20_orientation_q <= M_tile20_orientation_d;
+    M_tile21_orientation_q <= M_tile21_orientation_d;
+    M_tile22_orientation_q <= M_tile22_orientation_d;
+    M_tile23_orientation_q <= M_tile23_orientation_d;
+    M_tile24_orientation_q <= M_tile24_orientation_d;
+    M_tile25_orientation_q <= M_tile25_orientation_d;
     M_selected_tile_q <= M_selected_tile_d;
   end
   

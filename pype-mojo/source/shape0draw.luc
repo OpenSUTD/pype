@@ -16,7 +16,6 @@ module shape0draw (
   
   sig counterh[11];
   sig counterv[9];
-  sig fullcounter[51];
   sig oriented[3];
   
   //Example for shape 1 in folder I send you, sry for screwing with numbering
@@ -46,10 +45,9 @@ module shape0draw (
         
         //Reads from top most
         base.address = counterv-verticaloffset-120;
-       
-        fullcounter = base.bitmap;
+
       
-        bitout = fullcounter[51-((counterh-375-horizontaloffset)/2)];
+        bitout = base.bitmap[51-((counterh-375-horizontaloffset)/2)];
       
        
       }
