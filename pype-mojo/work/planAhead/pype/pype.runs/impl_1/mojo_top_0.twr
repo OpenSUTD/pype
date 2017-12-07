@@ -28,274 +28,16 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1763 paths analyzed, 138 endpoints analyzed, 0 failing endpoints
+ 3970 paths analyzed, 312 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.398ns.
+ Minimum period is   8.122ns.
 --------------------------------------------------------------------------------
-Slack:                  32.602ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      7.267ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X8Y45.B3       net (fanout=6)        1.528   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      7.267ns (1.738ns logic, 5.529ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  32.783ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      7.086ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B4       net (fanout=2)        0.949   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X8Y45.B3       net (fanout=6)        1.528   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      7.086ns (1.833ns logic, 5.253ns route)
-                                                       (25.9% logic, 74.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  32.788ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      7.082ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B3       net (fanout=2)        0.994   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X8Y45.B3       net (fanout=6)        1.528   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      7.082ns (1.784ns logic, 5.298ns route)
-                                                       (25.2% logic, 74.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  32.937ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.932ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X5Y44.C1       net (fanout=19)       0.911   _n0379[12]
-    SLICE_X5Y44.C        Tilo                  0.259   R_inv17
-                                                       R_inv16_SW0
-    SLICE_X5Y44.A3       net (fanout=1)        1.289   N147
-    SLICE_X5Y44.A        Tilo                  0.259   R_inv17
-                                                       R_inv16
-    SLICE_X5Y44.B5       net (fanout=1)        0.440   R_inv16
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.932ns (1.815ns logic, 5.117ns route)
-                                                       (26.2% logic, 73.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  32.963ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.907ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B2       net (fanout=2)        1.146   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X8Y45.B5       net (fanout=2)        1.046   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.907ns (1.813ns logic, 5.094ns route)
-                                                       (26.2% logic, 73.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.118ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.751ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B4       net (fanout=2)        0.949   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X5Y44.C1       net (fanout=19)       0.911   _n0379[12]
-    SLICE_X5Y44.C        Tilo                  0.259   R_inv17
-                                                       R_inv16_SW0
-    SLICE_X5Y44.A3       net (fanout=1)        1.289   N147
-    SLICE_X5Y44.A        Tilo                  0.259   R_inv17
-                                                       R_inv16
-    SLICE_X5Y44.B5       net (fanout=1)        0.440   R_inv16
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.751ns (1.910ns logic, 4.841ns route)
-                                                       (28.3% logic, 71.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.119ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  31.878ns (requirement - (data path - clock path skew + uncertainty))
   Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.750ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
+  Data Path Delay:      8.007ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -310,35 +52,36 @@ Slack:                  33.119ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y48.BQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd1_3
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
                                                        tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X6Y45.B5       net (fanout=10)       0.708   tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X8Y45.B3       net (fanout=6)        1.528   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X8Y38.A3       net (fanout=13)       0.893   n0036[2]
+    SLICE_X8Y38.A        Tilo                  0.254   N100
+                                                       R_inv35_F
+    SLICE_X4Y37.D2       net (fanout=1)        1.222   N100
+    SLICE_X4Y37.CMUX     Topdc                 0.456   N94
+                                                       R_inv39_F
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.750ns (1.738ns logic, 5.012ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                      8.007ns (2.126ns logic, 5.881ns route)
+                                                       (26.6% logic, 73.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.123ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
+Slack:                  31.885ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.747ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
+  Data Path Delay:      8.000ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -349,165 +92,385 @@ Slack:                  33.123ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B3       net (fanout=2)        0.994   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X5Y44.C1       net (fanout=19)       0.911   _n0379[12]
-    SLICE_X5Y44.C        Tilo                  0.259   R_inv17
-                                                       R_inv16_SW0
-    SLICE_X5Y44.A3       net (fanout=1)        1.289   N147
-    SLICE_X5Y44.A        Tilo                  0.259   R_inv17
-                                                       R_inv16
-    SLICE_X5Y44.B5       net (fanout=1)        0.440   R_inv16
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X6Y37.CX       net (fanout=7)        0.889   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X6Y37.CMUX     Tcxc                  0.192   outdata_56
+                                                       R_inv49_SW0_SW1
+    SLICE_X11Y38.D6      net (fanout=1)        0.875   N58
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.747ns (1.861ns logic, 4.886ns route)
+    Total                                      8.000ns (1.843ns logic, 6.157ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  31.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      8.000ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X9Y51.A2       net (fanout=10)       2.159   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X9Y51.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd2_3
+                                                       tiles/M_selected_tile_q__n0305<5>1
+    SLICE_X8Y51.A3       net (fanout=1)        0.949   tiles/_n0305[5]
+    SLICE_X8Y51.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
+    SLICE_X11Y38.C5      net (fanout=2)        1.284   tiles/selector/Msub_n0036_Madd_lut<0>5
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      8.000ns (1.757ns logic, 6.243ns route)
+                                                       (22.0% logic, 78.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.086ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.870ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B3       net (fanout=10)       1.831   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q__n0305<4>1
+    SLICE_X11Y38.A1      net (fanout=4)        1.508   _n0305[4]
+    SLICE_X11Y38.A       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_n0036_Madd_cy<0>51
+    SLICE_X11Y38.C1      net (fanout=2)        0.923   tiles/selector/Msub_n0036_Madd_cy<0>4
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.870ns (1.757ns logic, 6.113ns route)
+                                                       (22.3% logic, 77.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.137ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.748ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X11Y38.C2      net (fanout=7)        0.733   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.748ns (1.833ns logic, 5.915ns route)
+                                                       (23.7% logic, 76.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.140ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.745ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X11Y38.A6      net (fanout=14)       0.733   _n0305[12]
+    SLICE_X11Y38.A       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_n0036_Madd_cy<0>51
+    SLICE_X11Y38.C1      net (fanout=2)        0.923   tiles/selector/Msub_n0036_Madd_cy<0>4
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.745ns (1.857ns logic, 5.888ns route)
+                                                       (24.0% logic, 76.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.174ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.782ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B3       net (fanout=10)       1.831   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q__n0305<4>1
+    SLICE_X10Y37.A5      net (fanout=4)        1.382   _n0305[4]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X6Y37.CX       net (fanout=7)        0.889   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X6Y37.CMUX     Tcxc                  0.192   outdata_56
+                                                       R_inv49_SW0_SW1
+    SLICE_X11Y38.D6      net (fanout=1)        0.875   N58
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.782ns (1.743ns logic, 6.039ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.177ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.708ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X10Y37.D4      net (fanout=13)       0.819   n0036[2]
+    SLICE_X10Y37.CMUX    Topdc                 0.402   N59
+                                                       R_inv49_SW0_SW0_F
+                                                       R_inv49_SW0_SW0
+    SLICE_X11Y38.D3      net (fanout=1)        0.804   N57
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.708ns (2.077ns logic, 5.631ns route)
+                                                       (26.9% logic, 73.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.200ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.685ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X10Y37.CX      net (fanout=7)        0.645   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X10Y37.CMUX    Tcxc                  0.192   N59
+                                                       R_inv49_SW0_SW0
+    SLICE_X11Y38.D3      net (fanout=1)        0.804   N57
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.685ns (1.843ns logic, 5.842ns route)
+                                                       (24.0% logic, 76.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.619ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X7Y35.A4       net (fanout=13)       0.785   n0036[2]
+    SLICE_X7Y35.A        Tilo                  0.259   tiles/selector/base/_n0215<24>1
+                                                       R_inv32_G
+    SLICE_X4Y37.C2       net (fanout=1)        0.963   N99
+    SLICE_X4Y37.CMUX     Tilo                  0.430   N94
+                                                       R_inv39_G
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.619ns (2.105ns logic, 5.514ns route)
                                                        (27.6% logic, 72.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.251ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd2_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.702ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.012ns (0.194 - 0.206)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd2_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X9Y47.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd2_3
-                                                       tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X6Y45.B6       net (fanout=5)        0.660   tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X8Y45.B3       net (fanout=6)        1.528   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.702ns (1.738ns logic, 4.964ns route)
-                                                       (25.9% logic, 74.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.292ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.577ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X7Y47.B1       net (fanout=2)        0.767   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X8Y45.B5       net (fanout=2)        1.046   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.577ns (1.862ns logic, 4.715ns route)
-                                                       (28.3% logic, 71.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.446ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.424ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B2       net (fanout=2)        1.146   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X11Y45.B2      net (fanout=2)        1.582   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X11Y45.B       Tilo                  0.259   GND_4_o_GND_4_o_sub_13_OUT<4>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<4>11
-    SLICE_X9Y45.B3       net (fanout=1)        0.758   GND_4_o_GND_4_o_sub_13_OUT<4>1
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.424ns (1.626ns logic, 4.798ns route)
-                                                       (25.3% logic, 74.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.454ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  32.301ns (requirement - (data path - clock path skew + uncertainty))
   Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.415ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
+  Data Path Delay:      7.584ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -522,118 +485,36 @@ Slack:                  33.454ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y48.BQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd1_3
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
                                                        tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X6Y45.B5       net (fanout=10)       0.708   tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X5Y44.C1       net (fanout=19)       0.911   _n0379[12]
-    SLICE_X5Y44.C        Tilo                  0.259   R_inv17
-                                                       R_inv16_SW0
-    SLICE_X5Y44.A3       net (fanout=1)        1.289   N147
-    SLICE_X5Y44.A        Tilo                  0.259   R_inv17
-                                                       R_inv16
-    SLICE_X5Y44.B5       net (fanout=1)        0.440   R_inv16
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X4Y37.A5       net (fanout=13)       0.732   n0036[2]
+    SLICE_X4Y37.A        Tilo                  0.254   N94
+                                                       R_inv32_F
+    SLICE_X4Y37.C4       net (fanout=1)        0.986   N98
+    SLICE_X4Y37.CMUX     Tilo                  0.430   N94
+                                                       R_inv39_G
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.415ns (1.815ns logic, 4.600ns route)
-                                                       (28.3% logic, 71.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.457ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.412ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X11Y45.B1      net (fanout=6)        1.692   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X11Y45.B       Tilo                  0.259   GND_4_o_GND_4_o_sub_13_OUT<4>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<4>11
-    SLICE_X9Y45.B3       net (fanout=1)        0.758   GND_4_o_GND_4_o_sub_13_OUT<4>1
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.412ns (1.551ns logic, 4.861ns route)
-                                                       (24.2% logic, 75.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.488ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.381ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X7Y47.B5       net (fanout=3)        0.666   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X8Y45.B5       net (fanout=2)        1.046   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.381ns (1.767ns logic, 4.614ns route)
+    Total                                      7.584ns (2.100ns logic, 5.484ns route)
                                                        (27.7% logic, 72.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.554ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  32.309ns (requirement - (data path - clock path skew + uncertainty))
   Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.315ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
+  Data Path Delay:      7.576ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -648,35 +529,210 @@ Slack:                  33.554ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y48.BQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd1_3
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
                                                        tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X7Y47.B3       net (fanout=10)       0.600   tiles/M_selected_tile_q_FSM_FFd1_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X8Y45.B5       net (fanout=2)        1.046   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X10Y37.C6      net (fanout=13)       0.686   n0036[2]
+    SLICE_X10Y37.CMUX    Tilo                  0.403   N59
+                                                       R_inv49_SW0_SW0_G
+                                                       R_inv49_SW0_SW0
+    SLICE_X11Y38.D3      net (fanout=1)        0.804   N57
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.315ns (1.767ns logic, 4.548ns route)
+    Total                                      7.576ns (2.078ns logic, 5.498ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.423ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.462ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X6Y37.C5       net (fanout=13)       0.501   n0036[2]
+    SLICE_X6Y37.CMUX     Tilo                  0.403   outdata_56
+                                                       R_inv49_SW0_SW1_G
+                                                       R_inv49_SW0_SW1
+    SLICE_X11Y38.D6      net (fanout=1)        0.875   N58
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.462ns (2.078ns logic, 5.384ns route)
+                                                       (27.8% logic, 72.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.426ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.530ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B3       net (fanout=10)       1.831   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q__n0305<4>1
+    SLICE_X10Y37.A5      net (fanout=4)        1.382   _n0305[4]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X11Y38.C2      net (fanout=7)        0.733   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.530ns (1.733ns logic, 5.797ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.429ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.527ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X9Y51.A2       net (fanout=10)       2.159   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X9Y51.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd2_3
+                                                       tiles/M_selected_tile_q__n0305<5>1
+    SLICE_X8Y51.A3       net (fanout=1)        0.949   tiles/_n0305[5]
+    SLICE_X8Y51.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
+    SLICE_X11Y38.C5      net (fanout=2)        1.284   tiles/selector/Msub_n0036_Madd_lut<0>5
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X11Y38.D5      net (fanout=2)        0.239   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.527ns (1.834ns logic, 5.693ns route)
+                                                       (24.4% logic, 75.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.455ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.430ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X6Y36.A3       net (fanout=13)       0.808   n0036[2]
+    SLICE_X6Y36.A        Tilo                  0.235   N102
+                                                       R_inv38_F
+    SLICE_X4Y37.C1       net (fanout=1)        0.775   N102
+    SLICE_X4Y37.CMUX     Tilo                  0.430   N94
+                                                       R_inv39_G
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.430ns (2.081ns logic, 5.349ns route)
                                                        (28.0% logic, 72.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.586ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd2_1 (FF)
+Slack:                  32.477ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.367ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.012ns (0.194 - 0.206)
+  Data Path Delay:      7.408ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -687,39 +743,39 @@ Slack:                  33.586ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd2_1 to vga_R
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y47.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd2_3
-                                                       tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X6Y45.B6       net (fanout=5)        0.660   tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X5Y44.C1       net (fanout=19)       0.911   _n0379[12]
-    SLICE_X5Y44.C        Tilo                  0.259   R_inv17
-                                                       R_inv16_SW0
-    SLICE_X5Y44.A3       net (fanout=1)        1.289   N147
-    SLICE_X5Y44.A        Tilo                  0.259   R_inv17
-                                                       R_inv16
-    SLICE_X5Y44.B5       net (fanout=1)        0.440   R_inv16
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X9Y38.B1       net (fanout=14)       1.069   _n0305[12]
+    SLICE_X9Y38.B        Tilo                  0.259   N66
+                                                       R_inv42
+    SLICE_X9Y38.A5       net (fanout=1)        0.230   R_inv42
+    SLICE_X9Y38.A        Tilo                  0.259   N66
+                                                       R_inv43
+    SLICE_X11Y38.D2      net (fanout=1)        0.732   R_inv43
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.367ns (1.815ns logic, 4.552ns route)
-                                                       (28.5% logic, 71.5% route)
+    Total                                      7.408ns (1.934ns logic, 5.474ns route)
+                                                       (26.1% logic, 73.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.638ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  32.489ns (requirement - (data path - clock path skew + uncertainty))
   Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.231ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
+  Data Path Delay:      7.467ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -734,32 +790,35 @@ Slack:                  33.638ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
                                                        tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B4       net (fanout=2)        0.949   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X11Y45.B1      net (fanout=6)        1.692   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X11Y45.B       Tilo                  0.259   GND_4_o_GND_4_o_sub_13_OUT<4>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<4>11
-    SLICE_X9Y45.B3       net (fanout=1)        0.758   GND_4_o_GND_4_o_sub_13_OUT<4>1
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X8Y51.B3       net (fanout=10)       1.831   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q__n0305<4>1
+    SLICE_X10Y37.A5      net (fanout=4)        1.382   _n0305[4]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X10Y37.CX      net (fanout=7)        0.645   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X10Y37.CMUX    Tcxc                  0.192   N59
+                                                       R_inv49_SW0_SW0
+    SLICE_X11Y38.D3      net (fanout=1)        0.804   N57
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.231ns (1.646ns logic, 4.585ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                      7.467ns (1.743ns logic, 5.724ns route)
+                                                       (23.3% logic, 76.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.643ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
+Slack:                  32.507ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.227ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
+  Data Path Delay:      7.378ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -770,36 +829,468 @@ Slack:                  33.643ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B3       net (fanout=2)        0.994   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X11Y45.B1      net (fanout=6)        1.692   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X11Y45.B       Tilo                  0.259   GND_4_o_GND_4_o_sub_13_OUT<4>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<4>11
-    SLICE_X9Y45.B3       net (fanout=1)        0.758   GND_4_o_GND_4_o_sub_13_OUT<4>1
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X6Y37.D6       net (fanout=13)       0.418   n0036[2]
+    SLICE_X6Y37.CMUX     Topdc                 0.402   outdata_56
+                                                       R_inv49_SW0_SW1_F
+                                                       R_inv49_SW0_SW1
+    SLICE_X11Y38.D6      net (fanout=1)        0.875   N58
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.227ns (1.597ns logic, 4.630ns route)
+    Total                                      7.378ns (2.077ns logic, 5.301ns route)
+                                                       (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.548ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.337ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X10Y37.B3      net (fanout=13)       0.945   n0036[2]
+    SLICE_X10Y37.B       Tilo                  0.235   N59
+                                                       R_inv49_SW0_SW2
+    SLICE_X11Y38.D4      net (fanout=1)        0.474   N59
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.337ns (1.910ns logic, 5.427ns route)
+                                                       (26.0% logic, 74.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.559ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.397ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.327 - 0.336)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B3       net (fanout=10)       1.831   tiles/M_selected_tile_q_FSM_FFd5_1
+    SLICE_X8Y51.B        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q__n0305<4>1
+    SLICE_X11Y38.A1      net (fanout=4)        1.508   _n0305[4]
+    SLICE_X11Y38.A       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_n0036_Madd_cy<0>51
+    SLICE_X11Y38.C1      net (fanout=2)        0.923   tiles/selector/Msub_n0036_Madd_cy<0>4
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X11Y38.D5      net (fanout=2)        0.239   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.397ns (1.834ns logic, 5.563ns route)
+                                                       (24.8% logic, 75.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.610ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.275ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X11Y38.C2      net (fanout=7)        0.733   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X11Y38.D5      net (fanout=2)        0.239   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.275ns (1.910ns logic, 5.365ns route)
+                                                       (26.3% logic, 73.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.613ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.272ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X11Y38.A6      net (fanout=14)       0.733   _n0305[12]
+    SLICE_X11Y38.A       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_n0036_Madd_cy<0>51
+    SLICE_X11Y38.C1      net (fanout=2)        0.923   tiles/selector/Msub_n0036_Madd_cy<0>4
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X11Y38.D5      net (fanout=2)        0.239   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.272ns (1.934ns logic, 5.338ns route)
+                                                       (26.6% logic, 73.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.651ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.234ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X4Y37.D3       net (fanout=7)        1.235   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X4Y37.CMUX     Topdc                 0.456   N94
+                                                       R_inv39_F
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.234ns (1.848ns logic, 5.386ns route)
+                                                       (25.5% logic, 74.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.660ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.225ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y37.A6      net (fanout=14)       0.950   _n0305[12]
+    SLICE_X10Y37.A       Tilo                  0.235   N59
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
+    SLICE_X4Y37.C3       net (fanout=7)        1.252   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
+    SLICE_X4Y37.CMUX     Tilo                  0.430   N94
+                                                       R_inv39_G
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.225ns (1.822ns logic, 5.403ns route)
+                                                       (25.2% logic, 74.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.697ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.188ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X7Y39.D5       net (fanout=13)       0.259   n0036[2]
+    SLICE_X7Y39.D        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       R_inv29_G
+    SLICE_X4Y37.D4       net (fanout=1)        1.032   N95
+    SLICE_X4Y37.CMUX     Topdc                 0.456   N94
+                                                       R_inv39_F
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.188ns (2.131ns logic, 5.057ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.699ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.186ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.C2       net (fanout=14)       0.565   _n0305[12]
+    SLICE_X7Y39.C        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>31
+    SLICE_X4Y37.B5       net (fanout=13)       0.696   n0036[2]
+    SLICE_X4Y37.B        Tilo                  0.254   N94
+                                                       R_inv29_F
+    SLICE_X4Y37.D1       net (fanout=1)        0.598   N94
+    SLICE_X4Y37.CMUX     Topdc                 0.456   N94
+                                                       R_inv39_F
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.186ns (2.126ns logic, 5.060ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.699ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.186ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X6Y44.A4       net (fanout=14)       1.219   _n0305[12]
+    SLICE_X6Y44.A        Tilo                  0.235   tiles/selector/BUS_0001_GND_4_o_AND_4_o7
+                                                       tiles/selector/BUS_0001_GND_4_o_AND_4_o6
+    SLICE_X6Y44.B4       net (fanout=1)        0.421   tiles/selector/BUS_0001_GND_4_o_AND_4_o6
+    SLICE_X6Y44.B        Tilo                  0.235   tiles/selector/BUS_0001_GND_4_o_AND_4_o7
+                                                       tiles/selector/BUS_0001_GND_4_o_AND_4_o7
+    SLICE_X7Y43.A2       net (fanout=1)        0.726   tiles/selector/BUS_0001_GND_4_o_AND_4_o7
+    SLICE_X7Y43.A        Tilo                  0.259   vga_B_OBUF
+                                                       tiles/selector/BUS_0001_GND_4_o_AND_4_o9
+    SLICE_X7Y43.C2       net (fanout=13)       0.553   BUS_0001_GND_4_o_AND_4_o
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.186ns (1.886ns logic, 5.300ns route)
+                                                       (26.2% logic, 73.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  32.722ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
+  Destination:          vga_R (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      7.163ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X10Y38.A6      net (fanout=14)       0.733   _n0305[12]
+    SLICE_X10Y38.A       Tilo                  0.235   GND_4_o_GND_4_o_sub_13_OUT<4>1
+                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
+    SLICE_X11Y38.C3      net (fanout=5)        0.365   GND_4_o_GND_4_o_sub_13_OUT<2>1
+    SLICE_X11Y38.C       Tilo                  0.259   CounterX_2_1
+                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
+    SLICE_X4Y37.CX       net (fanout=2)        1.031   GND_4_o_GND_4_o_sub_13_OUT<5>1
+    SLICE_X4Y37.CMUX     Tcxc                  0.182   N94
+                                                       R_inv39
+    SLICE_X7Y43.C6       net (fanout=1)        0.820   R_inv39
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
+                                                       vga_R_rstpot
+                                                       vga_R
+    -------------------------------------------------  ---------------------------
+    Total                                      7.163ns (1.833ns logic, 5.330ns route)
                                                        (25.6% logic, 74.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  33.646ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
+Slack:                  32.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tiles/M_selected_tile_q_FSM_FFd1_1 (FF)
   Destination:          vga_R (FF)
   Requirement:          40.000ns
-  Data Path Delay:      6.223ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
+  Data Path Delay:      7.097ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.080ns (0.632 - 0.712)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -810,493 +1301,51 @@ Slack:                  33.646ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
+  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd1_1 to vga_R
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X8Y45.D1       net (fanout=19)       0.976   _n0379[12]
-    SLICE_X8Y45.CMUX     Topdc                 0.456   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51_F
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
-    SLICE_X6Y44.D2       net (fanout=6)        1.267   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
-    SLICE_X6Y44.CMUX     Topdc                 0.402   R_inv4
-                                                       R_inv21_SW0_F
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
+    SLICE_X8Y51.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd1_3
+                                                       tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A2       net (fanout=5)        2.381   tiles/M_selected_tile_q_FSM_FFd1_1
+    SLICE_X7Y39.A        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       tiles/_n0305<12>1
+    SLICE_X7Y39.B6       net (fanout=14)       0.178   _n0305[12]
+    SLICE_X7Y39.B        Tilo                  0.259   tiles/M_selected_tile_q_FSM_FFd5_3
+                                                       R_inv43_SW0
+    SLICE_X9Y38.A4       net (fanout=1)        0.810   N92
+    SLICE_X9Y38.A        Tilo                  0.259   N66
+                                                       R_inv43
+    SLICE_X11Y38.D2      net (fanout=1)        0.732   R_inv43
+    SLICE_X11Y38.D       Tilo                  0.259   CounterX_2_1
+                                                       R_inv49_SW0
+    SLICE_X7Y43.C4       net (fanout=1)        1.062   N45
+    SLICE_X7Y43.CLK      Tas                   0.373   vga_B_OBUF
                                                        vga_R_rstpot
                                                        vga_R
     -------------------------------------------------  ---------------------------
-    Total                                      6.223ns (1.896ns logic, 4.327ns route)
-                                                       (30.5% logic, 69.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.703ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.166ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X9Y44.B4       net (fanout=6)        1.290   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X9Y44.B        Tilo                  0.259   N141
-                                                       R_inv15
-    SLICE_X9Y45.B2       net (fanout=1)        0.914   R_inv15
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.166ns (1.551ns logic, 4.615ns route)
-                                                       (25.2% logic, 74.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.712ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.157ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X5Y44.B3       net (fanout=6)        0.943   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X5Y44.B        Tilo                  0.259   R_inv17
-                                                       R_inv19
-    SLICE_X9Y45.B1       net (fanout=1)        1.252   R_inv19
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.157ns (1.551ns logic, 4.606ns route)
-                                                       (25.2% logic, 74.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.724ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.146ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B2       net (fanout=2)        1.146   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X7Y47.A5       net (fanout=3)        0.244   tiles/_n0379[4]
-    SLICE_X7Y47.A        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>41
-    SLICE_X8Y45.A6       net (fanout=1)        0.657   tiles/selector/Msub_n0036_Madd_lut<0>4
-    SLICE_X8Y45.A        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_n0036_Madd_cy<0>51
-    SLICE_X8Y45.B4       net (fanout=2)        0.442   tiles/selector/Msub_n0036_Madd_cy<0>4
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.146ns (2.067ns logic, 4.079ns route)
-                                                       (33.6% logic, 66.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.775ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.094ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X7Y47.B1       net (fanout=2)        0.767   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X11Y45.B2      net (fanout=2)        1.582   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X11Y45.B       Tilo                  0.259   GND_4_o_GND_4_o_sub_13_OUT<4>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<4>11
-    SLICE_X9Y45.B3       net (fanout=1)        0.758   GND_4_o_GND_4_o_sub_13_OUT<4>1
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.094ns (1.675ns logic, 4.419ns route)
-                                                       (27.5% logic, 72.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.778ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd2_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.175ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.012ns (0.194 - 0.206)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd2_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X9Y47.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd2_3
-                                                       tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X7Y47.B6       net (fanout=5)        0.460   tiles/M_selected_tile_q_FSM_FFd2_1
-    SLICE_X7Y47.B        Tilo                  0.259   tiles/_n0379[4]
-                                                       tiles/M_selected_tile_q__n0379<4>1
-    SLICE_X3Y47.A1       net (fanout=3)        1.312   tiles/_n0379[4]
-    SLICE_X3Y47.A        Tilo                  0.259   tiles/_n0379[5]
-                                                       tiles/selector/Msub_n0036_Madd_lut<0>51
-    SLICE_X8Y45.B5       net (fanout=2)        1.046   tiles/selector/Msub_n0036_Madd_lut<0>5
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.175ns (1.767ns logic, 4.408ns route)
-                                                       (28.6% logic, 71.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.811ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.058ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X5Y49.AQ       Tcko                  0.430   tiles/M_selected_tile_q_FSM_FFd4_3
-                                                       tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B2       net (fanout=3)        1.225   tiles/M_selected_tile_q_FSM_FFd4_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X7Y43.B5       net (fanout=19)       0.515   _n0379[12]
-    SLICE_X7Y43.B        Tilo                  0.259   tiles/selector/base/_n0215<20>1
-                                                       R_inv12_SW0
-    SLICE_X7Y43.A3       net (fanout=1)        0.564   N143
-    SLICE_X7Y43.A        Tilo                  0.259   tiles/selector/base/_n0215<20>1
-                                                       R_inv12
-    SLICE_X9Y44.B1       net (fanout=1)        1.025   R_inv12
-    SLICE_X9Y44.B        Tilo                  0.259   N141
-                                                       R_inv15
-    SLICE_X9Y45.B2       net (fanout=1)        0.914   R_inv15
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.058ns (1.815ns logic, 4.243ns route)
-                                                       (30.0% logic, 70.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.827ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.042ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B4       net (fanout=2)        0.949   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X8Y45.D1       net (fanout=19)       0.976   _n0379[12]
-    SLICE_X8Y45.CMUX     Topdc                 0.456   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51_F
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
-    SLICE_X6Y44.D2       net (fanout=6)        1.267   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
-    SLICE_X6Y44.CMUX     Topdc                 0.402   R_inv4
-                                                       R_inv21_SW0_F
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.042ns (1.991ns logic, 4.051ns route)
-                                                       (33.0% logic, 67.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.832ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.038ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.AQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B3       net (fanout=2)        0.994   tiles/M_selected_tile_q_FSM_FFd3_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X8Y45.D1       net (fanout=19)       0.976   _n0379[12]
-    SLICE_X8Y45.CMUX     Topdc                 0.456   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51_F
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>51
-    SLICE_X6Y44.D2       net (fanout=6)        1.267   Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut[3]
-    SLICE_X6Y44.CMUX     Topdc                 0.402   R_inv4
-                                                       R_inv21_SW0_F
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.038ns (1.942ns logic, 4.096ns route)
-                                                       (32.2% logic, 67.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.834ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd4 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.035ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd4 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y49.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/M_selected_tile_q_FSM_FFd4
-    SLICE_X4Y49.D1       net (fanout=29)       1.593   tiles/M_selected_tile_q_FSM_FFd4
-    SLICE_X4Y49.D        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd41
-    SLICE_X8Y45.B1       net (fanout=1)        1.254   tiles/selector/Msub_n0036_Madd4
-    SLICE_X8Y45.B        Tilo                  0.254   GND_4_o_GND_4_o_sub_13_OUT<5>1
-                                                       tiles/selector/Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11
-    SLICE_X6Y44.CX       net (fanout=2)        0.731   GND_4_o_GND_4_o_sub_13_OUT<5>1
-    SLICE_X6Y44.CMUX     Tcxc                  0.192   R_inv4
-                                                       R_inv21_SW0
-    SLICE_X9Y45.B4       net (fanout=1)        0.859   N41
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.035ns (1.598ns logic, 4.437ns route)
-                                                       (26.5% logic, 73.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.844ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd3_2 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      6.026ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.095ns (0.628 - 0.723)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd3_2 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y49.BQ       Tcko                  0.476   tiles/M_selected_tile_q_FSM_FFd3_3
-                                                       tiles/M_selected_tile_q_FSM_FFd3_2
-    SLICE_X2Y46.D1       net (fanout=15)       1.495   tiles/M_selected_tile_q_FSM_FFd3_2
-    SLICE_X2Y46.D        Tilo                  0.235   tiles/_n0379[17]
-                                                       tiles/M_selected_tile_q__n0379<17>1
-    SLICE_X2Y46.B1       net (fanout=2)        0.549   tiles/_n0379[17]
-    SLICE_X2Y46.B        Tilo                  0.235   tiles/_n0379[17]
-                                                       tiles/selector/M_hvsync_CounterY[8]_GND_4_o_LessThan_8_o13_SW1
-    SLICE_X2Y45.C2       net (fanout=3)        0.693   tiles/selector/N47
-    SLICE_X2Y45.C        Tilo                  0.235   tiles/selector/N48
-                                                       tiles/selector/BUS_0001_GND_4_o_AND_4_o8_SW0
-    SLICE_X9Y45.A5       net (fanout=1)        1.333   N134
-    SLICE_X9Y45.A        Tilo                  0.259   vga_B_OBUF
-                                                       vga_R_rstpot_SW0
-    SLICE_X9Y45.B6       net (fanout=1)        0.143   N132
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      6.026ns (1.813ns logic, 4.213ns route)
-                                                       (30.1% logic, 69.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  33.884ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               tiles/M_selected_tile_q_FSM_FFd5_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      5.985ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.096ns (0.628 - 0.724)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: tiles/M_selected_tile_q_FSM_FFd5_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y48.AQ       Tcko                  0.525   tiles/M_selected_tile_q_FSM_FFd5_4
-                                                       tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B4       net (fanout=2)        0.949   tiles/M_selected_tile_q_FSM_FFd5_1
-    SLICE_X6Y45.B        Tilo                  0.235   outdata_40
-                                                       tiles/_n0379<12>1
-    SLICE_X4Y49.A3       net (fanout=19)       1.186   _n0379[12]
-    SLICE_X4Y49.A        Tilo                  0.254   tiles/M_selected_tile_q_FSM_FFd5
-                                                       tiles/selector/Msub_n0036_Madd_xor<0>41
-    SLICE_X9Y44.B4       net (fanout=6)        1.290   GND_4_o_GND_4_o_sub_13_OUT<2>1
-    SLICE_X9Y44.B        Tilo                  0.259   N141
-                                                       R_inv15
-    SLICE_X9Y45.B2       net (fanout=1)        0.914   R_inv15
-    SLICE_X9Y45.CLK      Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      5.985ns (1.646ns logic, 4.339ns route)
-                                                       (27.5% logic, 72.5% route)
+    Total                                      7.097ns (1.934ns logic, 5.163ns route)
+                                                       (27.3% logic, 72.7% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: tiles/shape0/base_Mram__n06071/CLKA
+  Logical resource: tiles/shape0/base_Mram__n06071/CLKA
+  Location pin: RAMB16_X1Y16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: tiles/shape0/base_Mram__n06072/CLKAWRCLK
+  Logical resource: tiles/shape0/base_Mram__n06072/CLKAWRCLK
+  Location pin: RAMB8_X1Y15.CLKAWRCLK
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 37.334ns (period - min period limit)
   Period: 40.000ns
@@ -1309,233 +1358,217 @@ Slack: 37.334ns (period - min period limit)
 Slack: 37.751ns (period - min period limit)
   Period: 40.000ns
   Min period limit: 2.249ns (444.642MHz) (Tockper)
-  Physical resource: io_led_0/CLK0
-  Logical resource: io_led_0/CK0
-  Location pin: OLOGIC_X12Y46.CLK0
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 37.751ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 2.249ns (444.642MHz) (Tockper)
-  Physical resource: io_led_1/CLK0
-  Logical resource: io_led_1/CK0
-  Location pin: OLOGIC_X12Y47.CLK0
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 37.751ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 2.249ns (444.642MHz) (Tockper)
-  Physical resource: io_led_2/CLK0
-  Logical resource: io_led_2/CK0
-  Location pin: OLOGIC_X12Y34.CLK0
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 37.751ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 2.249ns (444.642MHz) (Tockper)
-  Physical resource: io_led_3/CLK0
-  Logical resource: io_led_3/CK0
-  Location pin: OLOGIC_X12Y35.CLK0
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 37.751ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 2.249ns (444.642MHz) (Tockper)
-  Physical resource: io_led_4/CLK0
-  Logical resource: io_led_4/CK0
-  Location pin: OLOGIC_X12Y32.CLK0
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 37.751ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 2.249ns (444.642MHz) (Tockper)
   Physical resource: io_led_5/CLK0
   Logical resource: io_led_5/CK0
   Location pin: OLOGIC_X12Y33.CLK0
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
+Slack: 38.134ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_3/CLK
-  Logical resource: syncgen/CounterY_0/CK
-  Location pin: SLICE_X4Y45.CLK
+  Min period limit: 1.866ns (535.906MHz) (Tickper)
+  Physical resource: io_button_0_IBUF/CLK0
+  Logical resource: io_led_0/CLK0
+  Location pin: ILOGIC_X2Y60.CLK0
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.134ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.866ns (535.906MHz) (Tickper)
+  Physical resource: io_button_1_IBUF/CLK0
+  Logical resource: io_led_1/CLK0
+  Location pin: ILOGIC_X2Y63.CLK0
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.134ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.866ns (535.906MHz) (Tickper)
+  Physical resource: io_button_2_IBUF/CLK0
+  Logical resource: io_led_2/CLK0
+  Location pin: ILOGIC_X2Y62.CLK0
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.134ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.866ns (535.906MHz) (Tickper)
+  Physical resource: io_button_3_IBUF/CLK0
+  Logical resource: io_led_3/CLK0
+  Location pin: ILOGIC_X1Y61.CLK0
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.134ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.866ns (535.906MHz) (Tickper)
+  Physical resource: io_button_4_IBUF/CLK0
+  Logical resource: io_led_4/CLK0
+  Location pin: ILOGIC_X2Y61.CLK0
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_3/CLK
-  Logical resource: syncgen/CounterY_1/CK
-  Location pin: SLICE_X4Y45.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_3/CLK
-  Logical resource: syncgen/CounterY_2/CK
-  Location pin: SLICE_X4Y45.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_3/CLK
-  Logical resource: syncgen/CounterY_3/CK
-  Location pin: SLICE_X4Y45.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_7/CLK
-  Logical resource: syncgen/CounterY_4/CK
-  Location pin: SLICE_X4Y46.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_7/CLK
-  Logical resource: syncgen/CounterY_5/CK
-  Location pin: SLICE_X4Y46.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_7/CLK
-  Logical resource: syncgen/CounterY_6/CK
-  Location pin: SLICE_X4Y46.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_7/CLK
-  Logical resource: syncgen/CounterY_7/CK
-  Location pin: SLICE_X4Y46.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_8/CLK
-  Logical resource: syncgen/CounterY_8/CK
-  Location pin: SLICE_X4Y47.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: tiles/M_selected_tile_q_FSM_FFd5_4/CLK
-  Logical resource: tiles/M_selected_tile_q_FSM_FFd5_1/CK
-  Location pin: SLICE_X4Y48.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: tiles/M_selected_tile_q_FSM_FFd5_4/CLK
-  Logical resource: tiles/M_selected_tile_q_FSM_FFd5_3/CK
-  Location pin: SLICE_X4Y48.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: tiles/M_selected_tile_q_FSM_FFd5_4/CLK
-  Logical resource: tiles/M_selected_tile_q_FSM_FFd5_4/CK
-  Location pin: SLICE_X4Y48.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: tiles/M_selected_tile_q_FSM_FFd5/CLK
-  Logical resource: tiles/M_selected_tile_q_FSM_FFd4/CK
-  Location pin: SLICE_X4Y49.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: tiles/M_selected_tile_q_FSM_FFd5/CLK
-  Logical resource: tiles/M_selected_tile_q_FSM_FFd5/CK
-  Location pin: SLICE_X4Y49.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
   Physical resource: CounterX_3/CLK
   Logical resource: syncgen/CounterX_0/CK
-  Location pin: SLICE_X6Y46.CLK
+  Location pin: SLICE_X12Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_3/CLK
   Logical resource: syncgen/CounterX_1/CK
-  Location pin: SLICE_X6Y46.CLK
+  Location pin: SLICE_X12Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_3/CLK
   Logical resource: syncgen/CounterX_2/CK
-  Location pin: SLICE_X6Y46.CLK
+  Location pin: SLICE_X12Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_3/CLK
   Logical resource: syncgen/CounterX_3/CK
-  Location pin: SLICE_X6Y46.CLK
+  Location pin: SLICE_X12Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_7/CLK
   Logical resource: syncgen/CounterX_4/CK
-  Location pin: SLICE_X6Y47.CLK
+  Location pin: SLICE_X12Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_7/CLK
   Logical resource: syncgen/CounterX_5/CK
-  Location pin: SLICE_X6Y47.CLK
+  Location pin: SLICE_X12Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_7/CLK
   Logical resource: syncgen/CounterX_6/CK
-  Location pin: SLICE_X6Y47.CLK
+  Location pin: SLICE_X12Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_7/CLK
   Logical resource: syncgen/CounterX_7/CK
-  Location pin: SLICE_X6Y47.CLK
+  Location pin: SLICE_X12Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: CounterX_10/CLK
   Logical resource: syncgen/CounterX_8/CK
-  Location pin: SLICE_X6Y48.CLK
+  Location pin: SLICE_X12Y39.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_10/CLK
+  Logical resource: syncgen/CounterX_9/CK
+  Location pin: SLICE_X12Y39.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_10/CLK
+  Logical resource: syncgen/CounterX_10/CK
+  Location pin: SLICE_X12Y39.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[3]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_0/CK
+  Location pin: SLICE_X16Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[3]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_1/CK
+  Location pin: SLICE_X16Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[3]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_2/CK
+  Location pin: SLICE_X16Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[3]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_3/CK
+  Location pin: SLICE_X16Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[7]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_4/CK
+  Location pin: SLICE_X16Y45.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[7]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_5/CK
+  Location pin: SLICE_X16Y45.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[7]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_6/CK
+  Location pin: SLICE_X16Y45.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[7]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_7/CK
+  Location pin: SLICE_X16Y45.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[11]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_8/CK
+  Location pin: SLICE_X16Y46.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: tiles/counter/M_stateCounter_q[11]/CLK
+  Logical resource: tiles/counter/M_stateCounter_q_9/CK
+  Location pin: SLICE_X16Y46.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1552,7 +1585,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.398|         |         |         |
+clk            |    8.122|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1561,23 +1594,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1763 paths, 0 nets, and 663 connections
+Constraints cover 3970 paths, 0 nets, and 955 connections
 
 Design statistics:
-   Minimum period:   7.398ns{1}   (Maximum frequency: 135.172MHz)
+   Minimum period:   8.122ns{1}   (Maximum frequency: 123.122MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Dec 07 04:03:22 2017 
+Analysis completed Thu Dec 07 19:43:06 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 223 MB
+Peak Memory Usage: 224 MB
 
 
 

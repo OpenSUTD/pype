@@ -7,31 +7,7 @@ module tilesort (
     input left,
     input right,
     input center,
-    output tile1_out,
-    output tile2_out,
-    output tile3_out,
-    output tile4_out,
-    output tile5_out,
-    output tile6_out,
-    output tile7_out,
-    output tile8_out,
-    output tile9_out,
-    output tile10_out,
-    output tile11_out,
-    output tile12_out,
-    output tile13_out,
-    output tile14_out,
-    output tile15_out,
-    output tile16_out,
-    output tile17_out,
-    output tile18_out,
-    output tile19_out,
-    output tile20_out,
-    output tile21_out,
-    output tile22_out,
-    output tile23_out,
-    output tile24_out,
-    output tile25_out,
+    output shape0_out,
     output selector_out,
     output debug1,
     output debug2,
@@ -40,21 +16,11 @@ module tilesort (
   )
   {
   
-  // 6 bit data for each tile
-  // data[5:3] - shape
-  // data[2:0] - orientation
-  sig data[25][6];
-  sig image_buffer[25][51];
-  sig counterh[11];
-  sig counterv[9];
-  var i;
-
+  
   .clk(clk) {
   
-    hvsync_generator hvsync;
     selector_draw selector;
-    hsync_buffer_counter hsync_buffer_counter;
-    vsync_buffer_counter vsync_buffer_counter;
+    stateCounter counter;
     
     // Draw tiles 
     //  1  2  3  4  5
@@ -63,50 +29,15 @@ module tilesort (
     // 16 17 18 19 20
     // 21 22 23 24 25
     
-    draw_tile tile1;
-    draw_tile tile2;
-    draw_tile tile3;
-    draw_tile tile4;
-    draw_tile tile5;
-    draw_tile tile6;
-    draw_tile tile7;
-    draw_tile tile8;
-    draw_tile tile9;
-    draw_tile tile10;
-    draw_tile tile11;
-    draw_tile tile12;
-    draw_tile tile13;
-    draw_tile tile14;
-    draw_tile tile15;
-    draw_tile tile16;
-    draw_tile tile17;
-    draw_tile tile18;
-    draw_tile tile19;
-    draw_tile tile20;
-    draw_tile tile21;
-    draw_tile tile22;
-    draw_tile tile23;
-    draw_tile tile24;
-    draw_tile tile25;    
+    shape0draw shape0;
     
-    // input h pos, v pos and orientation
-    // output the bitmap to be drawn
-    tile_library tile_library;
     
     fsm selected_tile = {S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25};
+    dff tile1_orientation[3];
   }
   
 
   always {
-  
-    counterh = hvsync.CounterX;
-    counterv = hvsync.CounterY;
-    
-    for (i=0; i<25; i++) {
-      data[i] = 0;
-      image_buffer[i] = 0;
-    }
-    
     debug1 = 0;
     debug2 = 0;
     debug3 = 0;
@@ -114,793 +45,485 @@ module tilesort (
     selector.horizontaloffset = 0;
     selector.verticaloffset = 0;
     selector_out = selector.bitout;
-    tile_library.data = 0;
-    tile_library.address = 0;
-    tile1.fullcounter = image_buffer[0];
-    tile2.fullcounter = image_buffer[1];
-    tile3.fullcounter = image_buffer[2];
-    tile4.fullcounter = image_buffer[3];
-    tile5.fullcounter = image_buffer[4];
-    tile6.fullcounter = image_buffer[5];
-    tile7.fullcounter = image_buffer[6];
-    tile8.fullcounter = image_buffer[7];
-    tile9.fullcounter = image_buffer[8];
-    tile10.fullcounter = image_buffer[9];
-    tile11.fullcounter = image_buffer[10];
-    tile12.fullcounter = image_buffer[11];
-    tile13.fullcounter = image_buffer[12];
-    tile14.fullcounter = image_buffer[13];
-    tile15.fullcounter = image_buffer[14];
-    tile16.fullcounter = image_buffer[15];
-    tile17.fullcounter = image_buffer[16];
-    tile18.fullcounter = image_buffer[17];
-    tile19.fullcounter = image_buffer[18];
-    tile20.fullcounter = image_buffer[19];
-    tile21.fullcounter = image_buffer[20];
-    tile22.fullcounter = image_buffer[21];
-    tile23.fullcounter = image_buffer[22];
-    tile24.fullcounter = image_buffer[23];
-    tile25.fullcounter = image_buffer[24];
-    tile1_out = tile1.draw;
-    tile2_out = tile2.draw;
-    tile3_out = tile3.draw;
-    tile4_out = tile4.draw;
-    tile5_out = tile5.draw;
-    tile6_out = tile6.draw;
-    tile7_out = tile7.draw;
-    tile8_out = tile8.draw;
-    tile9_out = tile9.draw;
-    tile10_out = tile10.draw;
-    tile11_out = tile11.draw;
-    tile12_out = tile12.draw;
-    tile13_out = tile13.draw;
-    tile14_out = tile14.draw;
-    tile15_out = tile15.draw;
-    tile16_out = tile16.draw;
-    tile17_out = tile17.draw;
-    tile18_out = tile18.draw;
-    tile19_out = tile19.draw;
-    tile20_out = tile20.draw;
-    tile21_out = tile21.draw;
-    tile22_out = tile22.draw;
-    tile23_out = tile23.draw;
-    tile24_out = tile24.draw;
-    tile25_out = tile25.draw;
-    // Constrain data
-    // On hsync reload address into buffer
-    // On hsync buffer_counter.inc_state goes from 1 to 25 then 0
-    case (hsync_buffer_counter.hsync_reload_count) {
-      1:
-        tile_library.address = tile1.address;
-        image_buffer[0] = tile_library.bitmap;
-      2:
-        tile_library.address = tile2.address;
-        image_buffer[1] = tile_library.bitmap;
-      3:
-        tile_library.address = tile3.address;
-        image_buffer[2] = tile_library.bitmap;
-      4:
-        tile_library.address = tile4.address;
-        image_buffer[3] = tile_library.bitmap;
-      5:
-        tile_library.address = tile5.address;
-        image_buffer[4] = tile_library.bitmap;
-      6:
-        tile_library.address = tile6.address;
-        image_buffer[5] = tile_library.bitmap;
-      7:
-        tile_library.address = tile7.address;
-        image_buffer[6] = tile_library.bitmap;
-      8:
-        tile_library.address = tile8.address;
-        image_buffer[7] = tile_library.bitmap;
-      9:
-        tile_library.address = tile9.address;
-        image_buffer[8] = tile_library.bitmap;
-      10:
-        tile_library.address = tile10.address;
-        image_buffer[9] = tile_library.bitmap;
-      11:
-        tile_library.address = tile11.address;
-        image_buffer[10] = tile_library.bitmap;
-      12:
-        tile_library.address = tile12.address;
-        image_buffer[11] = tile_library.bitmap;
-      13:
-        tile_library.address = tile13.address;
-        image_buffer[12] = tile_library.bitmap;
-      14:
-        tile_library.address = tile14.address;
-        image_buffer[13] = tile_library.bitmap;
-      15:
-        tile_library.address = tile15.address;
-        image_buffer[14] = tile_library.bitmap;
-      16:
-        tile_library.address = tile16.address;
-        image_buffer[15] = tile_library.bitmap;
-      17:
-        tile_library.address = tile17.address;
-        image_buffer[16] = tile_library.bitmap;
-      18:
-        tile_library.address = tile18.address;
-        image_buffer[17] = tile_library.bitmap;
-      19:
-        tile_library.address = tile19.address;
-        image_buffer[18] = tile_library.bitmap;
-      20:
-        tile_library.address = tile20.address;
-        image_buffer[19] = tile_library.bitmap;
-      21:
-        tile_library.address = tile21.address;
-        image_buffer[20] = tile_library.bitmap;
-      22:
-        tile_library.address = tile22.address;
-        image_buffer[21] = tile_library.bitmap;
-      23:
-        tile_library.address = tile23.address;
-        image_buffer[22] = tile_library.bitmap;
-      24:
-        tile_library.address = tile24.address;
-        image_buffer[23] = tile_library.bitmap;
-      25:
-        tile_library.address = tile25.address;
-        image_buffer[24] = tile_library.bitmap;
-    }
-    case (vsync_buffer_counter.vsync_reload_count) {
-      1:
-        tile_library.data = data[0];
-        tile_library.address = tile1.address;
-        image_buffer[0] = tile_library.bitmap;
-      2:
-        tile_library.data = data[1];
-        tile_library.address = tile2.address;
-        image_buffer[1] = tile_library.bitmap;
-      3:
-        tile_library.data = data[2];
-        tile_library.address = tile3.address;
-        image_buffer[2] = tile_library.bitmap;
-      4:
-        tile_library.data = data[3];
-        tile_library.address = tile4.address;
-        image_buffer[3] = tile_library.bitmap;
-      5:
-        tile_library.data = data[4];
-        tile_library.address = tile5.address;
-        image_buffer[4] = tile_library.bitmap;
-      6:
-        tile_library.data = data[5];
-        tile_library.address = tile6.address;
-        image_buffer[5] = tile_library.bitmap;
-      7:
-        tile_library.data = data[6];
-        tile_library.address = tile7.address;
-        image_buffer[6] = tile_library.bitmap;
-      8:
-        tile_library.data = data[7];
-        tile_library.address = tile8.address;
-        image_buffer[7] = tile_library.bitmap;
-      9:
-        tile_library.data = data[8];
-        tile_library.address = tile9.address;
-        image_buffer[8] = tile_library.bitmap;
-      10:
-        tile_library.data = data[9];
-        tile_library.address = tile10.address;
-        image_buffer[9] = tile_library.bitmap;
-      11:
-        tile_library.data = data[10];
-        tile_library.address = tile11.address;
-        image_buffer[10] = tile_library.bitmap;
-      12:
-        tile_library.data = data[11];
-        tile_library.address = tile12.address;
-        image_buffer[11] = tile_library.bitmap;
-      13:
-        tile_library.data = data[12];
-        tile_library.address = tile13.address;
-        image_buffer[12] = tile_library.bitmap;
-      14:
-        tile_library.data = data[13];
-        tile_library.address = tile14.address;
-        image_buffer[13] = tile_library.bitmap;
-      15:
-        tile_library.data = data[14];
-        tile_library.address = tile15.address;
-        image_buffer[14] = tile_library.bitmap;
-      16:
-        tile_library.data = data[15];
-        tile_library.address = tile16.address;
-        image_buffer[15] = tile_library.bitmap;
-      17:
-        tile_library.data = data[16];
-        tile_library.address = tile17.address;
-        image_buffer[16] = tile_library.bitmap;
-      18:
-        tile_library.data = data[17];
-        tile_library.address = tile18.address;
-        image_buffer[17] = tile_library.bitmap;
-      19:
-        tile_library.data = data[18];
-        tile_library.address = tile19.address;
-        image_buffer[18] = tile_library.bitmap;
-      20:
-        tile_library.data = data[19];
-        tile_library.address = tile20.address;
-        image_buffer[19] = tile_library.bitmap;
-      21:
-        tile_library.data = data[20];
-        tile_library.address = tile21.address;
-        image_buffer[20] = tile_library.bitmap;
-      22:
-        tile_library.data = data[21];
-        tile_library.address = tile22.address;
-        image_buffer[21] = tile_library.bitmap;
-      23:
-        tile_library.data = data[22];
-        tile_library.address = tile23.address;
-        image_buffer[22] = tile_library.bitmap;
-      24:
-        tile_library.data = data[23];
-        tile_library.address = tile24.address;
-        image_buffer[23] = tile_library.bitmap;
-      25:
-        tile_library.data = data[24];
-        tile_library.address = tile25.address;
-        image_buffer[24] = tile_library.bitmap;
-    }
-    // Button inputs will navigate and select tiles.
-    
-    case(selected_tile.q) {
+    shape0.horizontaloffset = 0;
+    shape0.verticaloffset = 0;    
+    if(tile1_orientation.q > 5) tile1_orientation.d =0;
+    else if (tile1_orientation.q <0)tile1_orientation.d=5;
+    shape0.orientation = tile1_orientation.q;
+    shape0_out = shape0.bitout;
+        case(selected_tile.q) {
     
     selected_tile.S1:
       selector.horizontaloffset = 0;
       selector.verticaloffset = 0;
-      if(left) {
+      if (center & counter.inc_state) {    
+        tile1_orientation.d = tile1_orientation.q + 1;
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S25;
         debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S6;
           debug1 = 1;
-      } if (center) {
-          data[0] = data[0] + 1;
       }
 
     selected_tile.S2:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 0;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
           debug1 = 1;
-      } if (center) {
-          data[1] = data[1] + 1;
       }
 
     selected_tile.S3:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 0;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
-      } if (center) {
-          data[2] = data[2] + 1;
       }
-
     selected_tile.S4:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 0;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S9;
           debug1 = 1;
-      } if (center) {
-          data[3] = data[3] + 1;
       }
 
     selected_tile.S5:
       selector.horizontaloffset = 480;
       selector.verticaloffset = 0;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S6;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S25;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
-      } if (center) {
-          data[4] = data[4] + 1;
       }
 
     selected_tile.S6:
       selector.horizontaloffset = 60;
       selector.verticaloffset = 52;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S11;
           debug1 = 1;
-      } if (center) {
-          data[5] = data[5] + 1;
       }
 
     selected_tile.S7:
       selector.horizontaloffset = 180;
       selector.verticaloffset = 52;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S6;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
-      } if (center) {
-          data[6] = data[6] + 1;
       }
 
     selected_tile.S8:
       selector.horizontaloffset = 300;
       selector.verticaloffset = 52;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S9;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
-      } if (center) {
-          data[7] = data[7] + 1;
       }
 
     selected_tile.S9:
       selector.horizontaloffset = 420;
       selector.verticaloffset = 52;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
-      } if (center) {
-          data[8] = data[8] + 1;
       }
 
     selected_tile.S10:
       selector.horizontaloffset = 540;
       selector.verticaloffset = 52;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S9;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S11;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
-      } if (center) {
-          data[9] = data[9] + 1;
       }
 
     selected_tile.S11:
       selector.horizontaloffset = 0;
       selector.verticaloffset = 104;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S6;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
-      } if (center) {
-          data[10] = data[10] + 1;
       }
 
     selected_tile.S12:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 104;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S11;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
-      } if (center) {
-          data[11] = data[11] + 1;
       }
 
     selected_tile.S13:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 104;
-      if(left) {
+      if (center) {
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
-      } if (center) {
-          data[12] = data[12] + 1;
       }
  
     selected_tile.S14:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 104;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S9;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
-      } if (center) {
-          data[13] = data[13] + 1;
       }
 
     selected_tile.S15:
       selector.horizontaloffset = 480;
       selector.verticaloffset = 104;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
-      } if (center) {
-          data[14] = data[14] + 1;
       }
 
     selected_tile.S16:
       selector.horizontaloffset = 60;
       selector.verticaloffset = 156;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S11;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
-      } if (center) {
-          data[15] = data[15] + 1;
       }
 
     selected_tile.S17:
       selector.horizontaloffset = 180;
       selector.verticaloffset = 156;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
-      }  if (center) {
-          data[16] = data[16] + 1;
       }
 
     selected_tile.S18:
       selector.horizontaloffset = 300;
       selector.verticaloffset = 156;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
-      } if (center) {
-          data[17] = data[17] + 1;
       }
 
     selected_tile.S19:
       selector.horizontaloffset = 420;
       selector.verticaloffset = 156;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
-      } if (center) {
-          data[18] = data[18] + 1;
       }
 
     selected_tile.S20:
       selector.horizontaloffset = 540;
       selector.verticaloffset = 156;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S25;
           debug1 = 1;
-      } if (center) {
-          data[19] = data[19] + 1;
       }
 
     selected_tile.S21:
       selector.horizontaloffset = 0;
       selector.verticaloffset = 208;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
           debug1 = 1;
-      } if (center) {
-          data[20] = data[20] + 1;
       }
 
     selected_tile.S22:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 208;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
-      } if (center) {
-          data[21] = data[21] + 1;
       }
 
     selected_tile.S23:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 208;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
-      } if (center) {
-          data[22] = data[22] + 1;
       }
 
     selected_tile.S24:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 208;
-      if(left) {
+      if (center) {
+
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S25;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
-      } if (center) {
-          data[23] = data[23] + 1;
       }
 
     selected_tile.S25:
       selector.horizontaloffset = 480;
       selector.verticaloffset = 208;
-      if(left) {
+      if (center) {
+      } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
-      } if (right) {
+      } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
           debug1 = 1;
-      } if (up) {
+      } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
-      } if (down) {
+      } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
-      } if (center) {
-          data[24] = data[24] + 1;
       }
     }
-    
-    tile1.horizontaloffset = 0;
-    tile1.verticaloffset = 0;
-    
-    tile2.horizontaloffset = 120;
-    tile2.verticaloffset = 0;
-    
-    tile3.horizontaloffset = 240;
-    tile3.verticaloffset = 0;
-    
-    tile4.horizontaloffset = 360;
-    tile4.verticaloffset = 0;
-   
-    tile5.horizontaloffset = 480;
-    tile5.verticaloffset = 0;
-   
-    tile6.horizontaloffset = 60;
-    tile6.verticaloffset = 52;
-    
-    tile7.horizontaloffset = 180;
-    tile7.verticaloffset = 52;
-    
-    tile8.horizontaloffset = 300;
-    tile8.verticaloffset = 52;
-    
-    tile9.horizontaloffset = 420;
-    tile9.verticaloffset = 52;
-    
-    tile10.horizontaloffset = 540;
-    tile10.verticaloffset = 52;
-    
-    tile11.horizontaloffset = 0;
-    tile11.verticaloffset = 104;
-    
-    tile12.horizontaloffset = 120;
-    tile12.verticaloffset = 104;
-    
-    tile13.horizontaloffset = 240;
-    tile13.verticaloffset = 104;
-    
-    tile14.horizontaloffset = 360;
-    tile14.verticaloffset = 104;
-    
-    tile15.horizontaloffset = 480;
-    tile15.verticaloffset = 104;
-    
-    tile16.horizontaloffset = 60;
-    tile16.verticaloffset = 156;
-    
-    tile17.horizontaloffset = 180;
-    tile17.verticaloffset = 156;
-    
-    tile18.horizontaloffset = 300;
-    tile18.verticaloffset = 156;
-    
-    tile19.horizontaloffset = 420;
-    tile19.verticaloffset = 156;
-    
-    tile20.horizontaloffset = 540;
-    tile20.verticaloffset = 156;
-    
-    tile21.horizontaloffset = 0;
-    tile21.verticaloffset = 208;
-    
-    tile22.horizontaloffset = 120;
-    tile22.verticaloffset = 208;
-    
-    tile23.horizontaloffset = 240;
-    tile23.verticaloffset = 208;
-    
-    tile24.horizontaloffset = 360;
-    tile24.verticaloffset = 208;
-    
-    tile25.horizontaloffset = 480;
-    tile25.verticaloffset = 208;
   }
 }

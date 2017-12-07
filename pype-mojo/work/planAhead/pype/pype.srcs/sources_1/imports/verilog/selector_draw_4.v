@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module selector_draw_3 (
+module selector_draw_4 (
     input clk,
     input [9:0] horizontaloffset,
     input [8:0] verticaloffset,
@@ -28,7 +28,7 @@ module selector_draw_3 (
   );
   wire [59-1:0] M_base_outdata;
   reg [7-1:0] M_base_address;
-  selector_base_32 base (
+  selector_base_13 base (
     .clk(clk),
     .address(M_base_address),
     .outdata(M_base_outdata)

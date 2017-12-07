@@ -19,13 +19,14 @@ wire [8:0] CounterY;
 hvsync_generator_1 syncgen(.clk(clk), .vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), 
   .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
   
-tilesort_2 tiles(.clk(clk),.debug1(d1),.debug2(d2),.debug3(d3),.debug4(d4),.left(io_button[3]),.right(io_button[4]),.up(io_button[0]),.down(io_button[2]),.center(io_button[1]),.selector_out(selector),.tile1_out(tile1),.tile2_out(tile2),.tile3_out(tile3),.tile4_out(tile4),.tile5_out(tile5),.tile6_out(tile6),.tile7_out(tile7),.tile8_out(tile8),.tile9_out(tile9),.tile10_out(tile10),.tile11_out(tile11),.tile12_out(tile12),.tile13_out(tile13),.tile14_out(tile14),.tile15_out(tile15),.tile16_out(tile16),.tile17_out(tile17),.tile18_out(tile18),.tile19_out(tile19),.tile20_out(tile20),.tile21_out(tile21),.tile22_out(tile22),.tile23_out(tile23),.tile24_out(tile24),.tile25_out(tile25));
+tilesort_2 tiles(.clk(clk),.debug1(d1),.debug2(d2),.debug3(d3),.debug4(d4),.left(io_button[3]),.right(io_button[4]),.up(io_button[0]),.down(io_button[2]),.center(io_button[1]),.selector_out(selector),.shape0_out(tile1));
+bannerdraw_3 banner(.clk(clk), .out(out));
 
 
 /////////////////////////////////////////////////////////////////
-wire R = selector|tile1|tile2|tile3|tile4|tile5|tile6|tile7|tile8|tile9|tile10|tile11|tile12|tile13|tile14|tile15|tile16|tile17|tile18|tile19|tile20|tile21|tile22|tile23|tile24|tile25;
-wire G = selector|tile1|tile2|tile3|tile4|tile5|tile6|tile7|tile8|tile9|tile10|tile11|tile12|tile13|tile14|tile15|tile16|tile17|tile18|tile19|tile20|tile21|tile22|tile23|tile24|tile25;
-wire B = selector|tile1|tile2|tile3|tile4|tile5|tile6|tile7|tile8|tile9|tile10|tile11|tile12|tile13|tile14|tile15|tile16|tile17|tile18|tile19|tile20|tile21|tile22|tile23|tile24|tile25;
+wire R = selector|tile1;
+wire G = selector|tile1;
+wire B = selector|tile1;
 reg vga_R, vga_G, vga_B;
 
 always @(posedge clk)

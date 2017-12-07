@@ -11,31 +11,7 @@ module tilesort_2 (
     input left,
     input right,
     input center,
-    output reg tile1_out,
-    output reg tile2_out,
-    output reg tile3_out,
-    output reg tile4_out,
-    output reg tile5_out,
-    output reg tile6_out,
-    output reg tile7_out,
-    output reg tile8_out,
-    output reg tile9_out,
-    output reg tile10_out,
-    output reg tile11_out,
-    output reg tile12_out,
-    output reg tile13_out,
-    output reg tile14_out,
-    output reg tile15_out,
-    output reg tile16_out,
-    output reg tile17_out,
-    output reg tile18_out,
-    output reg tile19_out,
-    output reg tile20_out,
-    output reg tile21_out,
-    output reg tile22_out,
-    output reg tile23_out,
-    output reg tile24_out,
-    output reg tile25_out,
+    output reg shape0_out,
     output reg selector_out,
     output reg debug1,
     output reg debug2,
@@ -45,381 +21,30 @@ module tilesort_2 (
   
   
   
-  reg [149:0] data;
-  
-  reg [1274:0] image_buffer;
-  
-  reg [10:0] counterh;
-  
-  reg [8:0] counterv;
-  
-  integer i;
-  
-  wire [1-1:0] M_hvsync_vga_h_sync;
-  wire [1-1:0] M_hvsync_vga_v_sync;
-  wire [1-1:0] M_hvsync_inDisplayArea;
-  wire [11-1:0] M_hvsync_CounterX;
-  wire [9-1:0] M_hvsync_CounterY;
-  hvsync_generator_1 hvsync (
-    .clk(clk),
-    .vga_h_sync(M_hvsync_vga_h_sync),
-    .vga_v_sync(M_hvsync_vga_v_sync),
-    .inDisplayArea(M_hvsync_inDisplayArea),
-    .CounterX(M_hvsync_CounterX),
-    .CounterY(M_hvsync_CounterY)
-  );
   wire [1-1:0] M_selector_bitout;
   reg [10-1:0] M_selector_horizontaloffset;
   reg [9-1:0] M_selector_verticaloffset;
-  selector_draw_3 selector (
+  selector_draw_4 selector (
     .clk(clk),
     .horizontaloffset(M_selector_horizontaloffset),
     .verticaloffset(M_selector_verticaloffset),
     .bitout(M_selector_bitout)
   );
-  wire [5-1:0] M_hsync_buffer_counter_hsync_reload_count;
-  hsync_buffer_counter_4 hsync_buffer_counter (
+  wire [1-1:0] M_counter_inc_state;
+  stateCounter_5 counter (
     .clk(clk),
-    .hsync_reload_count(M_hsync_buffer_counter_hsync_reload_count)
+    .inc_state(M_counter_inc_state)
   );
-  wire [5-1:0] M_vsync_buffer_counter_vsync_reload_count;
-  vsync_buffer_counter_5 vsync_buffer_counter (
+  wire [1-1:0] M_shape0_bitout;
+  reg [10-1:0] M_shape0_horizontaloffset;
+  reg [9-1:0] M_shape0_verticaloffset;
+  reg [3-1:0] M_shape0_orientation;
+  shape0draw_6 shape0 (
     .clk(clk),
-    .vsync_reload_count(M_vsync_buffer_counter_vsync_reload_count)
-  );
-  wire [1-1:0] M_tile1_address;
-  wire [1-1:0] M_tile1_draw;
-  reg [10-1:0] M_tile1_horizontaloffset;
-  reg [9-1:0] M_tile1_verticaloffset;
-  reg [51-1:0] M_tile1_fullcounter;
-  draw_tile_6 tile1 (
-    .clk(clk),
-    .horizontaloffset(M_tile1_horizontaloffset),
-    .verticaloffset(M_tile1_verticaloffset),
-    .fullcounter(M_tile1_fullcounter),
-    .address(M_tile1_address),
-    .draw(M_tile1_draw)
-  );
-  wire [1-1:0] M_tile2_address;
-  wire [1-1:0] M_tile2_draw;
-  reg [10-1:0] M_tile2_horizontaloffset;
-  reg [9-1:0] M_tile2_verticaloffset;
-  reg [51-1:0] M_tile2_fullcounter;
-  draw_tile_6 tile2 (
-    .clk(clk),
-    .horizontaloffset(M_tile2_horizontaloffset),
-    .verticaloffset(M_tile2_verticaloffset),
-    .fullcounter(M_tile2_fullcounter),
-    .address(M_tile2_address),
-    .draw(M_tile2_draw)
-  );
-  wire [1-1:0] M_tile3_address;
-  wire [1-1:0] M_tile3_draw;
-  reg [10-1:0] M_tile3_horizontaloffset;
-  reg [9-1:0] M_tile3_verticaloffset;
-  reg [51-1:0] M_tile3_fullcounter;
-  draw_tile_6 tile3 (
-    .clk(clk),
-    .horizontaloffset(M_tile3_horizontaloffset),
-    .verticaloffset(M_tile3_verticaloffset),
-    .fullcounter(M_tile3_fullcounter),
-    .address(M_tile3_address),
-    .draw(M_tile3_draw)
-  );
-  wire [1-1:0] M_tile4_address;
-  wire [1-1:0] M_tile4_draw;
-  reg [10-1:0] M_tile4_horizontaloffset;
-  reg [9-1:0] M_tile4_verticaloffset;
-  reg [51-1:0] M_tile4_fullcounter;
-  draw_tile_6 tile4 (
-    .clk(clk),
-    .horizontaloffset(M_tile4_horizontaloffset),
-    .verticaloffset(M_tile4_verticaloffset),
-    .fullcounter(M_tile4_fullcounter),
-    .address(M_tile4_address),
-    .draw(M_tile4_draw)
-  );
-  wire [1-1:0] M_tile5_address;
-  wire [1-1:0] M_tile5_draw;
-  reg [10-1:0] M_tile5_horizontaloffset;
-  reg [9-1:0] M_tile5_verticaloffset;
-  reg [51-1:0] M_tile5_fullcounter;
-  draw_tile_6 tile5 (
-    .clk(clk),
-    .horizontaloffset(M_tile5_horizontaloffset),
-    .verticaloffset(M_tile5_verticaloffset),
-    .fullcounter(M_tile5_fullcounter),
-    .address(M_tile5_address),
-    .draw(M_tile5_draw)
-  );
-  wire [1-1:0] M_tile6_address;
-  wire [1-1:0] M_tile6_draw;
-  reg [10-1:0] M_tile6_horizontaloffset;
-  reg [9-1:0] M_tile6_verticaloffset;
-  reg [51-1:0] M_tile6_fullcounter;
-  draw_tile_6 tile6 (
-    .clk(clk),
-    .horizontaloffset(M_tile6_horizontaloffset),
-    .verticaloffset(M_tile6_verticaloffset),
-    .fullcounter(M_tile6_fullcounter),
-    .address(M_tile6_address),
-    .draw(M_tile6_draw)
-  );
-  wire [1-1:0] M_tile7_address;
-  wire [1-1:0] M_tile7_draw;
-  reg [10-1:0] M_tile7_horizontaloffset;
-  reg [9-1:0] M_tile7_verticaloffset;
-  reg [51-1:0] M_tile7_fullcounter;
-  draw_tile_6 tile7 (
-    .clk(clk),
-    .horizontaloffset(M_tile7_horizontaloffset),
-    .verticaloffset(M_tile7_verticaloffset),
-    .fullcounter(M_tile7_fullcounter),
-    .address(M_tile7_address),
-    .draw(M_tile7_draw)
-  );
-  wire [1-1:0] M_tile8_address;
-  wire [1-1:0] M_tile8_draw;
-  reg [10-1:0] M_tile8_horizontaloffset;
-  reg [9-1:0] M_tile8_verticaloffset;
-  reg [51-1:0] M_tile8_fullcounter;
-  draw_tile_6 tile8 (
-    .clk(clk),
-    .horizontaloffset(M_tile8_horizontaloffset),
-    .verticaloffset(M_tile8_verticaloffset),
-    .fullcounter(M_tile8_fullcounter),
-    .address(M_tile8_address),
-    .draw(M_tile8_draw)
-  );
-  wire [1-1:0] M_tile9_address;
-  wire [1-1:0] M_tile9_draw;
-  reg [10-1:0] M_tile9_horizontaloffset;
-  reg [9-1:0] M_tile9_verticaloffset;
-  reg [51-1:0] M_tile9_fullcounter;
-  draw_tile_6 tile9 (
-    .clk(clk),
-    .horizontaloffset(M_tile9_horizontaloffset),
-    .verticaloffset(M_tile9_verticaloffset),
-    .fullcounter(M_tile9_fullcounter),
-    .address(M_tile9_address),
-    .draw(M_tile9_draw)
-  );
-  wire [1-1:0] M_tile10_address;
-  wire [1-1:0] M_tile10_draw;
-  reg [10-1:0] M_tile10_horizontaloffset;
-  reg [9-1:0] M_tile10_verticaloffset;
-  reg [51-1:0] M_tile10_fullcounter;
-  draw_tile_6 tile10 (
-    .clk(clk),
-    .horizontaloffset(M_tile10_horizontaloffset),
-    .verticaloffset(M_tile10_verticaloffset),
-    .fullcounter(M_tile10_fullcounter),
-    .address(M_tile10_address),
-    .draw(M_tile10_draw)
-  );
-  wire [1-1:0] M_tile11_address;
-  wire [1-1:0] M_tile11_draw;
-  reg [10-1:0] M_tile11_horizontaloffset;
-  reg [9-1:0] M_tile11_verticaloffset;
-  reg [51-1:0] M_tile11_fullcounter;
-  draw_tile_6 tile11 (
-    .clk(clk),
-    .horizontaloffset(M_tile11_horizontaloffset),
-    .verticaloffset(M_tile11_verticaloffset),
-    .fullcounter(M_tile11_fullcounter),
-    .address(M_tile11_address),
-    .draw(M_tile11_draw)
-  );
-  wire [1-1:0] M_tile12_address;
-  wire [1-1:0] M_tile12_draw;
-  reg [10-1:0] M_tile12_horizontaloffset;
-  reg [9-1:0] M_tile12_verticaloffset;
-  reg [51-1:0] M_tile12_fullcounter;
-  draw_tile_6 tile12 (
-    .clk(clk),
-    .horizontaloffset(M_tile12_horizontaloffset),
-    .verticaloffset(M_tile12_verticaloffset),
-    .fullcounter(M_tile12_fullcounter),
-    .address(M_tile12_address),
-    .draw(M_tile12_draw)
-  );
-  wire [1-1:0] M_tile13_address;
-  wire [1-1:0] M_tile13_draw;
-  reg [10-1:0] M_tile13_horizontaloffset;
-  reg [9-1:0] M_tile13_verticaloffset;
-  reg [51-1:0] M_tile13_fullcounter;
-  draw_tile_6 tile13 (
-    .clk(clk),
-    .horizontaloffset(M_tile13_horizontaloffset),
-    .verticaloffset(M_tile13_verticaloffset),
-    .fullcounter(M_tile13_fullcounter),
-    .address(M_tile13_address),
-    .draw(M_tile13_draw)
-  );
-  wire [1-1:0] M_tile14_address;
-  wire [1-1:0] M_tile14_draw;
-  reg [10-1:0] M_tile14_horizontaloffset;
-  reg [9-1:0] M_tile14_verticaloffset;
-  reg [51-1:0] M_tile14_fullcounter;
-  draw_tile_6 tile14 (
-    .clk(clk),
-    .horizontaloffset(M_tile14_horizontaloffset),
-    .verticaloffset(M_tile14_verticaloffset),
-    .fullcounter(M_tile14_fullcounter),
-    .address(M_tile14_address),
-    .draw(M_tile14_draw)
-  );
-  wire [1-1:0] M_tile15_address;
-  wire [1-1:0] M_tile15_draw;
-  reg [10-1:0] M_tile15_horizontaloffset;
-  reg [9-1:0] M_tile15_verticaloffset;
-  reg [51-1:0] M_tile15_fullcounter;
-  draw_tile_6 tile15 (
-    .clk(clk),
-    .horizontaloffset(M_tile15_horizontaloffset),
-    .verticaloffset(M_tile15_verticaloffset),
-    .fullcounter(M_tile15_fullcounter),
-    .address(M_tile15_address),
-    .draw(M_tile15_draw)
-  );
-  wire [1-1:0] M_tile16_address;
-  wire [1-1:0] M_tile16_draw;
-  reg [10-1:0] M_tile16_horizontaloffset;
-  reg [9-1:0] M_tile16_verticaloffset;
-  reg [51-1:0] M_tile16_fullcounter;
-  draw_tile_6 tile16 (
-    .clk(clk),
-    .horizontaloffset(M_tile16_horizontaloffset),
-    .verticaloffset(M_tile16_verticaloffset),
-    .fullcounter(M_tile16_fullcounter),
-    .address(M_tile16_address),
-    .draw(M_tile16_draw)
-  );
-  wire [1-1:0] M_tile17_address;
-  wire [1-1:0] M_tile17_draw;
-  reg [10-1:0] M_tile17_horizontaloffset;
-  reg [9-1:0] M_tile17_verticaloffset;
-  reg [51-1:0] M_tile17_fullcounter;
-  draw_tile_6 tile17 (
-    .clk(clk),
-    .horizontaloffset(M_tile17_horizontaloffset),
-    .verticaloffset(M_tile17_verticaloffset),
-    .fullcounter(M_tile17_fullcounter),
-    .address(M_tile17_address),
-    .draw(M_tile17_draw)
-  );
-  wire [1-1:0] M_tile18_address;
-  wire [1-1:0] M_tile18_draw;
-  reg [10-1:0] M_tile18_horizontaloffset;
-  reg [9-1:0] M_tile18_verticaloffset;
-  reg [51-1:0] M_tile18_fullcounter;
-  draw_tile_6 tile18 (
-    .clk(clk),
-    .horizontaloffset(M_tile18_horizontaloffset),
-    .verticaloffset(M_tile18_verticaloffset),
-    .fullcounter(M_tile18_fullcounter),
-    .address(M_tile18_address),
-    .draw(M_tile18_draw)
-  );
-  wire [1-1:0] M_tile19_address;
-  wire [1-1:0] M_tile19_draw;
-  reg [10-1:0] M_tile19_horizontaloffset;
-  reg [9-1:0] M_tile19_verticaloffset;
-  reg [51-1:0] M_tile19_fullcounter;
-  draw_tile_6 tile19 (
-    .clk(clk),
-    .horizontaloffset(M_tile19_horizontaloffset),
-    .verticaloffset(M_tile19_verticaloffset),
-    .fullcounter(M_tile19_fullcounter),
-    .address(M_tile19_address),
-    .draw(M_tile19_draw)
-  );
-  wire [1-1:0] M_tile20_address;
-  wire [1-1:0] M_tile20_draw;
-  reg [10-1:0] M_tile20_horizontaloffset;
-  reg [9-1:0] M_tile20_verticaloffset;
-  reg [51-1:0] M_tile20_fullcounter;
-  draw_tile_6 tile20 (
-    .clk(clk),
-    .horizontaloffset(M_tile20_horizontaloffset),
-    .verticaloffset(M_tile20_verticaloffset),
-    .fullcounter(M_tile20_fullcounter),
-    .address(M_tile20_address),
-    .draw(M_tile20_draw)
-  );
-  wire [1-1:0] M_tile21_address;
-  wire [1-1:0] M_tile21_draw;
-  reg [10-1:0] M_tile21_horizontaloffset;
-  reg [9-1:0] M_tile21_verticaloffset;
-  reg [51-1:0] M_tile21_fullcounter;
-  draw_tile_6 tile21 (
-    .clk(clk),
-    .horizontaloffset(M_tile21_horizontaloffset),
-    .verticaloffset(M_tile21_verticaloffset),
-    .fullcounter(M_tile21_fullcounter),
-    .address(M_tile21_address),
-    .draw(M_tile21_draw)
-  );
-  wire [1-1:0] M_tile22_address;
-  wire [1-1:0] M_tile22_draw;
-  reg [10-1:0] M_tile22_horizontaloffset;
-  reg [9-1:0] M_tile22_verticaloffset;
-  reg [51-1:0] M_tile22_fullcounter;
-  draw_tile_6 tile22 (
-    .clk(clk),
-    .horizontaloffset(M_tile22_horizontaloffset),
-    .verticaloffset(M_tile22_verticaloffset),
-    .fullcounter(M_tile22_fullcounter),
-    .address(M_tile22_address),
-    .draw(M_tile22_draw)
-  );
-  wire [1-1:0] M_tile23_address;
-  wire [1-1:0] M_tile23_draw;
-  reg [10-1:0] M_tile23_horizontaloffset;
-  reg [9-1:0] M_tile23_verticaloffset;
-  reg [51-1:0] M_tile23_fullcounter;
-  draw_tile_6 tile23 (
-    .clk(clk),
-    .horizontaloffset(M_tile23_horizontaloffset),
-    .verticaloffset(M_tile23_verticaloffset),
-    .fullcounter(M_tile23_fullcounter),
-    .address(M_tile23_address),
-    .draw(M_tile23_draw)
-  );
-  wire [1-1:0] M_tile24_address;
-  wire [1-1:0] M_tile24_draw;
-  reg [10-1:0] M_tile24_horizontaloffset;
-  reg [9-1:0] M_tile24_verticaloffset;
-  reg [51-1:0] M_tile24_fullcounter;
-  draw_tile_6 tile24 (
-    .clk(clk),
-    .horizontaloffset(M_tile24_horizontaloffset),
-    .verticaloffset(M_tile24_verticaloffset),
-    .fullcounter(M_tile24_fullcounter),
-    .address(M_tile24_address),
-    .draw(M_tile24_draw)
-  );
-  wire [1-1:0] M_tile25_address;
-  wire [1-1:0] M_tile25_draw;
-  reg [10-1:0] M_tile25_horizontaloffset;
-  reg [9-1:0] M_tile25_verticaloffset;
-  reg [51-1:0] M_tile25_fullcounter;
-  draw_tile_6 tile25 (
-    .clk(clk),
-    .horizontaloffset(M_tile25_horizontaloffset),
-    .verticaloffset(M_tile25_verticaloffset),
-    .fullcounter(M_tile25_fullcounter),
-    .address(M_tile25_address),
-    .draw(M_tile25_draw)
-  );
-  wire [51-1:0] M_tile_library_bitmap;
-  reg [6-1:0] M_tile_library_data;
-  reg [6-1:0] M_tile_library_address;
-  tile_library_31 tile_library (
-    .clk(clk),
-    .data(M_tile_library_data),
-    .address(M_tile_library_address),
-    .bitmap(M_tile_library_bitmap)
+    .horizontaloffset(M_shape0_horizontaloffset),
+    .verticaloffset(M_shape0_verticaloffset),
+    .orientation(M_shape0_orientation),
+    .bitout(M_shape0_bitout)
   );
   localparam S1_selected_tile = 5'd0;
   localparam S2_selected_tile = 5'd1;
@@ -448,16 +73,12 @@ module tilesort_2 (
   localparam S25_selected_tile = 5'd24;
   
   reg [4:0] M_selected_tile_d, M_selected_tile_q = S1_selected_tile;
+  reg [2:0] M_tile1_orientation_d, M_tile1_orientation_q = 1'h0;
   
   always @* begin
     M_selected_tile_d = M_selected_tile_q;
+    M_tile1_orientation_d = M_tile1_orientation_q;
     
-    counterh = M_hvsync_CounterX;
-    counterv = M_hvsync_CounterY;
-    for (i = 1'h0; i < 5'h19; i = i + 1) begin
-      data[(i)*6+5-:6] = 1'h0;
-      image_buffer[(i)*51+50-:51] = 1'h0;
-    end
     debug1 = 1'h0;
     debug2 = 1'h0;
     debug3 = 1'h0;
@@ -465,920 +86,599 @@ module tilesort_2 (
     M_selector_horizontaloffset = 1'h0;
     M_selector_verticaloffset = 1'h0;
     selector_out = M_selector_bitout;
-    M_tile_library_data = 1'h0;
-    M_tile_library_address = 1'h0;
-    M_tile1_fullcounter = image_buffer[0+50-:51];
-    M_tile2_fullcounter = image_buffer[51+50-:51];
-    M_tile3_fullcounter = image_buffer[102+50-:51];
-    M_tile4_fullcounter = image_buffer[153+50-:51];
-    M_tile5_fullcounter = image_buffer[204+50-:51];
-    M_tile6_fullcounter = image_buffer[255+50-:51];
-    M_tile7_fullcounter = image_buffer[306+50-:51];
-    M_tile8_fullcounter = image_buffer[357+50-:51];
-    M_tile9_fullcounter = image_buffer[408+50-:51];
-    M_tile10_fullcounter = image_buffer[459+50-:51];
-    M_tile11_fullcounter = image_buffer[510+50-:51];
-    M_tile12_fullcounter = image_buffer[561+50-:51];
-    M_tile13_fullcounter = image_buffer[612+50-:51];
-    M_tile14_fullcounter = image_buffer[663+50-:51];
-    M_tile15_fullcounter = image_buffer[714+50-:51];
-    M_tile16_fullcounter = image_buffer[765+50-:51];
-    M_tile17_fullcounter = image_buffer[816+50-:51];
-    M_tile18_fullcounter = image_buffer[867+50-:51];
-    M_tile19_fullcounter = image_buffer[918+50-:51];
-    M_tile20_fullcounter = image_buffer[969+50-:51];
-    M_tile21_fullcounter = image_buffer[1020+50-:51];
-    M_tile22_fullcounter = image_buffer[1071+50-:51];
-    M_tile23_fullcounter = image_buffer[1122+50-:51];
-    M_tile24_fullcounter = image_buffer[1173+50-:51];
-    M_tile25_fullcounter = image_buffer[1224+50-:51];
-    tile1_out = M_tile1_draw;
-    tile2_out = M_tile2_draw;
-    tile3_out = M_tile3_draw;
-    tile4_out = M_tile4_draw;
-    tile5_out = M_tile5_draw;
-    tile6_out = M_tile6_draw;
-    tile7_out = M_tile7_draw;
-    tile8_out = M_tile8_draw;
-    tile9_out = M_tile9_draw;
-    tile10_out = M_tile10_draw;
-    tile11_out = M_tile11_draw;
-    tile12_out = M_tile12_draw;
-    tile13_out = M_tile13_draw;
-    tile14_out = M_tile14_draw;
-    tile15_out = M_tile15_draw;
-    tile16_out = M_tile16_draw;
-    tile17_out = M_tile17_draw;
-    tile18_out = M_tile18_draw;
-    tile19_out = M_tile19_draw;
-    tile20_out = M_tile20_draw;
-    tile21_out = M_tile21_draw;
-    tile22_out = M_tile22_draw;
-    tile23_out = M_tile23_draw;
-    tile24_out = M_tile24_draw;
-    tile25_out = M_tile25_draw;
-    
-    case (M_hsync_buffer_counter_hsync_reload_count)
-      1'h1: begin
-        M_tile_library_address = M_tile1_address;
-        image_buffer[0+50-:51] = M_tile_library_bitmap;
+    M_shape0_horizontaloffset = 1'h0;
+    M_shape0_verticaloffset = 1'h0;
+    if (M_tile1_orientation_q > 3'h5) begin
+      M_tile1_orientation_d = 1'h0;
+    end else begin
+      if (M_tile1_orientation_q < 1'h0) begin
+        M_tile1_orientation_d = 3'h5;
       end
-      2'h2: begin
-        M_tile_library_address = M_tile2_address;
-        image_buffer[51+50-:51] = M_tile_library_bitmap;
-      end
-      2'h3: begin
-        M_tile_library_address = M_tile3_address;
-        image_buffer[102+50-:51] = M_tile_library_bitmap;
-      end
-      3'h4: begin
-        M_tile_library_address = M_tile4_address;
-        image_buffer[153+50-:51] = M_tile_library_bitmap;
-      end
-      3'h5: begin
-        M_tile_library_address = M_tile5_address;
-        image_buffer[204+50-:51] = M_tile_library_bitmap;
-      end
-      3'h6: begin
-        M_tile_library_address = M_tile6_address;
-        image_buffer[255+50-:51] = M_tile_library_bitmap;
-      end
-      3'h7: begin
-        M_tile_library_address = M_tile7_address;
-        image_buffer[306+50-:51] = M_tile_library_bitmap;
-      end
-      4'h8: begin
-        M_tile_library_address = M_tile8_address;
-        image_buffer[357+50-:51] = M_tile_library_bitmap;
-      end
-      4'h9: begin
-        M_tile_library_address = M_tile9_address;
-        image_buffer[408+50-:51] = M_tile_library_bitmap;
-      end
-      4'ha: begin
-        M_tile_library_address = M_tile10_address;
-        image_buffer[459+50-:51] = M_tile_library_bitmap;
-      end
-      4'hb: begin
-        M_tile_library_address = M_tile11_address;
-        image_buffer[510+50-:51] = M_tile_library_bitmap;
-      end
-      4'hc: begin
-        M_tile_library_address = M_tile12_address;
-        image_buffer[561+50-:51] = M_tile_library_bitmap;
-      end
-      4'hd: begin
-        M_tile_library_address = M_tile13_address;
-        image_buffer[612+50-:51] = M_tile_library_bitmap;
-      end
-      4'he: begin
-        M_tile_library_address = M_tile14_address;
-        image_buffer[663+50-:51] = M_tile_library_bitmap;
-      end
-      4'hf: begin
-        M_tile_library_address = M_tile15_address;
-        image_buffer[714+50-:51] = M_tile_library_bitmap;
-      end
-      5'h10: begin
-        M_tile_library_address = M_tile16_address;
-        image_buffer[765+50-:51] = M_tile_library_bitmap;
-      end
-      5'h11: begin
-        M_tile_library_address = M_tile17_address;
-        image_buffer[816+50-:51] = M_tile_library_bitmap;
-      end
-      5'h12: begin
-        M_tile_library_address = M_tile18_address;
-        image_buffer[867+50-:51] = M_tile_library_bitmap;
-      end
-      5'h13: begin
-        M_tile_library_address = M_tile19_address;
-        image_buffer[918+50-:51] = M_tile_library_bitmap;
-      end
-      5'h14: begin
-        M_tile_library_address = M_tile20_address;
-        image_buffer[969+50-:51] = M_tile_library_bitmap;
-      end
-      5'h15: begin
-        M_tile_library_address = M_tile21_address;
-        image_buffer[1020+50-:51] = M_tile_library_bitmap;
-      end
-      5'h16: begin
-        M_tile_library_address = M_tile22_address;
-        image_buffer[1071+50-:51] = M_tile_library_bitmap;
-      end
-      5'h17: begin
-        M_tile_library_address = M_tile23_address;
-        image_buffer[1122+50-:51] = M_tile_library_bitmap;
-      end
-      5'h18: begin
-        M_tile_library_address = M_tile24_address;
-        image_buffer[1173+50-:51] = M_tile_library_bitmap;
-      end
-      5'h19: begin
-        M_tile_library_address = M_tile25_address;
-        image_buffer[1224+50-:51] = M_tile_library_bitmap;
-      end
-    endcase
-    
-    case (M_vsync_buffer_counter_vsync_reload_count)
-      1'h1: begin
-        M_tile_library_data = data[0+5-:6];
-        M_tile_library_address = M_tile1_address;
-        image_buffer[0+50-:51] = M_tile_library_bitmap;
-      end
-      2'h2: begin
-        M_tile_library_data = data[6+5-:6];
-        M_tile_library_address = M_tile2_address;
-        image_buffer[51+50-:51] = M_tile_library_bitmap;
-      end
-      2'h3: begin
-        M_tile_library_data = data[12+5-:6];
-        M_tile_library_address = M_tile3_address;
-        image_buffer[102+50-:51] = M_tile_library_bitmap;
-      end
-      3'h4: begin
-        M_tile_library_data = data[18+5-:6];
-        M_tile_library_address = M_tile4_address;
-        image_buffer[153+50-:51] = M_tile_library_bitmap;
-      end
-      3'h5: begin
-        M_tile_library_data = data[24+5-:6];
-        M_tile_library_address = M_tile5_address;
-        image_buffer[204+50-:51] = M_tile_library_bitmap;
-      end
-      3'h6: begin
-        M_tile_library_data = data[30+5-:6];
-        M_tile_library_address = M_tile6_address;
-        image_buffer[255+50-:51] = M_tile_library_bitmap;
-      end
-      3'h7: begin
-        M_tile_library_data = data[36+5-:6];
-        M_tile_library_address = M_tile7_address;
-        image_buffer[306+50-:51] = M_tile_library_bitmap;
-      end
-      4'h8: begin
-        M_tile_library_data = data[42+5-:6];
-        M_tile_library_address = M_tile8_address;
-        image_buffer[357+50-:51] = M_tile_library_bitmap;
-      end
-      4'h9: begin
-        M_tile_library_data = data[48+5-:6];
-        M_tile_library_address = M_tile9_address;
-        image_buffer[408+50-:51] = M_tile_library_bitmap;
-      end
-      4'ha: begin
-        M_tile_library_data = data[54+5-:6];
-        M_tile_library_address = M_tile10_address;
-        image_buffer[459+50-:51] = M_tile_library_bitmap;
-      end
-      4'hb: begin
-        M_tile_library_data = data[60+5-:6];
-        M_tile_library_address = M_tile11_address;
-        image_buffer[510+50-:51] = M_tile_library_bitmap;
-      end
-      4'hc: begin
-        M_tile_library_data = data[66+5-:6];
-        M_tile_library_address = M_tile12_address;
-        image_buffer[561+50-:51] = M_tile_library_bitmap;
-      end
-      4'hd: begin
-        M_tile_library_data = data[72+5-:6];
-        M_tile_library_address = M_tile13_address;
-        image_buffer[612+50-:51] = M_tile_library_bitmap;
-      end
-      4'he: begin
-        M_tile_library_data = data[78+5-:6];
-        M_tile_library_address = M_tile14_address;
-        image_buffer[663+50-:51] = M_tile_library_bitmap;
-      end
-      4'hf: begin
-        M_tile_library_data = data[84+5-:6];
-        M_tile_library_address = M_tile15_address;
-        image_buffer[714+50-:51] = M_tile_library_bitmap;
-      end
-      5'h10: begin
-        M_tile_library_data = data[90+5-:6];
-        M_tile_library_address = M_tile16_address;
-        image_buffer[765+50-:51] = M_tile_library_bitmap;
-      end
-      5'h11: begin
-        M_tile_library_data = data[96+5-:6];
-        M_tile_library_address = M_tile17_address;
-        image_buffer[816+50-:51] = M_tile_library_bitmap;
-      end
-      5'h12: begin
-        M_tile_library_data = data[102+5-:6];
-        M_tile_library_address = M_tile18_address;
-        image_buffer[867+50-:51] = M_tile_library_bitmap;
-      end
-      5'h13: begin
-        M_tile_library_data = data[108+5-:6];
-        M_tile_library_address = M_tile19_address;
-        image_buffer[918+50-:51] = M_tile_library_bitmap;
-      end
-      5'h14: begin
-        M_tile_library_data = data[114+5-:6];
-        M_tile_library_address = M_tile20_address;
-        image_buffer[969+50-:51] = M_tile_library_bitmap;
-      end
-      5'h15: begin
-        M_tile_library_data = data[120+5-:6];
-        M_tile_library_address = M_tile21_address;
-        image_buffer[1020+50-:51] = M_tile_library_bitmap;
-      end
-      5'h16: begin
-        M_tile_library_data = data[126+5-:6];
-        M_tile_library_address = M_tile22_address;
-        image_buffer[1071+50-:51] = M_tile_library_bitmap;
-      end
-      5'h17: begin
-        M_tile_library_data = data[132+5-:6];
-        M_tile_library_address = M_tile23_address;
-        image_buffer[1122+50-:51] = M_tile_library_bitmap;
-      end
-      5'h18: begin
-        M_tile_library_data = data[138+5-:6];
-        M_tile_library_address = M_tile24_address;
-        image_buffer[1173+50-:51] = M_tile_library_bitmap;
-      end
-      5'h19: begin
-        M_tile_library_data = data[144+5-:6];
-        M_tile_library_address = M_tile25_address;
-        image_buffer[1224+50-:51] = M_tile_library_bitmap;
-      end
-    endcase
+    end
+    M_shape0_orientation = M_tile1_orientation_q;
+    shape0_out = M_shape0_bitout;
     
     case (M_selected_tile_q)
       S1_selected_tile: begin
         M_selector_horizontaloffset = 1'h0;
         M_selector_verticaloffset = 1'h0;
-        if (left) begin
+        if (center & M_counter_inc_state) begin
+          M_tile1_orientation_d = M_tile1_orientation_q + 1'h1;
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S25_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S2_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S21_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S6_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[0+5-:6] = data[0+5-:6] + 1'h1;
         end
       end
       S2_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 1'h0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S1_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S3_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S22_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S7_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[6+5-:6] = data[6+5-:6] + 1'h1;
         end
       end
       S3_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 1'h0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S2_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S4_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S23_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S8_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[12+5-:6] = data[12+5-:6] + 1'h1;
         end
       end
       S4_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 1'h0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S3_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S5_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S24_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S9_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[18+5-:6] = data[18+5-:6] + 1'h1;
         end
       end
       S5_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 1'h0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S4_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S6_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S25_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S10_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[24+5-:6] = data[24+5-:6] + 1'h1;
         end
       end
       S6_selected_tile: begin
         M_selector_horizontaloffset = 6'h3c;
         M_selector_verticaloffset = 6'h34;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S5_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S7_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S1_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S11_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[30+5-:6] = data[30+5-:6] + 1'h1;
         end
       end
       S7_selected_tile: begin
         M_selector_horizontaloffset = 8'hb4;
         M_selector_verticaloffset = 6'h34;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S6_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S8_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S2_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S12_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[36+5-:6] = data[36+5-:6] + 1'h1;
         end
       end
       S8_selected_tile: begin
         M_selector_horizontaloffset = 9'h12c;
         M_selector_verticaloffset = 6'h34;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S7_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S9_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S3_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S13_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[42+5-:6] = data[42+5-:6] + 1'h1;
         end
       end
       S9_selected_tile: begin
         M_selector_horizontaloffset = 9'h1a4;
         M_selector_verticaloffset = 6'h34;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S8_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S10_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S4_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S14_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[48+5-:6] = data[48+5-:6] + 1'h1;
         end
       end
       S10_selected_tile: begin
         M_selector_horizontaloffset = 10'h21c;
         M_selector_verticaloffset = 6'h34;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S9_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S11_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S5_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S15_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[54+5-:6] = data[54+5-:6] + 1'h1;
         end
       end
       S11_selected_tile: begin
         M_selector_horizontaloffset = 1'h0;
         M_selector_verticaloffset = 7'h68;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S10_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S12_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S6_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S16_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[60+5-:6] = data[60+5-:6] + 1'h1;
         end
       end
       S12_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 7'h68;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S11_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S13_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S7_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S17_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[66+5-:6] = data[66+5-:6] + 1'h1;
         end
       end
       S13_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 7'h68;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S12_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S14_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S8_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S18_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[72+5-:6] = data[72+5-:6] + 1'h1;
         end
       end
       S14_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 7'h68;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S13_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S15_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S9_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S19_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[78+5-:6] = data[78+5-:6] + 1'h1;
         end
       end
       S15_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 7'h68;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S14_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S16_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S10_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S20_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[84+5-:6] = data[84+5-:6] + 1'h1;
         end
       end
       S16_selected_tile: begin
         M_selector_horizontaloffset = 6'h3c;
         M_selector_verticaloffset = 8'h9c;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S15_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S17_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S11_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S21_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[90+5-:6] = data[90+5-:6] + 1'h1;
         end
       end
       S17_selected_tile: begin
         M_selector_horizontaloffset = 8'hb4;
         M_selector_verticaloffset = 8'h9c;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S16_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S18_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S12_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S22_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[96+5-:6] = data[96+5-:6] + 1'h1;
         end
       end
       S18_selected_tile: begin
         M_selector_horizontaloffset = 9'h12c;
         M_selector_verticaloffset = 8'h9c;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S17_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S19_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S13_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S23_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[102+5-:6] = data[102+5-:6] + 1'h1;
         end
       end
       S19_selected_tile: begin
         M_selector_horizontaloffset = 9'h1a4;
         M_selector_verticaloffset = 8'h9c;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S18_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S20_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S14_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S24_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[108+5-:6] = data[108+5-:6] + 1'h1;
         end
       end
       S20_selected_tile: begin
         M_selector_horizontaloffset = 10'h21c;
         M_selector_verticaloffset = 8'h9c;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S19_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S21_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S15_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S25_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[114+5-:6] = data[114+5-:6] + 1'h1;
         end
       end
       S21_selected_tile: begin
         M_selector_horizontaloffset = 1'h0;
         M_selector_verticaloffset = 8'hd0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S20_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S22_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S16_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S1_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[120+5-:6] = data[120+5-:6] + 1'h1;
         end
       end
       S22_selected_tile: begin
         M_selector_horizontaloffset = 7'h78;
         M_selector_verticaloffset = 8'hd0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S21_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S23_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S17_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S2_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[126+5-:6] = data[126+5-:6] + 1'h1;
         end
       end
       S23_selected_tile: begin
         M_selector_horizontaloffset = 8'hf0;
         M_selector_verticaloffset = 8'hd0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S22_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S24_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S18_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S3_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[132+5-:6] = data[132+5-:6] + 1'h1;
         end
       end
       S24_selected_tile: begin
         M_selector_horizontaloffset = 9'h168;
         M_selector_verticaloffset = 8'hd0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S23_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S25_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S19_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S4_selected_tile;
           debug1 = 1'h1;
-        end
-        if (center) begin
-          data[138+5-:6] = data[138+5-:6] + 1'h1;
         end
       end
       S25_selected_tile: begin
         M_selector_horizontaloffset = 9'h1e0;
         M_selector_verticaloffset = 8'hd0;
-        if (left) begin
+        if (center) begin
+          
+        end
+        if (left & M_counter_inc_state) begin
           M_selected_tile_d = S24_selected_tile;
           debug1 = 1'h1;
         end
-        if (right) begin
+        if (right & M_counter_inc_state) begin
           M_selected_tile_d = S1_selected_tile;
           debug1 = 1'h1;
         end
-        if (up) begin
+        if (up & M_counter_inc_state) begin
           M_selected_tile_d = S20_selected_tile;
           debug1 = 1'h1;
         end
-        if (down) begin
+        if (down & M_counter_inc_state) begin
           M_selected_tile_d = S5_selected_tile;
           debug1 = 1'h1;
         end
-        if (center) begin
-          data[144+5-:6] = data[144+5-:6] + 1'h1;
-        end
       end
     endcase
-    M_tile1_horizontaloffset = 1'h0;
-    M_tile1_verticaloffset = 1'h0;
-    M_tile2_horizontaloffset = 7'h78;
-    M_tile2_verticaloffset = 1'h0;
-    M_tile3_horizontaloffset = 8'hf0;
-    M_tile3_verticaloffset = 1'h0;
-    M_tile4_horizontaloffset = 9'h168;
-    M_tile4_verticaloffset = 1'h0;
-    M_tile5_horizontaloffset = 9'h1e0;
-    M_tile5_verticaloffset = 1'h0;
-    M_tile6_horizontaloffset = 6'h3c;
-    M_tile6_verticaloffset = 6'h34;
-    M_tile7_horizontaloffset = 8'hb4;
-    M_tile7_verticaloffset = 6'h34;
-    M_tile8_horizontaloffset = 9'h12c;
-    M_tile8_verticaloffset = 6'h34;
-    M_tile9_horizontaloffset = 9'h1a4;
-    M_tile9_verticaloffset = 6'h34;
-    M_tile10_horizontaloffset = 10'h21c;
-    M_tile10_verticaloffset = 6'h34;
-    M_tile11_horizontaloffset = 1'h0;
-    M_tile11_verticaloffset = 7'h68;
-    M_tile12_horizontaloffset = 7'h78;
-    M_tile12_verticaloffset = 7'h68;
-    M_tile13_horizontaloffset = 8'hf0;
-    M_tile13_verticaloffset = 7'h68;
-    M_tile14_horizontaloffset = 9'h168;
-    M_tile14_verticaloffset = 7'h68;
-    M_tile15_horizontaloffset = 9'h1e0;
-    M_tile15_verticaloffset = 7'h68;
-    M_tile16_horizontaloffset = 6'h3c;
-    M_tile16_verticaloffset = 8'h9c;
-    M_tile17_horizontaloffset = 8'hb4;
-    M_tile17_verticaloffset = 8'h9c;
-    M_tile18_horizontaloffset = 9'h12c;
-    M_tile18_verticaloffset = 8'h9c;
-    M_tile19_horizontaloffset = 9'h1a4;
-    M_tile19_verticaloffset = 8'h9c;
-    M_tile20_horizontaloffset = 10'h21c;
-    M_tile20_verticaloffset = 8'h9c;
-    M_tile21_horizontaloffset = 1'h0;
-    M_tile21_verticaloffset = 8'hd0;
-    M_tile22_horizontaloffset = 7'h78;
-    M_tile22_verticaloffset = 8'hd0;
-    M_tile23_horizontaloffset = 8'hf0;
-    M_tile23_verticaloffset = 8'hd0;
-    M_tile24_horizontaloffset = 9'h168;
-    M_tile24_verticaloffset = 8'hd0;
-    M_tile25_horizontaloffset = 9'h1e0;
-    M_tile25_verticaloffset = 8'hd0;
   end
   
   always @(posedge clk) begin
+    M_tile1_orientation_q <= M_tile1_orientation_d;
     M_selected_tile_q <= M_selected_tile_d;
   end
   
