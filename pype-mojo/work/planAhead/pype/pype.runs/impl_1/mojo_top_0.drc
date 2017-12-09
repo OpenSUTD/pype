@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Dec 07 22:45:52 2017
+Sat Dec 09 10:02:55 2017
 
 drc -z mojo_top_0_routed.ncd mojo_top_0.pcf
 
@@ -38,11 +38,11 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tiles/tile14_shape0/M_base_en is sourced by a combinatorial pin. This is not
+   tiles/tile22_shape0/M_base_en is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tiles/tile22_shape0/M_base_en is sourced by a combinatorial pin. This is not
+   tiles/tile14_shape0/M_base_en is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -62,11 +62,11 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tiles/tile20_shape0/M_base_en is sourced by a combinatorial pin. This is not
+   tiles/tile12_shape0/M_base_en is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tiles/tile12_shape0/M_base_en is sourced by a combinatorial pin. This is not
+   tiles/tile20_shape0/M_base_en is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net

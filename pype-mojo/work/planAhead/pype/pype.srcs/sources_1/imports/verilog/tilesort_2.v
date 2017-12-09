@@ -36,11 +36,13 @@ module tilesort_2 (
     output reg tile23_out,
     output reg tile24_out,
     output reg tile25_out,
-    output reg selector_out,
     output reg debug1,
-    output reg debug2,
-    output reg debug3,
-    output reg debug4
+    output reg debug_play,
+    output reg debug_winlevel,
+    output reg debug_wingame,
+    output reg led4,
+    output reg led5,
+    output reg selector_out
   );
   
   
@@ -386,8 +388,39 @@ module tilesort_2 (
   reg [2:0] M_tile23_orientation_d, M_tile23_orientation_q = 1'h0;
   reg [2:0] M_tile24_orientation_d, M_tile24_orientation_q = 1'h0;
   reg [2:0] M_tile25_orientation_d, M_tile25_orientation_q = 1'h0;
+  localparam GAME_PLAYING_game_stage = 2'd0;
+  localparam WIN_THE_LEVEL_game_stage = 2'd1;
+  localparam WIN_THE_GAME_game_stage = 2'd2;
+  
+  reg [1:0] M_game_stage_d, M_game_stage_q = GAME_PLAYING_game_stage;
+  reg [2:0] M_number_of_wins_d, M_number_of_wins_q = 1'h0;
+  wire [1-1:0] M_flasher_inc_state;
+  flash_counter_500ms_30 flasher (
+    .clk(clk),
+    .inc_state(M_flasher_inc_state)
+  );
+  
+  wire [1-1:0] M_alu_z;
+  wire [1-1:0] M_alu_v;
+  wire [1-1:0] M_alu_n;
+  wire [8-1:0] M_alu_outalu;
+  reg [8-1:0] M_alu_a;
+  reg [8-1:0] M_alu_b;
+  reg [6-1:0] M_alu_alufn;
+  alu_31 alu (
+    .a(M_alu_a),
+    .b(M_alu_b),
+    .alufn(M_alu_alufn),
+    .z(M_alu_z),
+    .v(M_alu_v),
+    .n(M_alu_n),
+    .outalu(M_alu_outalu)
+  );
+  
+  reg is_correct_solution;
   
   always @* begin
+    M_game_stage_d = M_game_stage_q;
     M_selected_tile_d = M_selected_tile_q;
     M_tile21_orientation_d = M_tile21_orientation_q;
     M_tile24_orientation_d = M_tile24_orientation_q;
@@ -415,10 +448,12 @@ module tilesort_2 (
     M_tile19_orientation_d = M_tile19_orientation_q;
     M_tile13_orientation_d = M_tile13_orientation_q;
     
-    debug1 = 1'h0;
-    debug2 = 1'h0;
-    debug3 = 1'h0;
-    debug4 = 1'h0;
+    M_alu_alufn = 6'h00;
+    M_alu_a = 8'h00;
+    M_alu_b = 8'h00;
+    debug_play = 1'h0;
+    debug_winlevel = 1'h0;
+    debug_wingame = 1'h0;
     M_selector_horizontaloffset = 1'h0;
     M_selector_verticaloffset = 1'h0;
     selector_out = M_selector_bitout;
@@ -697,582 +732,733 @@ module tilesort_2 (
     tile24_out = M_tile24_shape0_bitout;
     M_tile25_shape0_orientation = M_tile25_orientation_q;
     tile25_out = M_tile25_shape0_bitout;
+    led4 = 1'h0;
+    led5 = 1'h0;
+    is_correct_solution = 1'h0;
+    debug1 = 1'h0;
+    if (M_tile1_orientation_q == 3'h4 && M_tile2_orientation_q == 2'h3 && M_tile3_orientation_q == 3'h4 && M_tile4_orientation_q == 3'h4 && M_tile5_orientation_q == 3'h4 && M_tile6_orientation_q == 2'h2 && (M_tile7_orientation_q == 1'h0 | M_tile7_orientation_q == 2'h3) && M_tile8_orientation_q == 1'h0 && M_tile9_orientation_q == 1'h1 && M_tile10_orientation_q == 1'h0 && M_tile11_orientation_q == 2'h3 && M_tile12_orientation_q == 1'h0 && M_tile13_orientation_q == 2'h3 && M_tile14_orientation_q == 3'h4 && M_tile15_orientation_q == 1'h0 && M_tile16_orientation_q == 3'h5 && M_tile17_orientation_q == 2'h3 && M_tile18_orientation_q == 1'h0 && M_tile19_orientation_q == 1'h1 && M_tile20_orientation_q == 3'h5 && M_tile21_orientation_q == 2'h2 && (M_tile22_orientation_q == 1'h0 | M_tile22_orientation_q == 2'h3) && M_tile23_orientation_q == 1'h1 && M_tile24_orientation_q == 2'h3 && M_tile25_orientation_q == 1'h0) begin
+      led4 = 1'h1;
+      led5 = 1'h1;
+      is_correct_solution = 1'h1;
+    end
     
-    case (M_selected_tile_q)
-      S1_selected_tile: begin
-        M_selector_horizontaloffset = 1'h0;
-        M_selector_verticaloffset = 1'h0;
-        if (center & M_counter_inc_state) begin
-          M_tile1_orientation_d = M_tile1_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S25_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S2_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S21_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S6_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S2_selected_tile: begin
-        M_selector_horizontaloffset = 7'h78;
-        M_selector_verticaloffset = 1'h0;
-        if (center & M_counter_inc_state) begin
-          M_tile2_orientation_d = M_tile2_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S1_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S3_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S22_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S7_selected_tile;
-          debug1 = 1'h1;
+    case (M_game_stage_q)
+      WIN_THE_LEVEL_game_stage: begin
+        tile1_out = M_tile1_shape0_bitout & M_flasher_inc_state;
+        tile2_out = M_tile2_shape0_bitout & M_flasher_inc_state;
+        tile3_out = M_tile3_shape0_bitout & M_flasher_inc_state;
+        tile4_out = M_tile4_shape0_bitout & M_flasher_inc_state;
+        tile5_out = M_tile5_shape0_bitout & M_flasher_inc_state;
+        tile6_out = M_tile6_shape0_bitout & M_flasher_inc_state;
+        tile7_out = M_tile7_shape0_bitout & M_flasher_inc_state;
+        tile8_out = M_tile8_shape0_bitout & M_flasher_inc_state;
+        tile9_out = M_tile9_shape0_bitout & M_flasher_inc_state;
+        tile10_out = M_tile10_shape0_bitout & M_flasher_inc_state;
+        tile11_out = M_tile11_shape0_bitout & M_flasher_inc_state;
+        tile12_out = M_tile12_shape0_bitout & M_flasher_inc_state;
+        tile13_out = M_tile13_shape0_bitout & M_flasher_inc_state;
+        tile14_out = M_tile14_shape0_bitout & M_flasher_inc_state;
+        tile15_out = M_tile15_shape0_bitout & M_flasher_inc_state;
+        tile16_out = M_tile16_shape0_bitout & M_flasher_inc_state;
+        tile17_out = M_tile17_shape0_bitout & M_flasher_inc_state;
+        tile18_out = M_tile18_shape0_bitout & M_flasher_inc_state;
+        tile19_out = M_tile19_shape0_bitout & M_flasher_inc_state;
+        tile20_out = M_tile20_shape0_bitout & M_flasher_inc_state;
+        tile21_out = M_tile21_shape0_bitout & M_flasher_inc_state;
+        tile22_out = M_tile22_shape0_bitout & M_flasher_inc_state;
+        tile23_out = M_tile23_shape0_bitout & M_flasher_inc_state;
+        tile24_out = M_tile24_shape0_bitout & M_flasher_inc_state;
+        tile25_out = M_tile25_shape0_bitout & M_flasher_inc_state;
+        debug_winlevel = 1'h1;
+        if (center) begin
+          M_game_stage_d = GAME_PLAYING_game_stage;
         end
       end
-      S3_selected_tile: begin
-        M_selector_horizontaloffset = 8'hf0;
-        M_selector_verticaloffset = 1'h0;
-        if (center & M_counter_inc_state) begin
-          M_tile3_orientation_d = M_tile3_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S2_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S4_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S23_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S8_selected_tile;
-          debug1 = 1'h1;
-        end
+      WIN_THE_GAME_game_stage: begin
+        tile1_out = M_tile1_shape0_bitout;
+        tile2_out = M_tile2_shape0_bitout;
+        tile3_out = M_tile3_shape0_bitout;
+        tile4_out = M_tile4_shape0_bitout;
+        tile5_out = M_tile5_shape0_bitout;
+        tile6_out = M_tile6_shape0_bitout;
+        tile7_out = M_tile7_shape0_bitout;
+        tile8_out = M_tile8_shape0_bitout;
+        tile9_out = M_tile9_shape0_bitout;
+        tile10_out = M_tile10_shape0_bitout;
+        tile11_out = M_tile11_shape0_bitout;
+        tile12_out = M_tile12_shape0_bitout;
+        tile13_out = M_tile13_shape0_bitout;
+        tile14_out = M_tile14_shape0_bitout;
+        tile15_out = M_tile15_shape0_bitout;
+        tile16_out = M_tile16_shape0_bitout;
+        tile17_out = M_tile17_shape0_bitout;
+        tile18_out = M_tile18_shape0_bitout;
+        tile19_out = M_tile19_shape0_bitout;
+        tile20_out = M_tile20_shape0_bitout;
+        tile21_out = M_tile21_shape0_bitout;
+        tile22_out = M_tile22_shape0_bitout;
+        tile23_out = M_tile23_shape0_bitout;
+        tile24_out = M_tile24_shape0_bitout;
+        tile25_out = M_tile25_shape0_bitout;
+        debug_wingame = 1'h1;
       end
-      S4_selected_tile: begin
-        M_selector_horizontaloffset = 9'h168;
-        M_selector_verticaloffset = 1'h0;
-        if (center & M_counter_inc_state) begin
-          M_tile4_orientation_d = M_tile4_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S3_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S5_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S24_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S9_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S5_selected_tile: begin
-        M_selector_horizontaloffset = 9'h1e0;
-        M_selector_verticaloffset = 1'h0;
-        if (center & M_counter_inc_state) begin
-          M_tile5_orientation_d = M_tile5_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S4_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S6_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S25_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S10_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S6_selected_tile: begin
-        M_selector_horizontaloffset = 6'h3c;
-        M_selector_verticaloffset = 6'h34;
-        if (center & M_counter_inc_state) begin
-          M_tile6_orientation_d = M_tile6_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S5_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S7_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S1_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S11_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S7_selected_tile: begin
-        M_selector_horizontaloffset = 8'hb4;
-        M_selector_verticaloffset = 6'h34;
-        if (center & M_counter_inc_state) begin
-          M_tile7_orientation_d = M_tile7_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S6_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S8_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S2_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S12_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S8_selected_tile: begin
-        M_selector_horizontaloffset = 9'h12c;
-        M_selector_verticaloffset = 6'h34;
-        if (center & M_counter_inc_state) begin
-          M_tile8_orientation_d = M_tile8_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S7_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S9_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S3_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S13_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S9_selected_tile: begin
-        M_selector_horizontaloffset = 9'h1a4;
-        M_selector_verticaloffset = 6'h34;
-        if (center & M_counter_inc_state) begin
-          M_tile9_orientation_d = M_tile9_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S8_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S10_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S4_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S14_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S10_selected_tile: begin
-        M_selector_horizontaloffset = 10'h21c;
-        M_selector_verticaloffset = 6'h34;
-        if (center & M_counter_inc_state) begin
-          M_tile10_orientation_d = M_tile10_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S9_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S11_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S5_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S15_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S11_selected_tile: begin
-        M_selector_horizontaloffset = 1'h0;
-        M_selector_verticaloffset = 7'h68;
-        if (center & M_counter_inc_state) begin
-          M_tile11_orientation_d = M_tile11_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S10_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S12_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S6_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S16_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S12_selected_tile: begin
-        M_selector_horizontaloffset = 7'h78;
-        M_selector_verticaloffset = 7'h68;
-        if (center & M_counter_inc_state) begin
-          M_tile12_orientation_d = M_tile12_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S11_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S13_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S7_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S17_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S13_selected_tile: begin
-        M_selector_horizontaloffset = 8'hf0;
-        M_selector_verticaloffset = 7'h68;
-        if (center & M_counter_inc_state) begin
-          M_tile13_orientation_d = M_tile13_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S12_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S14_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S8_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S18_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S14_selected_tile: begin
-        M_selector_horizontaloffset = 9'h168;
-        M_selector_verticaloffset = 7'h68;
-        if (center & M_counter_inc_state) begin
-          M_tile14_orientation_d = M_tile14_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S13_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S15_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S9_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S19_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S15_selected_tile: begin
-        M_selector_horizontaloffset = 9'h1e0;
-        M_selector_verticaloffset = 7'h68;
-        if (center & M_counter_inc_state) begin
-          M_tile15_orientation_d = M_tile15_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S14_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S16_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S10_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S20_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S16_selected_tile: begin
-        M_selector_horizontaloffset = 6'h3c;
-        M_selector_verticaloffset = 8'h9c;
-        if (center & M_counter_inc_state) begin
-          M_tile16_orientation_d = M_tile16_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S15_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S17_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S11_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S21_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S17_selected_tile: begin
-        M_selector_horizontaloffset = 8'hb4;
-        M_selector_verticaloffset = 8'h9c;
-        if (center & M_counter_inc_state) begin
-          M_tile17_orientation_d = M_tile17_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S16_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S18_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S12_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S22_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S18_selected_tile: begin
-        M_selector_horizontaloffset = 9'h12c;
-        M_selector_verticaloffset = 8'h9c;
-        if (center & M_counter_inc_state) begin
-          M_tile18_orientation_d = M_tile18_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S17_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S19_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S13_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S23_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S19_selected_tile: begin
-        M_selector_horizontaloffset = 9'h1a4;
-        M_selector_verticaloffset = 8'h9c;
-        if (center & M_counter_inc_state) begin
-          M_tile19_orientation_d = M_tile19_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S18_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S20_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S14_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S24_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S20_selected_tile: begin
-        M_selector_horizontaloffset = 10'h21c;
-        M_selector_verticaloffset = 8'h9c;
-        if (center & M_counter_inc_state) begin
-          M_tile20_orientation_d = M_tile20_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S19_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S21_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S15_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S25_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S21_selected_tile: begin
-        M_selector_horizontaloffset = 1'h0;
-        M_selector_verticaloffset = 8'hd0;
-        if (center & M_counter_inc_state) begin
-          M_tile21_orientation_d = M_tile21_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S20_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S22_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S16_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S1_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S22_selected_tile: begin
-        M_selector_horizontaloffset = 7'h78;
-        M_selector_verticaloffset = 8'hd0;
-        if (center & M_counter_inc_state) begin
-          M_tile22_orientation_d = M_tile22_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S21_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S23_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S17_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S2_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S23_selected_tile: begin
-        M_selector_horizontaloffset = 8'hf0;
-        M_selector_verticaloffset = 8'hd0;
-        if (center & M_counter_inc_state) begin
-          M_tile23_orientation_d = M_tile23_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S22_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S24_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S18_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S3_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S24_selected_tile: begin
-        M_selector_horizontaloffset = 9'h168;
-        M_selector_verticaloffset = 8'hd0;
-        if (center & M_counter_inc_state) begin
-          M_tile24_orientation_d = M_tile24_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S23_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S25_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S19_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S4_selected_tile;
-          debug1 = 1'h1;
-        end
-      end
-      S25_selected_tile: begin
-        M_selector_horizontaloffset = 9'h1e0;
-        M_selector_verticaloffset = 8'hd0;
-        if (center & M_counter_inc_state) begin
-          M_tile25_orientation_d = M_tile25_orientation_q + 1'h1;
-        end
-        if (left & M_counter_inc_state) begin
-          M_selected_tile_d = S24_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (right & M_counter_inc_state) begin
-          M_selected_tile_d = S1_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (up & M_counter_inc_state) begin
-          M_selected_tile_d = S20_selected_tile;
-          debug1 = 1'h1;
-        end
-        if (down & M_counter_inc_state) begin
-          M_selected_tile_d = S5_selected_tile;
-          debug1 = 1'h1;
-        end
+      GAME_PLAYING_game_stage: begin
+        debug_play = 1'h1;
+        if (M_number_of_wins_q == 3'h5) begin
+          M_game_stage_d = WIN_THE_GAME_game_stage;
+        end
+        if (is_correct_solution == 1'h1) begin
+          M_game_stage_d = WIN_THE_LEVEL_game_stage;
+        end
+        
+        case (M_selected_tile_q)
+          S1_selected_tile: begin
+            M_selector_horizontaloffset = 1'h0;
+            M_selector_verticaloffset = 1'h0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile1_orientation_q;
+              M_tile1_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S25_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S2_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S21_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S6_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S2_selected_tile: begin
+            M_selector_horizontaloffset = 7'h78;
+            M_selector_verticaloffset = 1'h0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile2_orientation_q;
+              M_tile2_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S1_selected_tile;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S3_selected_tile;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S22_selected_tile;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S7_selected_tile;
+            end
+          end
+          S3_selected_tile: begin
+            M_selector_horizontaloffset = 8'hf0;
+            M_selector_verticaloffset = 1'h0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile3_orientation_q;
+              M_tile3_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S2_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S4_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S23_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S8_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S4_selected_tile: begin
+            M_selector_horizontaloffset = 9'h168;
+            M_selector_verticaloffset = 1'h0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile4_orientation_q;
+              M_tile4_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S3_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S5_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S24_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S9_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S5_selected_tile: begin
+            M_selector_horizontaloffset = 9'h1e0;
+            M_selector_verticaloffset = 1'h0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile5_orientation_q;
+              M_tile5_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S4_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S6_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S25_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S10_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S6_selected_tile: begin
+            M_selector_horizontaloffset = 6'h3c;
+            M_selector_verticaloffset = 6'h34;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile6_orientation_q;
+              M_tile6_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S5_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S7_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S1_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S11_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S7_selected_tile: begin
+            M_selector_horizontaloffset = 8'hb4;
+            M_selector_verticaloffset = 6'h34;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile7_orientation_q;
+              M_tile7_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S6_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S8_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S2_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S12_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S8_selected_tile: begin
+            M_selector_horizontaloffset = 9'h12c;
+            M_selector_verticaloffset = 6'h34;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile8_orientation_q;
+              M_tile8_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S7_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S9_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S3_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S13_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S9_selected_tile: begin
+            M_selector_horizontaloffset = 9'h1a4;
+            M_selector_verticaloffset = 6'h34;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile9_orientation_q;
+              M_tile9_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S8_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S10_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S4_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S14_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S10_selected_tile: begin
+            M_selector_horizontaloffset = 10'h21c;
+            M_selector_verticaloffset = 6'h34;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile10_orientation_q;
+              M_tile10_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S9_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S11_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S5_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S15_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S11_selected_tile: begin
+            M_selector_horizontaloffset = 1'h0;
+            M_selector_verticaloffset = 7'h68;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile11_orientation_q;
+              M_tile11_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S10_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S12_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S6_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S16_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S12_selected_tile: begin
+            M_selector_horizontaloffset = 7'h78;
+            M_selector_verticaloffset = 7'h68;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile12_orientation_q;
+              M_tile12_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S11_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S13_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S7_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S17_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S13_selected_tile: begin
+            M_selector_horizontaloffset = 8'hf0;
+            M_selector_verticaloffset = 7'h68;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile13_orientation_q;
+              M_tile13_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S12_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S14_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S8_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S18_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S14_selected_tile: begin
+            M_selector_horizontaloffset = 9'h168;
+            M_selector_verticaloffset = 7'h68;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile14_orientation_q;
+              M_tile14_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S13_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S15_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S9_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S19_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S15_selected_tile: begin
+            M_selector_horizontaloffset = 9'h1e0;
+            M_selector_verticaloffset = 7'h68;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile15_orientation_q;
+              M_tile15_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S14_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S16_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S10_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S20_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S16_selected_tile: begin
+            M_selector_horizontaloffset = 6'h3c;
+            M_selector_verticaloffset = 8'h9c;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile16_orientation_q;
+              M_tile16_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S15_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S17_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S11_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S21_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S17_selected_tile: begin
+            M_selector_horizontaloffset = 8'hb4;
+            M_selector_verticaloffset = 8'h9c;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile17_orientation_q;
+              M_tile17_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S16_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S18_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S12_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S22_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S18_selected_tile: begin
+            M_selector_horizontaloffset = 9'h12c;
+            M_selector_verticaloffset = 8'h9c;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile18_orientation_q;
+              M_tile18_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S17_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S19_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S13_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S23_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S19_selected_tile: begin
+            M_selector_horizontaloffset = 9'h1a4;
+            M_selector_verticaloffset = 8'h9c;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile19_orientation_q;
+              M_tile19_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S18_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S20_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S14_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S24_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S20_selected_tile: begin
+            M_selector_horizontaloffset = 10'h21c;
+            M_selector_verticaloffset = 8'h9c;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile20_orientation_q;
+              M_tile20_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S19_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S21_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S15_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S25_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S21_selected_tile: begin
+            M_selector_horizontaloffset = 1'h0;
+            M_selector_verticaloffset = 8'hd0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile21_orientation_q;
+              M_tile21_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S20_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S22_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S16_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S1_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S22_selected_tile: begin
+            M_selector_horizontaloffset = 7'h78;
+            M_selector_verticaloffset = 8'hd0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile22_orientation_q;
+              M_tile22_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S21_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S23_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S17_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S2_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S23_selected_tile: begin
+            M_selector_horizontaloffset = 8'hf0;
+            M_selector_verticaloffset = 8'hd0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile23_orientation_q;
+              M_tile23_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S22_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S24_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S18_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S3_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S24_selected_tile: begin
+            M_selector_horizontaloffset = 9'h168;
+            M_selector_verticaloffset = 8'hd0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile24_orientation_q;
+              M_tile24_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S23_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S25_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S19_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S4_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+          S25_selected_tile: begin
+            M_selector_horizontaloffset = 9'h1e0;
+            M_selector_verticaloffset = 8'hd0;
+            if (center & M_counter_inc_state) begin
+              M_alu_alufn = 6'h00;
+              M_alu_b = 8'h01;
+              M_alu_a = M_tile25_orientation_q;
+              M_tile25_orientation_d = M_alu_outalu[0+2-:3];
+            end
+            if (left & M_counter_inc_state) begin
+              M_selected_tile_d = S24_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (right & M_counter_inc_state) begin
+              M_selected_tile_d = S1_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (up & M_counter_inc_state) begin
+              M_selected_tile_d = S20_selected_tile;
+              debug1 = 1'h1;
+            end
+            if (down & M_counter_inc_state) begin
+              M_selected_tile_d = S5_selected_tile;
+              debug1 = 1'h1;
+            end
+          end
+        endcase
       end
     endcase
   end
@@ -1303,7 +1489,9 @@ module tilesort_2 (
     M_tile23_orientation_q <= M_tile23_orientation_d;
     M_tile24_orientation_q <= M_tile24_orientation_d;
     M_tile25_orientation_q <= M_tile25_orientation_d;
+    M_number_of_wins_q <= M_number_of_wins_d;
     M_selected_tile_q <= M_selected_tile_d;
+    M_game_stage_q <= M_game_stage_d;
   end
   
 endmodule

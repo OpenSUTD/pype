@@ -32,18 +32,14 @@ module tilesort (
     output tile23_out,
     output tile24_out,
     output tile25_out,
-        
-    output selector_out,
-    output debug1,
-    output debug2,
-    output debug3,
-    output debug4
+    output debug1,output debug_play, output debug_winlevel, output debug_wingame,output led4, output led5,
+    output selector_out
   )
   {
   
   
   .clk(clk) {
-  
+    
     selector_draw selector;
     stateCounter counter;
     
@@ -81,6 +77,7 @@ module tilesort (
     shape1draw tile25_shape0;
     
     
+    
     fsm selected_tile = {S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25};
     dff tile1_orientation[3];
     dff tile2_orientation[3];
@@ -107,18 +104,23 @@ module tilesort (
     dff tile23_orientation[3];
     dff tile24_orientation[3];
     dff tile25_orientation[3];
+    
+    fsm game_stage = {GAME_PLAYING , WIN_THE_LEVEL, WIN_THE_GAME};
+    
+    dff number_of_wins[3];
   }
-  
-
-  always {
-    debug1 = 0;
-    debug2 = 0;
-    debug3 = 0;
-    debug4 = 0;
+  alu alu;
+  sig is_correct_solution;
+  always {  
+    alu.alufn = 6b0; //initialize the alufn
+    alu.a = 8b0; // initialize alu.a;
+    alu.b = 8b0; //initialize alu.b;
+    debug_play = 0;
+    debug_winlevel=0; debug_wingame = 0;
     selector.horizontaloffset = 0;
     selector.verticaloffset = 0;
     selector_out = selector.bitout;
-    
+   
     tile1_shape0.horizontaloffset = 0;
     tile1_shape0.verticaloffset = 0;
     
@@ -294,51 +296,85 @@ module tilesort (
     tile24_out = tile24_shape0.bitout;
     tile25_shape0.orientation = tile25_orientation.q;
     tile25_out = tile25_shape0.bitout;
-        case(selected_tile.q) {
+    led4=0; led5=0;is_correct_solution = 0;debug1=0; // debug1, led4 and led5 for debug
+    if (tile1_orientation.q == 4 && tile2_orientation.q == 3 && tile3_orientation.q == 4 && tile4_orientation.q == 4 && tile5_orientation.q == 4 && tile6_orientation.q == 2 && (tile7_orientation.q == 0 | tile7_orientation.q == 3) && tile8_orientation.q == 0 && tile9_orientation.q == 1 && tile10_orientation.q == 0 && tile11_orientation.q == 3 && tile12_orientation.q == 0 && tile13_orientation.q == 3 && tile14_orientation.q == 4 && tile15_orientation.q == 0 && tile16_orientation.q == 5 && tile17_orientation.q == 3 && tile18_orientation.q == 0 && tile19_orientation.q == 1 && tile20_orientation.q == 5 && tile21_orientation.q == 2 && (tile22_orientation.q == 0 | tile22_orientation.q == 3) && tile23_orientation.q == 1 && tile24_orientation.q == 3 && tile25_orientation.q == 0) {
+    led4=1;led5=1;is_correct_solution =1;} // check unique solution
     
-    selected_tile.S1:
-      selector.horizontaloffset = 0;
-      selector.verticaloffset = 0;
-      if (center & counter.inc_state) {    
-        tile1_orientation.d = tile1_orientation.q + 1;
-      } if(left & counter.inc_state) {
-          selected_tile.d = selected_tile.S25;
-        debug1 = 1;
-      } if (right & counter.inc_state) {
-          selected_tile.d = selected_tile.S2;
-          debug1 = 1;
-      } if (up & counter.inc_state) {
-          selected_tile.d = selected_tile.S21;
-          debug1 = 1;
-      } if (down & counter.inc_state) {
-          selected_tile.d = selected_tile.S6;
-          debug1 = 1;
-      }
+
+    case (game_stage.q){
+      game_stage.WIN_THE_LEVEL:
+        debug_winlevel = 1; // led[2] should turn on
+        if (center) game_stage.d = game_stage.GAME_PLAYING; // go back to game_playing
+      game_stage.WIN_THE_GAME: //
+        // TODO:add logic here
+        debug_wingame = 1; // led[3] should turn on
+      game_stage.GAME_PLAYING:
+        debug_play = 1;
+        if (number_of_wins.q == 5) {
+				   game_stage.d = game_stage.WIN_THE_GAME;
+			   }
+        if (is_correct_solution == 1){// TODO:update number of wins ONCE only
+				   game_stage.d = game_stage.WIN_THE_LEVEL;
+			   }       
+        
+      case(selected_tile.q) {
+    
+  		 selected_tile.S1:
+    			selector.horizontaloffset = 0;
+    			selector.verticaloffset = 0;
+    
+    			if (center & counter.inc_state) {
+    	  			alu.alufn = 6b000000;
+  	    			alu.b = 8b00000001;
+      			alu.a = tile1_orientation.q;
+      			tile1_orientation.d = alu.outalu[2:0];
+
+      			//tile1_orientation.d = tile1_orientation.q + 1;
+    			} if(left & counter.inc_state) {
+        			selected_tile.d = selected_tile.S25;
+        			debug1 = 1;
+    			} if (right & counter.inc_state) {
+        			selected_tile.d = selected_tile.S2;
+        			debug1 = 1;
+    			} if (up & counter.inc_state) {
+        			selected_tile.d = selected_tile.S21;
+        			debug1 = 1;
+    			} if (down & counter.inc_state) {
+        			selected_tile.d = selected_tile.S6;
+       			debug1 = 1;
+      		}
 
     selected_tile.S2:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 0;
       if (center & counter.inc_state) {
-        tile2_orientation.d = tile2_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile2_orientation.q;
+        tile2_orientation.d = alu.outalu[2:0];
+         
+        //tile2_orientation.d = tile2_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
-          debug1 = 1;
       } if (right & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
-          debug1 = 1;
       } if (up & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
-          debug1 = 1;
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
-          debug1 = 1;
+              
       }
 
     selected_tile.S3:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 0;
       if (center & counter.inc_state) {
-        tile3_orientation.d = tile3_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile3_orientation.q;
+        tile3_orientation.d = alu.outalu[2:0];
+
+       // tile3_orientation.d = tile3_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
@@ -352,11 +388,17 @@ module tilesort (
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
       }
+
     selected_tile.S4:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 0;
       if (center & counter.inc_state) {
-        tile4_orientation.d = tile4_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile4_orientation.q;
+        tile4_orientation.d = alu.outalu[2:0];
+
+        //tile4_orientation.d = tile4_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
@@ -375,7 +417,12 @@ module tilesort (
       selector.horizontaloffset = 480;
       selector.verticaloffset = 0;
       if (center & counter.inc_state) {
-        tile5_orientation.d = tile5_orientation.q + 1;
+        	alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile5_orientation.q;
+        tile5_orientation.d = alu.outalu[2:0];
+
+        //tile5_orientation.d = tile5_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
@@ -388,13 +435,17 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
-      }
-
+      } 
     selected_tile.S6:
       selector.horizontaloffset = 60;
       selector.verticaloffset = 52;
       if (center & counter.inc_state) {
-        tile6_orientation.d = tile6_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile6_orientation.q;
+        tile6_orientation.d = alu.outalu[2:0];
+
+      //  tile6_orientation.d = tile6_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
@@ -413,7 +464,12 @@ module tilesort (
       selector.horizontaloffset = 180;
       selector.verticaloffset = 52;
       if (center & counter.inc_state) {
-        tile7_orientation.d = tile7_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile7_orientation.q;
+        tile7_orientation.d = alu.outalu[2:0];
+
+        //tile7_orientation.d = tile7_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S6;
           debug1 = 1;
@@ -426,13 +482,17 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
-      }
-
+      } 
     selected_tile.S8:
       selector.horizontaloffset = 300;
       selector.verticaloffset = 52;
       if (center & counter.inc_state) {
-        tile8_orientation.d = tile8_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile8_orientation.q;
+        tile8_orientation.d = alu.outalu[2:0];
+
+       // tile8_orientation.d = tile8_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S7;
           debug1 = 1;
@@ -445,13 +505,17 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
-      }
-
+      } 
     selected_tile.S9:
       selector.horizontaloffset = 420;
       selector.verticaloffset = 52;
       if (center & counter.inc_state) {
-        tile9_orientation.d = tile9_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile9_orientation.q;
+        tile9_orientation.d = alu.outalu[2:0];
+
+        //tile9_orientation.d = tile9_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S8;
           debug1 = 1;
@@ -465,12 +529,16 @@ module tilesort (
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
       }
-
     selected_tile.S10:
       selector.horizontaloffset = 540;
       selector.verticaloffset = 52;
       if (center & counter.inc_state) {
-        tile10_orientation.d = tile10_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile10_orientation.q;
+        tile10_orientation.d = alu.outalu[2:0];
+
+      //  tile10_orientation.d = tile10_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S9;
           debug1 = 1;
@@ -483,13 +551,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
-      }
+      } 
 
     selected_tile.S11:
       selector.horizontaloffset = 0;
       selector.verticaloffset = 104;
       if (center & counter.inc_state) {
-        tile11_orientation.d = tile11_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile11_orientation.q;
+        tile11_orientation.d = alu.outalu[2:0];
+
+     //   tile11_orientation.d = tile11_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S10;
           debug1 = 1;
@@ -502,13 +575,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
-      }
+      } 
 
     selected_tile.S12:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 104;
       if (center & counter.inc_state) {
-        tile12_orientation.d = tile12_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+        	alu.b = 8b00000001;
+        alu.a = tile12_orientation.q;
+        tile12_orientation.d = alu.outalu[2:0];
+
+      //  tile12_orientation.d = tile12_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S11;
           debug1 = 1;
@@ -521,13 +599,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S13:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 104;
       if (center & counter.inc_state) {
-        tile13_orientation.d = tile13_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile13_orientation.q;
+        tile13_orientation.d = alu.outalu[2:0];
+
+        //tile13_orientation.d = tile13_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S12;
           debug1 = 1;
@@ -540,13 +623,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
-      }
+      }  
  
     selected_tile.S14:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 104;
       if (center & counter.inc_state) {
-        tile14_orientation.d = tile14_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile14_orientation.q;
+        tile14_orientation.d = alu.outalu[2:0];
+
+        //tile14_orientation.d = tile14_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S13;
           debug1 = 1;
@@ -559,13 +647,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
-      }
+      } 
 
     selected_tile.S15:
       selector.horizontaloffset = 480;
       selector.verticaloffset = 104;
       if (center & counter.inc_state) {
-        tile15_orientation.d = tile15_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+        	alu.b = 8b00000001;
+        alu.a = tile15_orientation.q;
+        tile15_orientation.d = alu.outalu[2:0];
+
+        //tile15_orientation.d = tile15_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S14;
           debug1 = 1;
@@ -578,13 +671,17 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
-      }
-
+      }  
     selected_tile.S16:
       selector.horizontaloffset = 60;
       selector.verticaloffset = 156;
       if (center & counter.inc_state) {
-        tile16_orientation.d = tile16_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile16_orientation.q;
+        tile16_orientation.d = alu.outalu[2:0];
+
+        //tile16_orientation.d = tile16_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S15;
           debug1 = 1;
@@ -597,13 +694,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S17:
       selector.horizontaloffset = 180;
       selector.verticaloffset = 156;
       if (center & counter.inc_state) {
-        tile17_orientation.d = tile17_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile17_orientation.q;
+        tile17_orientation.d = alu.outalu[2:0];
+
+        //tile17_orientation.d = tile17_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S16;
           debug1 = 1;
@@ -616,13 +718,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S18:
       selector.horizontaloffset = 300;
       selector.verticaloffset = 156;
       if (center & counter.inc_state) {
-        tile18_orientation.d = tile18_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile18_orientation.q;
+        tile18_orientation.d = alu.outalu[2:0];
+
+        //tile18_orientation.d = tile18_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S17;
           debug1 = 1;
@@ -635,13 +742,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S19:
       selector.horizontaloffset = 420;
       selector.verticaloffset = 156;
       if (center & counter.inc_state) {
-        tile19_orientation.d = tile19_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile19_orientation.q;
+        tile19_orientation.d = alu.outalu[2:0];
+
+        //tile19_orientation.d = tile19_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S18;
           debug1 = 1;
@@ -654,13 +766,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S20:
       selector.horizontaloffset = 540;
       selector.verticaloffset = 156;
       if (center & counter.inc_state) {
-        tile20_orientation.d = tile20_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile20_orientation.q;
+        tile20_orientation.d = alu.outalu[2:0];
+
+        //tile20_orientation.d = tile20_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S19;
           debug1 = 1;
@@ -673,13 +790,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S25;
           debug1 = 1;
-        }
+        } 
 
     selected_tile.S21:
       selector.horizontaloffset = 0;
       selector.verticaloffset = 208;
       if (center & counter.inc_state) {
-        tile21_orientation.d = tile21_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile21_orientation.q;
+        tile21_orientation.d = alu.outalu[2:0];
+
+        //tile21_orientation.d = tile21_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S20;
           debug1 = 1;
@@ -692,13 +814,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S1;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S22:
       selector.horizontaloffset = 120;
       selector.verticaloffset = 208;
       if (center & counter.inc_state) {
-        tile22_orientation.d = tile22_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile22_orientation.q;
+        tile22_orientation.d = alu.outalu[2:0];
+
+        //tile22_orientation.d = tile22_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S21;
           debug1 = 1;
@@ -711,13 +838,18 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S2;
           debug1 = 1;
-      }
+      }  
 
     selected_tile.S23:
       selector.horizontaloffset = 240;
       selector.verticaloffset = 208;
       if (center & counter.inc_state) {
-        tile23_orientation.d = tile23_orientation.q + 1;
+        	alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile23_orientation.q;
+        tile23_orientation.d = alu.outalu[2:0];
+
+        //tile23_orientation.d = tile23_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S22;
           debug1 = 1;
@@ -730,13 +862,17 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S3;
           debug1 = 1;
-      }
-
+      } 
     selected_tile.S24:
       selector.horizontaloffset = 360;
       selector.verticaloffset = 208;
       if (center & counter.inc_state) {
-        tile24_orientation.d = tile24_orientation.q + 1;
+    	    alu.alufn = 6b000000;
+        	alu.b = 8b00000001;
+        alu.a = tile24_orientation.q;
+        tile24_orientation.d = alu.outalu[2:0];
+
+        //tile24_orientation.d = tile24_orientation.q + 1;
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S23;
           debug1 = 1;
@@ -749,13 +885,19 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S4;
           debug1 = 1;
-      }
-
+      }  
     selected_tile.S25:
       selector.horizontaloffset = 480;
       selector.verticaloffset = 208;
+        
+        
      if (center & counter.inc_state) {
-       tile25_orientation.d = tile25_orientation.q + 1;        
+        	alu.alufn = 6b000000;
+    	    alu.b = 8b00000001;
+        alu.a = tile25_orientation.q;
+        tile25_orientation.d = alu.outalu[2:0];
+
+        //tile25_orientation.d = tile25_orientation.q + 1;        
       } if(left & counter.inc_state) {
           selected_tile.d = selected_tile.S24;
           debug1 = 1;
@@ -768,7 +910,9 @@ module tilesort (
       } if (down & counter.inc_state) {
           selected_tile.d = selected_tile.S5;
           debug1 = 1;
-      }                       
-        }
-    }
-  }
+      } 
+                        
+     }
+   }
+ }
+}

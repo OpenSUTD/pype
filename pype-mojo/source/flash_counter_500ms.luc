@@ -12,7 +12,7 @@ module flash_counter_500ms (
     if (stateCounter.q <= 28b0001011111010111100001000000) {
       inc_state = 0;
     } 
-    if (stateCounter.q == 28b0010111110101111000010000000?) {
+    if (stateCounter.q == 28b0010111110101111000010000000) {
       stateCounter.d = 0;
   }
     

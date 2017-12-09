@@ -16,7 +16,7 @@ module shape2draw_8 (
   
   wire [11-1:0] M_hvsync_counterX;
   wire [9-1:0] M_hvsync_counterY;
-  hvsyncpass_33 hvsync (
+  hvsyncpass_35 hvsync (
     .clk(clk),
     .counterX(M_hvsync_counterX),
     .counterY(M_hvsync_counterY)
@@ -25,7 +25,7 @@ module shape2draw_8 (
   reg [1-1:0] M_base_en;
   reg [3-1:0] M_base_orientation;
   reg [6-1:0] M_base_address;
-  newshape2_38 base (
+  newshape2_40 base (
     .clk(clk),
     .en(M_base_en),
     .orientation(M_base_orientation),

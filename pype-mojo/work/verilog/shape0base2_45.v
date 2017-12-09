@@ -1,4 +1,4 @@
-module shape0base2_43(clk, en, orientation, address, bitmap);
+module shape0base2_45(clk, en, orientation, address, bitmap);
    input  clk;
    input   en;
     input wire [2:0] orientation;

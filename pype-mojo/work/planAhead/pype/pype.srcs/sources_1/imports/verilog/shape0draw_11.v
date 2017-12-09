@@ -31,7 +31,7 @@ module shape0draw_11 (
   reg [1-1:0] M_base_en;
   reg [3-1:0] M_base_orientation;
   reg [6-1:0] M_base_address;
-  shape0base2_43 base (
+  shape0base2_45 base (
     .clk(clk),
     .en(M_base_en),
     .orientation(M_base_orientation),

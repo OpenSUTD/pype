@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module hvsyncpass_33 (
+module hvsyncpass_35 (
     input clk,
     output reg [10:0] counterX,
     output reg [8:0] counterY

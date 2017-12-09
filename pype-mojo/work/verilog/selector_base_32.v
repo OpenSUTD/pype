@@ -1,4 +1,4 @@
-module selector_base_30 (
+module selector_base_32 (
     input wire clk,  // clock
     input wire[6:0] address,
     output reg [58:0] outdata

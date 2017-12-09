@@ -10,13 +10,10 @@ NET "io_led[4]" LOC = P92;
 NET "io_led[4]" IOSTANDARD = LVTTL;
 NET "io_led[5]" LOC = P93;
 NET "io_led[5]" IOSTANDARD = LVTTL;
-NET "io_led[6]" LOC = P87;
-NET "io_led[6]" IOSTANDARD = LVTTL;
-NET "io_led[7]" LOC = P88;
-NET "io_led[7]" IOSTANDARD = LVTTL;
+NET "io_led<6>" LOC = P87 | IOSTANDARD = LVTTL;
+NET "io_led<7>" LOC = P88 | IOSTANDARD = LVTTL;
 
-NET "io_led[8]" LOC = P84;
-NET "io_led[8]" IOSTANDARD = LVTTL;
+NET "io_led<8>" LOC = P84 | IOSTANDARD = LVTTL;
 NET "io_led<9>" LOC = P85 | IOSTANDARD = LVTTL;
 NET "io_led<10>" LOC = P82 | IOSTANDARD = LVTTL;
 NET "io_led<11>" LOC = P83 | IOSTANDARD = LVTTL;

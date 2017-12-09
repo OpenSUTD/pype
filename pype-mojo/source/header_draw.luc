@@ -1,0 +1,28 @@
+module header_draw (
+    input clk,  // clock
+    output out
+  ) {
+
+  .clk(clk) {
+  hvsyncpass hvsync;
+    header header;
+    }
+  
+  sig counterh[11];
+  sig counterv[9];
+  
+  always {
+    counterh = hvsync.counterX;
+    counterv = hvsync.counterY;
+    header.en = (counterh>=375 & counterh<=477);
+    if ((counterh>=375 & counterh<=1017) & (counterv>=0 & counterv<=120)) {
+      header.address = counterv-119;
+      out = header.bitmap[590-((counterh-375)/2)];
+    }
+    
+    else {
+    header.address = 999;
+    out = 0;
+    }
+  }
+}

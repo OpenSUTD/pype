@@ -28,13 +28,13 @@ module selector_draw_3 (
   );
   wire [59-1:0] M_base_outdata;
   reg [7-1:0] M_base_address;
-  selector_base_30 base (
+  selector_base_32 base (
     .clk(clk),
     .address(M_base_address),
     .outdata(M_base_outdata)
   );
   wire [1-1:0] M_flash_inc_state;
-  flash_counter_500ms_31 flash (
+  flash_counter_500ms_30 flash (
     .clk(clk),
     .inc_state(M_flash_inc_state)
   );

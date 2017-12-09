@@ -31,7 +31,7 @@ module shape5draw_5 (
   reg [1-1:0] M_base_en;
   reg [3-1:0] M_base_orientation;
   reg [6-1:0] M_base_address;
-  newshape5_32 base (
+  newshape5_34 base (
     .clk(clk),
     .en(M_base_en),
     .orientation(M_base_orientation),

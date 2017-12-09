@@ -1,0 +1,31 @@
+module water_draw (
+    input clk,  // clock
+    output out
+  ) {
+  .clk(clk) {
+    hvsyncpass hvsync;
+    water water;
+    water_counter_800ms water_counter;
+  }
+    
+  sig counterh[11];
+  sig counterv[9];
+  sig water_add[6];
+  
+ always {
+    counterh = hvsync.counterX;
+    counterv = hvsync.counterY;
+    water.en = (counterh>=375 & counterh<=477);
+    water_add[5:3] = water_counter.inc_state[5:3];
+    water_add[2:0] = 0;
+    water.address = water_add;
+    if ((counterh>=375 & counterh<=1017) & (counterv>=88 & counterv<=92)) {
+      water_add[2:0] = counterv-88;
+      out = water.bitmap[590-((counterh-375)/2)];
+    }
+    else {
+    water.address = 999;
+    out = 0;
+    }
+  }
+}

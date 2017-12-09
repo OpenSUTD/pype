@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module flash_counter_500ms_31 (
+module flash_counter_500ms_30 (
     input clk,
     output reg inc_state
   );

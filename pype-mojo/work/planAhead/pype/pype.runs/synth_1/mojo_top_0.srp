@@ -53,47 +53,59 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" into library work
 Parsing module <hvsync_generator_1>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_43.v" into library work
-Parsing module <shape0base2_43>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_30.v" into library work
-Parsing module <selector_base_30>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_32.v" into library work
-Parsing module <newshape5_32>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_42.v" into library work
-Parsing module <newshape4_42>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_51.v" into library work
-Parsing module <newshape3_51>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_38.v" into library work
-Parsing module <newshape2_38>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_34.v" into library work
-Parsing module <newshape1_34>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" into library work
-Parsing module <hvsyncpass_33>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/flash_counter_500ms_31.v" into library work
-Parsing module <flash_counter_500ms_31>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/stateCounter_4.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder_84.v" into library work
+Parsing module <adder_84>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shift_82.v" into library work
+Parsing module <shift_82>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_45.v" into library work
+Parsing module <shape0base2_45>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v" into library work
+Parsing module <selector_base_32>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_34.v" into library work
+Parsing module <newshape5_34>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_44.v" into library work
+Parsing module <newshape4_44>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_53.v" into library work
+Parsing module <newshape3_53>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_40.v" into library work
+Parsing module <newshape2_40>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_36.v" into library work
+Parsing module <newshape1_36>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" into library work
+Parsing module <hvsyncpass_35>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/flash_counter_500ms_30.v" into library work
+Parsing module <flash_counter_500ms_30>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/cmp_83.v" into library work
+Parsing module <cmp_83>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/boole_81.v" into library work
+Parsing module <boole_81>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" into library work
+Parsing module <adder8_80>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/stateCounter_4.v" into library work
 Parsing module <stateCounter_4>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" into library work
 Parsing module <shape5draw_5>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" into library work
 Parsing module <shape4draw_10>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" into library work
 Parsing module <shape3draw_15>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" into library work
 Parsing module <shape2draw_8>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" into library work
 Parsing module <shape1draw_6>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" into library work
 Parsing module <shape0draw_11>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" into library work
 Parsing module <selector_draw_3>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/alu_31.v" into library work
+Parsing module <alu_31>.
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" into library work
 Parsing module <tilesort_2>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
-WARNING:HDLCompiler:751 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 29: Redeclaration of ansi port vga_R is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 30: Redeclaration of ansi port vga_R is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -102,102 +114,145 @@ WARNING:HDLCompiler:751 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/py
 Elaborating module <mojo_top_0>.
 
 Elaborating module <hvsync_generator_1>.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 20: Assignment to CounterX ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 20: Assignment to CounterX ignored, since the identifier is never used
 
 Elaborating module <tilesort_2>.
 
 Elaborating module <selector_draw_3>.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 23: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 24: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 25: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 23: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 24: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 25: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
 
-Elaborating module <selector_base_30>.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_30.v" Line 84: Assignment to address_reg ignored, since the identifier is never used
+Elaborating module <selector_base_32>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v" Line 84: Assignment to address_reg ignored, since the identifier is never used
 
-Elaborating module <flash_counter_500ms_31>.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 52: Result of 9-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 56: Result of 10-bit expression is truncated to fit in 7-bit target.
+Elaborating module <flash_counter_500ms_30>.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 52: Result of 9-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" Line 56: Result of 10-bit expression is truncated to fit in 7-bit target.
 
 Elaborating module <stateCounter_4>.
 
 Elaborating module <shape5draw_5>.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 24: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 25: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 26: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 24: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 25: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 26: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
 
-Elaborating module <newshape5_32>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_32.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 70: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 72: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 77: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <newshape5_34>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_34.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 70: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 72: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" Line 77: Result of 10-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <shape1draw_6>.
 
-Elaborating module <hvsyncpass_33>.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" Line 22: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" Line 23: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" Line 24: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+Elaborating module <hvsyncpass_35>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" Line 22: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" Line 23: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" Line 24: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
 
-Elaborating module <newshape1_34>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_34.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 64: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 66: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 71: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <newshape1_36>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_36.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 64: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 66: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v" Line 71: Result of 10-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <shape2draw_8>.
 
-Elaborating module <newshape2_38>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_38.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 64: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 66: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 71: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <newshape2_40>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_40.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 64: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 66: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v" Line 71: Result of 10-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <shape4draw_10>.
 
-Elaborating module <newshape4_42>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_42.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 60: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 62: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 67: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <newshape4_44>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_44.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 60: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 62: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v" Line 67: Result of 10-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <shape0draw_11>.
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 24: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 25: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 26: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 24: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 25: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 26: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
 
-Elaborating module <shape0base2_43>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_43.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 67: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 70: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <shape0base2_45>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_45.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 67: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" Line 70: Result of 10-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <shape3draw_15>.
 
-Elaborating module <newshape3_51>.
-WARNING:HDLCompiler:91 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_51.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 60: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 62: Result of 9-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 67: Result of 10-bit expression is truncated to fit in 6-bit target.
+Elaborating module <newshape3_53>.
+WARNING:HDLCompiler:91 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_53.v" Line 21: Signal <en> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 60: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 62: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v" Line 67: Result of 10-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <alu_31>.
+
+Elaborating module <adder8_80>.
+
+Elaborating module <adder_84>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 88: Assignment to M_adder7_carry ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 109: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 110: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 111: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 112: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 113: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 114: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 115: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 116: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 117: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 118: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 123: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 124: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 125: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 126: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 127: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 128: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 129: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 130: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 133: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 134: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 135: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 136: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 137: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 138: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 139: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" Line 140: Result of 2-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <boole_81>.
+
+Elaborating module <shift_82>.
+
+Elaborating module <cmp_83>.
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 414: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 415: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 416: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" Line 396: Net <M_number_of_wins_d[2]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterX> of the instance <syncgen> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterY> of the instance <syncgen> is unconnected or connected to loadless signal.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterX> of the instance <syncgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 19: Output port <CounterY> of the instance <syncgen> is unconnected or connected to loadless signal.
     Register <vga_B> equivalent to <vga_R> has been removed
     Register <vga_G> equivalent to <vga_R> has been removed
     Found 1-bit register for signal <vga_R>.
-    Found 9-bit register for signal <io_led>.
+    Found 6-bit register for signal <io_led>.
     Summary:
-	inferred  10 D-type flip-flop(s).
+	inferred   7 D-type flip-flop(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <hvsync_generator_1>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v".
     Found 9-bit register for signal <CounterY>.
     Found 1-bit register for signal <vga_HS>.
     Found 1-bit register for signal <vga_VS>.
@@ -214,7 +269,11 @@ Synthesizing Unit <hvsync_generator_1>.
 Unit <hvsync_generator_1> synthesized.
 
 Synthesizing Unit <tilesort_2>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 410: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 410: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" line 410: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <M_number_of_wins_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 3-bit register for signal <M_tile2_orientation_q>.
     Found 3-bit register for signal <M_tile3_orientation_q>.
     Found 3-bit register for signal <M_tile4_orientation_q>.
@@ -240,81 +299,73 @@ Synthesizing Unit <tilesort_2>.
     Found 3-bit register for signal <M_tile24_orientation_q>.
     Found 3-bit register for signal <M_tile25_orientation_q>.
     Found 5-bit register for signal <M_selected_tile_q>.
+    Found 2-bit register for signal <M_game_stage_q>.
     Found 3-bit register for signal <M_tile1_orientation_q>.
+    Found finite state machine <FSM_1> for signal <M_game_stage_q>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 30                                             |
+    | Inputs             | 27                                             |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Found finite state machine <FSM_0> for signal <M_selected_tile_q>.
     -----------------------------------------------------------------------
     | States             | 25                                             |
-    | Transitions        | 150                                            |
-    | Inputs             | 5                                              |
+    | Transitions        | 200                                            |
+    | Inputs             | 7                                              |
     | Outputs            | 19                                             |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | 00000                                          |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <M_tile1_orientation_q[2]_GND_3_o_add_50_OUT> created at line 706.
-    Found 3-bit adder for signal <M_tile2_orientation_q[2]_GND_3_o_add_56_OUT> created at line 729.
-    Found 3-bit adder for signal <M_tile3_orientation_q[2]_GND_3_o_add_62_OUT> created at line 752.
-    Found 3-bit adder for signal <M_tile4_orientation_q[2]_GND_3_o_add_68_OUT> created at line 775.
-    Found 3-bit adder for signal <M_tile5_orientation_q[2]_GND_3_o_add_74_OUT> created at line 798.
-    Found 3-bit adder for signal <M_tile6_orientation_q[2]_GND_3_o_add_80_OUT> created at line 821.
-    Found 3-bit adder for signal <M_tile7_orientation_q[2]_GND_3_o_add_86_OUT> created at line 844.
-    Found 3-bit adder for signal <M_tile8_orientation_q[2]_GND_3_o_add_92_OUT> created at line 867.
-    Found 3-bit adder for signal <M_tile9_orientation_q[2]_GND_3_o_add_98_OUT> created at line 890.
-    Found 3-bit adder for signal <M_tile10_orientation_q[2]_GND_3_o_add_104_OUT> created at line 913.
-    Found 3-bit adder for signal <M_tile11_orientation_q[2]_GND_3_o_add_110_OUT> created at line 936.
-    Found 3-bit adder for signal <M_tile12_orientation_q[2]_GND_3_o_add_116_OUT> created at line 959.
-    Found 3-bit adder for signal <M_tile13_orientation_q[2]_GND_3_o_add_122_OUT> created at line 982.
-    Found 3-bit adder for signal <M_tile14_orientation_q[2]_GND_3_o_add_128_OUT> created at line 1005.
-    Found 3-bit adder for signal <M_tile15_orientation_q[2]_GND_3_o_add_134_OUT> created at line 1028.
-    Found 3-bit adder for signal <M_tile16_orientation_q[2]_GND_3_o_add_140_OUT> created at line 1051.
-    Found 3-bit adder for signal <M_tile17_orientation_q[2]_GND_3_o_add_146_OUT> created at line 1074.
-    Found 3-bit adder for signal <M_tile18_orientation_q[2]_GND_3_o_add_152_OUT> created at line 1097.
-    Found 3-bit adder for signal <M_tile19_orientation_q[2]_GND_3_o_add_158_OUT> created at line 1120.
-    Found 3-bit adder for signal <M_tile20_orientation_q[2]_GND_3_o_add_164_OUT> created at line 1143.
-    Found 3-bit adder for signal <M_tile21_orientation_q[2]_GND_3_o_add_170_OUT> created at line 1166.
-    Found 3-bit adder for signal <M_tile22_orientation_q[2]_GND_3_o_add_176_OUT> created at line 1189.
-    Found 3-bit adder for signal <M_tile23_orientation_q[2]_GND_3_o_add_182_OUT> created at line 1212.
-    Found 3-bit adder for signal <M_tile24_orientation_q[2]_GND_3_o_add_188_OUT> created at line 1235.
-    Found 3-bit adder for signal <M_tile25_orientation_q[2]_GND_3_o_add_194_OUT> created at line 1258.
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile1_orientation_q[2]_LessThan_1_o> created at line 475
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile2_orientation_q[2]_LessThan_3_o> created at line 482
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile3_orientation_q[2]_LessThan_5_o> created at line 489
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile4_orientation_q[2]_LessThan_7_o> created at line 496
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile5_orientation_q[2]_LessThan_9_o> created at line 503
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile6_orientation_q[2]_LessThan_11_o> created at line 510
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile7_orientation_q[2]_LessThan_13_o> created at line 517
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile8_orientation_q[2]_LessThan_15_o> created at line 524
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile9_orientation_q[2]_LessThan_17_o> created at line 531
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile10_orientation_q[2]_LessThan_19_o> created at line 538
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile11_orientation_q[2]_LessThan_21_o> created at line 545
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile12_orientation_q[2]_LessThan_23_o> created at line 552
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile13_orientation_q[2]_LessThan_25_o> created at line 559
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile14_orientation_q[2]_LessThan_27_o> created at line 566
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile15_orientation_q[2]_LessThan_29_o> created at line 573
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile16_orientation_q[2]_LessThan_31_o> created at line 580
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile17_orientation_q[2]_LessThan_33_o> created at line 587
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile18_orientation_q[2]_LessThan_35_o> created at line 594
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile19_orientation_q[2]_LessThan_37_o> created at line 601
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile20_orientation_q[2]_LessThan_39_o> created at line 608
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile21_orientation_q[2]_LessThan_41_o> created at line 615
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile22_orientation_q[2]_LessThan_43_o> created at line 622
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile23_orientation_q[2]_LessThan_45_o> created at line 629
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile24_orientation_q[2]_LessThan_47_o> created at line 636
-    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile25_orientation_q[2]_LessThan_49_o> created at line 643
+    Found 4x1-bit Read Only RAM for signal <debug_wingame>
+    Found 4x1-bit Read Only RAM for signal <debug_winlevel>
+    Found 4x1-bit Read Only RAM for signal <debug_play>
+    Found 8-bit 28-to-1 multiplexer for signal <M_selected_tile_q[4]_GND_3_o_wide_mux_261_OUT> created at line 814.
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile1_orientation_q[2]_LessThan_1_o> created at line 510
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile2_orientation_q[2]_LessThan_3_o> created at line 517
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile3_orientation_q[2]_LessThan_5_o> created at line 524
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile4_orientation_q[2]_LessThan_7_o> created at line 531
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile5_orientation_q[2]_LessThan_9_o> created at line 538
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile6_orientation_q[2]_LessThan_11_o> created at line 545
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile7_orientation_q[2]_LessThan_13_o> created at line 552
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile8_orientation_q[2]_LessThan_15_o> created at line 559
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile9_orientation_q[2]_LessThan_17_o> created at line 566
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile10_orientation_q[2]_LessThan_19_o> created at line 573
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile11_orientation_q[2]_LessThan_21_o> created at line 580
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile12_orientation_q[2]_LessThan_23_o> created at line 587
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile13_orientation_q[2]_LessThan_25_o> created at line 594
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile14_orientation_q[2]_LessThan_27_o> created at line 601
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile15_orientation_q[2]_LessThan_29_o> created at line 608
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile16_orientation_q[2]_LessThan_31_o> created at line 615
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile17_orientation_q[2]_LessThan_33_o> created at line 622
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile18_orientation_q[2]_LessThan_35_o> created at line 629
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile19_orientation_q[2]_LessThan_37_o> created at line 636
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile20_orientation_q[2]_LessThan_39_o> created at line 643
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile21_orientation_q[2]_LessThan_41_o> created at line 650
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile22_orientation_q[2]_LessThan_43_o> created at line 657
+    Found 3-bit comparator lessequal for signal <PWR_3_o_M_tile23_orientation_q[2]_LessThan_45_o> created at line 664
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile24_orientation_q[2]_LessThan_47_o> created at line 671
+    Found 3-bit comparator greater for signal <PWR_3_o_M_tile25_orientation_q[2]_LessThan_49_o> created at line 678
+    WARNING:Xst:2404 -  FFs/Latches <M_number_of_wins_q<2:0>> (without init value) have a constant value of 0 in block <tilesort_2>.
     Summary:
-	inferred  25 Adder/Subtractor(s).
+	inferred   3 RAM(s).
 	inferred  75 D-type flip-flop(s).
 	inferred  25 Comparator(s).
-	inferred  54 Multiplexer(s).
-	inferred   1 Finite State Machine(s).
+	inferred 155 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
 Unit <tilesort_2> synthesized.
 
 Synthesizing Unit <selector_draw_3>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v".
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_draw_3.v" line 21: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
     Found 9-bit subtractor for signal <M_hvsync_CounterY[8]_verticaloffset[8]_sub_9_OUT> created at line 52.
     Found 12-bit subtractor for signal <GND_4_o_GND_4_o_sub_11_OUT> created at line 54.
     Found 32-bit subtractor for signal <n0037> created at line 54.
@@ -336,8 +387,8 @@ INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.sr
 	inferred   1 Combinational logic shifter(s).
 Unit <selector_draw_3> synthesized.
 
-Synthesizing Unit <selector_base_30>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_30.v".
+Synthesizing Unit <selector_base_32>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/selector_base_32.v".
     Set property "rom_style = block" for signal <address_reg>.
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:737 - Found 1-bit latch for signal <outdata<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -367,10 +418,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <outdata<31>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <outdata<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred  25 Latch(s).
-Unit <selector_base_30> synthesized.
+Unit <selector_base_32> synthesized.
 
-Synthesizing Unit <flash_counter_500ms_31>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/flash_counter_500ms_31.v".
+Synthesizing Unit <flash_counter_500ms_30>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/flash_counter_500ms_30.v".
     Found 28-bit register for signal <M_stateCounter_q>.
     Found 28-bit adder for signal <M_stateCounter_q[27]_GND_65_o_add_0_OUT> created at line 20.
     Found 28-bit comparator greater for signal <inc_state> created at line 21
@@ -378,10 +429,10 @@ Synthesizing Unit <flash_counter_500ms_31>.
 	inferred   1 Adder/Subtractor(s).
 	inferred  28 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-Unit <flash_counter_500ms_31> synthesized.
+Unit <flash_counter_500ms_30> synthesized.
 
 Synthesizing Unit <stateCounter_4>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/stateCounter_4.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/stateCounter_4.v".
     Found 24-bit register for signal <M_stateCounter_q>.
     Found 24-bit adder for signal <M_stateCounter_q[23]_GND_66_o_add_0_OUT> created at line 20.
     Summary:
@@ -390,10 +441,10 @@ Synthesizing Unit <stateCounter_4>.
 Unit <stateCounter_4> synthesized.
 
 Synthesizing Unit <shape5draw_5>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v".
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape5draw_5.v" line 22: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
     Found 9-bit subtractor for signal <M_hvsync_CounterY[8]_verticaloffset[8]_sub_26_OUT> created at line 72.
     Found 9-bit subtractor for signal <n0052[8:0]> created at line 72.
     Found 12-bit subtractor for signal <GND_67_o_GND_67_o_sub_29_OUT> created at line 75.
@@ -416,8 +467,8 @@ INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.sr
 	inferred   1 Combinational logic shifter(s).
 Unit <shape5draw_5> synthesized.
 
-Synthesizing Unit <newshape5_32>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_32.v".
+Synthesizing Unit <newshape5_34>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape5_34.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -478,10 +529,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <newshape5_32> synthesized.
+Unit <newshape5_34> synthesized.
 
 Synthesizing Unit <shape1draw_6>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape1draw_6.v".
     Found 9-bit subtractor for signal <M_hvsync_counterY[8]_verticaloffset[8]_sub_26_OUT> created at line 66.
     Found 9-bit subtractor for signal <n0052[8:0]> created at line 66.
     Found 12-bit subtractor for signal <GND_120_o_GND_120_o_sub_29_OUT> created at line 69.
@@ -504,17 +555,17 @@ Synthesizing Unit <shape1draw_6>.
 	inferred   1 Combinational logic shifter(s).
 Unit <shape1draw_6> synthesized.
 
-Synthesizing Unit <hvsyncpass_33>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v".
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" line 20: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" line 20: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_33.v" line 20: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+Synthesizing Unit <hvsyncpass_35>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" line 20: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" line 20: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsyncpass_35.v" line 20: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
-Unit <hvsyncpass_33> synthesized.
+Unit <hvsyncpass_35> synthesized.
 
-Synthesizing Unit <newshape1_34>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_34.v".
+Synthesizing Unit <newshape1_36>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape1_36.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -575,10 +626,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <newshape1_34> synthesized.
+Unit <newshape1_36> synthesized.
 
 Synthesizing Unit <shape2draw_8>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape2draw_8.v".
     Found 9-bit subtractor for signal <M_hvsync_counterY[8]_verticaloffset[8]_sub_26_OUT> created at line 66.
     Found 9-bit subtractor for signal <n0052[8:0]> created at line 66.
     Found 12-bit subtractor for signal <GND_174_o_GND_174_o_sub_29_OUT> created at line 69.
@@ -601,8 +652,8 @@ Synthesizing Unit <shape2draw_8>.
 	inferred   1 Combinational logic shifter(s).
 Unit <shape2draw_8> synthesized.
 
-Synthesizing Unit <newshape2_38>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_38.v".
+Synthesizing Unit <newshape2_40>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape2_40.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -663,10 +714,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <newshape2_38> synthesized.
+Unit <newshape2_40> synthesized.
 
 Synthesizing Unit <shape4draw_10>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape4draw_10.v".
     Found 9-bit subtractor for signal <M_hvsync_counterY[8]_verticaloffset[8]_sub_25_OUT> created at line 62.
     Found 9-bit subtractor for signal <n0051[8:0]> created at line 62.
     Found 12-bit subtractor for signal <GND_227_o_GND_227_o_sub_28_OUT> created at line 65.
@@ -689,8 +740,8 @@ Synthesizing Unit <shape4draw_10>.
 	inferred   1 Combinational logic shifter(s).
 Unit <shape4draw_10> synthesized.
 
-Synthesizing Unit <newshape4_42>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_42.v".
+Synthesizing Unit <newshape4_44>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape4_44.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -751,13 +802,13 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <newshape4_42> synthesized.
+Unit <newshape4_44> synthesized.
 
 Synthesizing Unit <shape0draw_11>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v".
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v".
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0draw_11.v" line 22: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
     Found 9-bit subtractor for signal <M_hvsync_CounterY[8]_verticaloffset[8]_sub_22_OUT> created at line 67.
     Found 12-bit subtractor for signal <GND_280_o_GND_280_o_sub_24_OUT> created at line 68.
     Found 32-bit subtractor for signal <n0054> created at line 68.
@@ -779,8 +830,8 @@ INFO:Xst:3210 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.sr
 	inferred   1 Combinational logic shifter(s).
 Unit <shape0draw_11> synthesized.
 
-Synthesizing Unit <shape0base2_43>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_43.v".
+Synthesizing Unit <shape0base2_45>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape0base2_45.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -841,10 +892,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <shape0base2_43> synthesized.
+Unit <shape0base2_45> synthesized.
 
 Synthesizing Unit <shape3draw_15>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v".
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shape3draw_15.v".
     Found 9-bit subtractor for signal <M_hvsync_counterY[8]_verticaloffset[8]_sub_25_OUT> created at line 62.
     Found 9-bit subtractor for signal <n0051[8:0]> created at line 62.
     Found 12-bit subtractor for signal <GND_333_o_GND_333_o_sub_28_OUT> created at line 65.
@@ -867,8 +918,8 @@ Synthesizing Unit <shape3draw_15>.
 	inferred   1 Combinational logic shifter(s).
 Unit <shape3draw_15> synthesized.
 
-Synthesizing Unit <newshape3_51>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_51.v".
+Synthesizing Unit <newshape3_53>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/newshape3_53.v".
     Found 3-bit register for signal <orient_reg>.
     Found 9-bit register for signal <raddr>.
     Found 6-bit register for signal <address_reg>.
@@ -929,51 +980,171 @@ WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<0>>. Latches may be gener
 	inferred  18 D-type flip-flop(s).
 	inferred  51 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <newshape3_51> synthesized.
+Unit <newshape3_53> synthesized.
+
+Synthesizing Unit <alu_31>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/alu_31.v".
+    Found 8-bit 4-to-1 multiplexer for signal <outalu> created at line 90.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <alu_31> synthesized.
+
+Synthesizing Unit <adder8_80>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v".
+WARNING:Xst:647 - Input <alufn<5:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder8_80.v" line 85: Output port <carry> of the instance <adder7> is unconnected or connected to loadless signal.
+    Found 8-bit subtractor for signal <a[7]_a[7]_sub_22_OUT> created at line 146.
+    Found 8x8-bit multiplier for signal <n0080> created at line 143.
+    Found 8x8-bit multiplier for signal <n0082> created at line 146.
+    Found 8-bit 3-to-1 multiplexer for signal <s> created at line 121.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <adder8_80> synthesized.
+
+Synthesizing Unit <adder_84>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/adder_84.v".
+    Summary:
+Unit <adder_84> synthesized.
+
+Synthesizing Unit <div_8u_8u>.
+    Related source file is "".
+    Found 16-bit adder for signal <n0292> created at line 0.
+    Found 16-bit adder for signal <GND_390_o_b[7]_add_1_OUT> created at line 0.
+    Found 15-bit adder for signal <n0296> created at line 0.
+    Found 15-bit adder for signal <GND_390_o_b[7]_add_3_OUT> created at line 0.
+    Found 14-bit adder for signal <n0300> created at line 0.
+    Found 14-bit adder for signal <GND_390_o_b[7]_add_5_OUT> created at line 0.
+    Found 13-bit adder for signal <n0304> created at line 0.
+    Found 13-bit adder for signal <GND_390_o_b[7]_add_7_OUT> created at line 0.
+    Found 12-bit adder for signal <n0308> created at line 0.
+    Found 12-bit adder for signal <GND_390_o_b[7]_add_9_OUT> created at line 0.
+    Found 11-bit adder for signal <n0312> created at line 0.
+    Found 11-bit adder for signal <GND_390_o_b[7]_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0316> created at line 0.
+    Found 10-bit adder for signal <GND_390_o_b[7]_add_13_OUT> created at line 0.
+    Found 9-bit adder for signal <n0320> created at line 0.
+    Found 9-bit adder for signal <GND_390_o_b[7]_add_15_OUT> created at line 0.
+    Found 16-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  57 Multiplexer(s).
+Unit <div_8u_8u> synthesized.
+
+Synthesizing Unit <boole_81>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/boole_81.v".
+WARNING:Xst:647 - Input <alufn<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <boole_81> synthesized.
+
+Synthesizing Unit <shift_82>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/shift_82.v".
+WARNING:Xst:647 - Input <b<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn<5:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit shifter logical left for signal <a[7]_b[2]_shift_left_0_OUT> created at line 21
+    Found 8-bit shifter logical right for signal <a[7]_b[2]_shift_right_1_OUT> created at line 24
+    Found 8-bit shifter arithmetic right for signal <a[7]_b[2]_shift_right_2_OUT> created at line 27
+    Found 8-bit 4-to-1 multiplexer for signal <outshi> created at line 19.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <shift_82> synthesized.
+
+Synthesizing Unit <cmp_83>.
+    Related source file is "C:/Users/Joel/Desktop/pype-checkoff/pype-master/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/cmp_83.v".
+WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit 4-to-1 multiplexer for signal <outcmp> created at line 20.
+    Found 1-bit 3-to-1 multiplexer for signal <alufn[2]_z_Mux_1_o> created at line 20.
+WARNING:Xst:737 - Found 1-bit latch for signal <outcmp<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <cmp_83> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 25
+# RAMs                                                 : 28
  256x51-bit single-port Read Only RAM                  : 25
-# Adders/Subtractors                                   : 338
- 11-bit adder                                          : 79
+ 4x1-bit single-port Read Only RAM                     : 3
+# Multipliers                                          : 2
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 331
+ 10-bit adder                                          : 2
+ 11-bit adder                                          : 81
+ 12-bit adder                                          : 2
  12-bit subtractor                                     : 26
+ 13-bit adder                                          : 2
+ 14-bit adder                                          : 2
+ 15-bit adder                                          : 2
+ 16-bit adder                                          : 2
  24-bit adder                                          : 1
- 28-bit adder                                          : 1
- 3-bit adder                                           : 25
+ 28-bit adder                                          : 2
  32-bit subtractor                                     : 26
  6-bit subtractor                                      : 51
  7-bit subtractor                                      : 1
- 9-bit adder                                           : 79
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 81
  9-bit subtractor                                      : 49
-# Registers                                            : 239
+# Registers                                            : 240
  1-bit register                                        : 82
  11-bit register                                       : 27
  24-bit register                                       : 1
- 28-bit register                                       : 1
+ 28-bit register                                       : 2
  3-bit register                                        : 50
- 6-bit register                                        : 25
- 9-bit register                                        : 53
-# Latches                                              : 1300
- 1-bit latch                                           : 1300
-# Comparators                                          : 157
- 11-bit comparator lessequal                           : 52
- 28-bit comparator greater                             : 1
- 3-bit comparator lessequal                            : 25
+ 6-bit register                                        : 26
+ 9-bit register                                        : 52
+# Latches                                              : 1301
+ 1-bit latch                                           : 1301
+# Comparators                                          : 167
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator lessequal                           : 53
+ 12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 28-bit comparator greater                             : 2
+ 3-bit comparator greater                              : 19
+ 3-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 1
  9-bit comparator greater                              : 27
- 9-bit comparator lessequal                            : 52
-# Multiplexers                                         : 247
- 1-bit 2-to-1 multiplexer                              : 57
- 3-bit 2-to-1 multiplexer                              : 116
+ 9-bit comparator lessequal                            : 53
+# Multiplexers                                         : 410
+ 1-bit 2-to-1 multiplexer                              : 139
+ 1-bit 3-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 160
  51-bit 2-to-1 multiplexer                             : 25
  6-bit 2-to-1 multiplexer                              : 48
  7-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 26
+ 8-bit 2-to-1 multiplexer                              : 29
+ 8-bit 28-to-1 multiplexer                             : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 29
  101-bit shifter logical right                         : 25
  117-bit shifter logical right                         : 1
-# FSMs                                                 : 1
+ 8-bit shifter arithmetic right                        : 1
+ 8-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 2
+# Xors                                                 : 34
+ 1-bit xor2                                            : 17
+ 2-bit xor2                                            : 17
 
 =========================================================================
 
@@ -982,16 +1153,20 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <flash_counter_500ms_31>.
+Synthesizing (advanced) Unit <adder8_80>.
+	Multiplier <Mmult_n0082> in block <adder8_80> and adder/subtractor <Msub_a[7]_a[7]_sub_22_OUT> in block <adder8_80> are combined into a MAC<Maddsub_n0082>.
+Unit <adder8_80> synthesized (advanced).
+
+Synthesizing (advanced) Unit <flash_counter_500ms_30>.
 The following registers are absorbed into counter <M_stateCounter_q>: 1 register on signal <M_stateCounter_q>.
-Unit <flash_counter_500ms_31> synthesized (advanced).
+Unit <flash_counter_500ms_30> synthesized (advanced).
 
 Synthesizing (advanced) Unit <hvsync_generator_1>.
 The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
 Unit <hvsync_generator_1> synthesized (advanced).
 
-Synthesizing (advanced) Unit <newshape1_34>.
+Synthesizing (advanced) Unit <newshape1_36>.
 INFO:Xst:3226 - The RAM <Mram__n0787> will be implemented as a BLOCK RAM, absorbing the following register(s): <raddr>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
@@ -1007,9 +1182,9 @@ INFO:Xst:3226 - The RAM <Mram__n0787> will be implemented as a BLOCK RAM, absorb
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <newshape1_34> synthesized (advanced).
+Unit <newshape1_36> synthesized (advanced).
 
-Synthesizing (advanced) Unit <newshape2_38>.
+Synthesizing (advanced) Unit <newshape2_40>.
 INFO:Xst:3230 - The RAM description <Mram__n0787> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1021,9 +1196,9 @@ INFO:Xst:3230 - The RAM description <Mram__n0787> will not be implemented on the
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <newshape2_38> synthesized (advanced).
+Unit <newshape2_40> synthesized (advanced).
 
-Synthesizing (advanced) Unit <newshape3_51>.
+Synthesizing (advanced) Unit <newshape3_53>.
 INFO:Xst:3230 - The RAM description <Mram__n0607> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1035,9 +1210,9 @@ INFO:Xst:3230 - The RAM description <Mram__n0607> will not be implemented on the
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <newshape3_51> synthesized (advanced).
+Unit <newshape3_53> synthesized (advanced).
 
-Synthesizing (advanced) Unit <newshape4_42>.
+Synthesizing (advanced) Unit <newshape4_44>.
 INFO:Xst:3226 - The RAM <Mram__n0607> will be implemented as a BLOCK RAM, absorbing the following register(s): <raddr>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
@@ -1053,9 +1228,9 @@ INFO:Xst:3226 - The RAM <Mram__n0607> will be implemented as a BLOCK RAM, absorb
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <newshape4_42> synthesized (advanced).
+Unit <newshape4_44> synthesized (advanced).
 
-Synthesizing (advanced) Unit <newshape5_32>.
+Synthesizing (advanced) Unit <newshape5_34>.
 INFO:Xst:3226 - The RAM <Mram__n0787> will be implemented as a BLOCK RAM, absorbing the following register(s): <raddr>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
@@ -1071,9 +1246,9 @@ INFO:Xst:3226 - The RAM <Mram__n0787> will be implemented as a BLOCK RAM, absorb
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <newshape5_32> synthesized (advanced).
+Unit <newshape5_34> synthesized (advanced).
 
-Synthesizing (advanced) Unit <shape0base2_43>.
+Synthesizing (advanced) Unit <shape0base2_45>.
 INFO:Xst:3230 - The RAM description <Mram__n0607> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1085,72 +1260,134 @@ INFO:Xst:3230 - The RAM description <Mram__n0607> will not be implemented on the
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <shape0base2_43> synthesized (advanced).
+Unit <shape0base2_45> synthesized (advanced).
 
 Synthesizing (advanced) Unit <stateCounter_4>.
 The following registers are absorbed into counter <M_stateCounter_q>: 1 register on signal <M_stateCounter_q>.
 Unit <stateCounter_4> synthesized (advanced).
-WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape5_32>.
-WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape1_34>.
-WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape4_42>.
-WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape4_42>.
+
+Synthesizing (advanced) Unit <tilesort_2>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_debug_wingame> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("0",M_game_stage_q)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <debug_wingame> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_debug_winlevel> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("0",M_game_stage_q)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <debug_winlevel> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_debug_play> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("0",M_game_stage_q)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <debug_play>    |          |
+    -----------------------------------------------------------------------
+Unit <tilesort_2> synthesized (advanced).
+WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape5_34>.
+WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape1_36>.
+WARNING:Xst:2677 - Node <raddr_0> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_1> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_2> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_3> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_4> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_5> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_6> of sequential type is unconnected in block <newshape4_44>.
+WARNING:Xst:2677 - Node <raddr_7> of sequential type is unconnected in block <newshape4_44>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 25
+# RAMs                                                 : 28
  256x51-bit single-port block Read Only RAM            : 15
  256x51-bit single-port distributed Read Only RAM      : 10
-# Adders/Subtractors                                   : 282
+ 4x1-bit single-port distributed Read Only RAM         : 3
+# MACs                                                 : 1
+ 8x8-to-8-bit Dynamic Mult/MultAdd                     : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 265
  11-bit adder                                          : 52
- 3-bit adder                                           : 25
  6-bit subtractor                                      : 99
  7-bit subtractor                                      : 54
+ 8-bit adder carry in                                  : 8
  9-bit adder                                           : 52
-# Counters                                             : 56
+# Counters                                             : 57
  11-bit up counter                                     : 27
  24-bit up counter                                     : 1
- 28-bit up counter                                     : 1
+ 28-bit up counter                                     : 2
  9-bit up counter                                      : 27
-# Registers                                            : 496
- Flip-Flops                                            : 496
-# Comparators                                          : 157
- 11-bit comparator lessequal                           : 52
- 28-bit comparator greater                             : 1
- 3-bit comparator lessequal                            : 25
+# Registers                                            : 493
+ Flip-Flops                                            : 493
+# Comparators                                          : 167
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator lessequal                           : 53
+ 12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 28-bit comparator greater                             : 2
+ 3-bit comparator greater                              : 19
+ 3-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 1
  9-bit comparator greater                              : 27
- 9-bit comparator lessequal                            : 52
-# Multiplexers                                         : 220
- 1-bit 2-to-1 multiplexer                              : 30
- 3-bit 2-to-1 multiplexer                              : 116
+ 9-bit comparator lessequal                            : 53
+# Multiplexers                                         : 383
+ 1-bit 2-to-1 multiplexer                              : 112
+ 1-bit 3-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 160
  51-bit 2-to-1 multiplexer                             : 25
  6-bit 2-to-1 multiplexer                              : 48
  7-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 26
+ 8-bit 2-to-1 multiplexer                              : 29
+ 8-bit 28-to-1 multiplexer                             : 1
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 29
  101-bit shifter logical right                         : 25
  117-bit shifter logical right                         : 1
-# FSMs                                                 : 1
+ 8-bit shifter arithmetic right                        : 1
+ 8-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 2
+# Xors                                                 : 34
+ 1-bit xor2                                            : 17
+ 2-bit xor2                                            : 17
 
 =========================================================================
 
@@ -1178,6 +1415,15 @@ WARNING:Xst:2677 - Node <hvsync/inDisplayArea> of sequential type is unconnected
 WARNING:Xst:2677 - Node <hvsync/hvsync/inDisplayArea> of sequential type is unconnected in block <shape3draw_15>.
 WARNING:Xst:2677 - Node <hvsync/hvsync/vga_HS> of sequential type is unconnected in block <shape3draw_15>.
 WARNING:Xst:2677 - Node <hvsync/hvsync/vga_VS> of sequential type is unconnected in block <shape3draw_15>.
+WARNING:Xst:1710 - FF/Latch <outcmp_0> (without init value) has a constant value of 0 in block <cmp_83>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tiles/FSM_1> on signal <M_game_stage_q[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <tiles/FSM_0> on signal <M_selected_tile_q[1:5]> with user encoding.
 -------------------
@@ -1209,6 +1455,11 @@ Optimizing FSM <tiles/FSM_0> on signal <M_selected_tile_q[1:5]> with user encodi
  10010 | 10010
  10011 | 10011
 -------------------
+WARNING:Xst:2973 - All outputs of instance <alu/cmp> of block <cmp_83> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <alu/boole> of block <boole_81> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <alu/adder8/a[7]_b[7]_div_19> of block <div_8u_8u> are unconnected in block <tilesort_2>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <alu/adder8/Mmult_n0080> of sequential type is unconnected in block <tilesort_2>.
+WARNING:Xst:2677 - Node <alu/adder8/Maddsub_n0082> of sequential type is unconnected in block <tilesort_2>.
 
 Optimizing unit <mojo_top_0> ...
 
@@ -1216,33 +1467,34 @@ Optimizing unit <tilesort_2> ...
 
 Optimizing unit <selector_draw_3> ...
 
-Optimizing unit <selector_base_30> ...
+Optimizing unit <selector_base_32> ...
 
 Optimizing unit <shape5draw_5> ...
 
-Optimizing unit <newshape5_32> ...
+Optimizing unit <newshape5_34> ...
 
 Optimizing unit <shape1draw_6> ...
 
-Optimizing unit <newshape1_34> ...
+Optimizing unit <newshape1_36> ...
 
 Optimizing unit <shape2draw_8> ...
 
-Optimizing unit <newshape2_38> ...
+Optimizing unit <newshape2_40> ...
 
 Optimizing unit <shape4draw_10> ...
 
-Optimizing unit <newshape4_42> ...
+Optimizing unit <newshape4_44> ...
 
 Optimizing unit <shape0draw_11> ...
 
-Optimizing unit <shape0base2_43> ...
+Optimizing unit <shape0base2_45> ...
 
 Optimizing unit <shape3draw_15> ...
 
-Optimizing unit <newshape3_51> ...
-WARNING:Xst:1710 - FF/Latch <tiles/tile16_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile19_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+Optimizing unit <newshape3_53> ...
+
+Optimizing unit <div_8u_8u> ...
+WARNING:Xst:1710 - FF/Latch <tiles/tile19_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile25_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile4_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile10_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
@@ -1259,43 +1511,53 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile11_shape0
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile12_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile20_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile21_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile2_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile24_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile3_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_3> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile1_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile24_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile2_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile3_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile5_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile9_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_7> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile16_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile15_shape0/base/orient_reg_2> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <io_led_6> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile12_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile1_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile11_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile20_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile22_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile24_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile7_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile19_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile21_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile18_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile1_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile20_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile12_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile24_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile11_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile25_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile22_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile2_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile14_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile13_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile7_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile16_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile18_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile3_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile14_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile4_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile13_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile5_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile8_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile6_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile5_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile23_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile17_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile9_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile23_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile10_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile4_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile17_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile15_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile25_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile19_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tiles/tile16_shape0/base/raddr_8> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_0> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_1> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_2> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_3> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_4> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_5> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_6> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_7> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_8> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_9> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_10> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterX_10> <tiles/tile24_shape0/hvsync/CounterX_10> <tiles/tile1_shape0/hvsync/CounterX_10> <tiles/tile25_shape0/hvsync/hvsync/CounterX_10> <tiles/tile19_shape0/hvsync/hvsync/CounterX_10> <tiles/tile16_shape0/hvsync/hvsync/CounterX_10> <tiles/tile15_shape0/hvsync/hvsync/CounterX_10> <tiles/tile9_shape0/hvsync/hvsync/CounterX_10> <tiles/tile5_shape0/hvsync/hvsync/CounterX_10> <tiles/tile3_shape0/hvsync/hvsync/CounterX_10> <tiles/tile2_shape0/hvsync/hvsync/CounterX_10> <tiles/tile23_shape0/hvsync/hvsync/CounterX_10> <tiles/tile17_shape0/hvsync/hvsync/CounterX_10> <tiles/tile10_shape0/hvsync/hvsync/CounterX_10> <tiles/tile4_shape0/hvsync/hvsync/CounterX_10> <tiles/tile18_shape0/hvsync/hvsync/CounterX_10> <tiles/tile14_shape0/hvsync/hvsync/CounterX_10> <tiles/tile13_shape0/hvsync/hvsync/CounterX_10> <tiles/tile8_shape0/hvsync/hvsync/CounterX_10>
    <tiles/tile6_shape0/hvsync/hvsync/CounterX_10> <tiles/tile22_shape0/hvsync/CounterX_10> <tiles/tile7_shape0/hvsync/CounterX_10> <tiles/tile21_shape0/hvsync/hvsync/CounterX_10> <tiles/tile20_shape0/hvsync/hvsync/CounterX_10> <tiles/tile12_shape0/hvsync/hvsync/CounterX_10> <tiles/tile11_shape0/hvsync/hvsync/CounterX_10> 
+INFO:Xst:2261 - The FF/Latch <io_led_sliced_sliced_sliced_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <io_led_sliced_sliced_sliced_0> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_0> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterX_0> <tiles/tile24_shape0/hvsync/CounterX_0> <tiles/tile1_shape0/hvsync/CounterX_0> <tiles/tile25_shape0/hvsync/hvsync/CounterX_0> <tiles/tile19_shape0/hvsync/hvsync/CounterX_0> <tiles/tile16_shape0/hvsync/hvsync/CounterX_0> <tiles/tile15_shape0/hvsync/hvsync/CounterX_0> <tiles/tile9_shape0/hvsync/hvsync/CounterX_0> <tiles/tile5_shape0/hvsync/hvsync/CounterX_0> <tiles/tile3_shape0/hvsync/hvsync/CounterX_0> <tiles/tile2_shape0/hvsync/hvsync/CounterX_0> <tiles/tile23_shape0/hvsync/hvsync/CounterX_0> <tiles/tile17_shape0/hvsync/hvsync/CounterX_0> <tiles/tile10_shape0/hvsync/hvsync/CounterX_0> <tiles/tile4_shape0/hvsync/hvsync/CounterX_0> <tiles/tile18_shape0/hvsync/hvsync/CounterX_0> <tiles/tile14_shape0/hvsync/hvsync/CounterX_0> <tiles/tile13_shape0/hvsync/hvsync/CounterX_0> <tiles/tile8_shape0/hvsync/hvsync/CounterX_0>
    <tiles/tile6_shape0/hvsync/hvsync/CounterX_0> <tiles/tile22_shape0/hvsync/CounterX_0> <tiles/tile7_shape0/hvsync/CounterX_0> <tiles/tile21_shape0/hvsync/hvsync/CounterX_0> <tiles/tile20_shape0/hvsync/hvsync/CounterX_0> <tiles/tile12_shape0/hvsync/hvsync/CounterX_0> <tiles/tile11_shape0/hvsync/hvsync/CounterX_0> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_1> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterX_1> <tiles/tile24_shape0/hvsync/CounterX_1> <tiles/tile1_shape0/hvsync/CounterX_1> <tiles/tile25_shape0/hvsync/hvsync/CounterX_1> <tiles/tile19_shape0/hvsync/hvsync/CounterX_1> <tiles/tile16_shape0/hvsync/hvsync/CounterX_1> <tiles/tile15_shape0/hvsync/hvsync/CounterX_1> <tiles/tile9_shape0/hvsync/hvsync/CounterX_1> <tiles/tile5_shape0/hvsync/hvsync/CounterX_1> <tiles/tile3_shape0/hvsync/hvsync/CounterX_1> <tiles/tile2_shape0/hvsync/hvsync/CounterX_1> <tiles/tile23_shape0/hvsync/hvsync/CounterX_1> <tiles/tile17_shape0/hvsync/hvsync/CounterX_1> <tiles/tile10_shape0/hvsync/hvsync/CounterX_1> <tiles/tile4_shape0/hvsync/hvsync/CounterX_1> <tiles/tile18_shape0/hvsync/hvsync/CounterX_1> <tiles/tile14_shape0/hvsync/hvsync/CounterX_1> <tiles/tile13_shape0/hvsync/hvsync/CounterX_1> <tiles/tile8_shape0/hvsync/hvsync/CounterX_1>
@@ -1316,6 +1578,24 @@ INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_8> in Unit <mojo_top_0> is equiva
    <tiles/tile6_shape0/hvsync/hvsync/CounterX_8> <tiles/tile22_shape0/hvsync/CounterX_8> <tiles/tile7_shape0/hvsync/CounterX_8> <tiles/tile21_shape0/hvsync/hvsync/CounterX_8> <tiles/tile20_shape0/hvsync/hvsync/CounterX_8> <tiles/tile12_shape0/hvsync/hvsync/CounterX_8> <tiles/tile11_shape0/hvsync/hvsync/CounterX_8> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_9> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterX_9> <tiles/tile24_shape0/hvsync/CounterX_9> <tiles/tile1_shape0/hvsync/CounterX_9> <tiles/tile25_shape0/hvsync/hvsync/CounterX_9> <tiles/tile19_shape0/hvsync/hvsync/CounterX_9> <tiles/tile16_shape0/hvsync/hvsync/CounterX_9> <tiles/tile15_shape0/hvsync/hvsync/CounterX_9> <tiles/tile9_shape0/hvsync/hvsync/CounterX_9> <tiles/tile5_shape0/hvsync/hvsync/CounterX_9> <tiles/tile3_shape0/hvsync/hvsync/CounterX_9> <tiles/tile2_shape0/hvsync/hvsync/CounterX_9> <tiles/tile23_shape0/hvsync/hvsync/CounterX_9> <tiles/tile17_shape0/hvsync/hvsync/CounterX_9> <tiles/tile10_shape0/hvsync/hvsync/CounterX_9> <tiles/tile4_shape0/hvsync/hvsync/CounterX_9> <tiles/tile18_shape0/hvsync/hvsync/CounterX_9> <tiles/tile14_shape0/hvsync/hvsync/CounterX_9> <tiles/tile13_shape0/hvsync/hvsync/CounterX_9> <tiles/tile8_shape0/hvsync/hvsync/CounterX_9>
    <tiles/tile6_shape0/hvsync/hvsync/CounterX_9> <tiles/tile22_shape0/hvsync/CounterX_9> <tiles/tile7_shape0/hvsync/CounterX_9> <tiles/tile21_shape0/hvsync/hvsync/CounterX_9> <tiles/tile20_shape0/hvsync/hvsync/CounterX_9> <tiles/tile12_shape0/hvsync/hvsync/CounterX_9> <tiles/tile11_shape0/hvsync/hvsync/CounterX_9> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_10> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_11> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_12> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_13> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_14> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_20> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_15> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_21> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_21> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_16> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_22> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_22> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_17> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_23> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_23> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_18> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_24> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_19> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_25> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_25> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_26> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_26> 
+INFO:Xst:2261 - The FF/Latch <tiles/flasher/M_stateCounter_q_27> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <tiles/selector/flash/M_stateCounter_q_27> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_0> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterY_0> <tiles/tile24_shape0/hvsync/CounterY_0> <tiles/tile1_shape0/hvsync/CounterY_0> <tiles/tile25_shape0/hvsync/hvsync/CounterY_0> <tiles/tile19_shape0/hvsync/hvsync/CounterY_0> <tiles/tile16_shape0/hvsync/hvsync/CounterY_0> <tiles/tile15_shape0/hvsync/hvsync/CounterY_0> <tiles/tile9_shape0/hvsync/hvsync/CounterY_0> <tiles/tile5_shape0/hvsync/hvsync/CounterY_0> <tiles/tile3_shape0/hvsync/hvsync/CounterY_0> <tiles/tile2_shape0/hvsync/hvsync/CounterY_0> <tiles/tile23_shape0/hvsync/hvsync/CounterY_0> <tiles/tile17_shape0/hvsync/hvsync/CounterY_0> <tiles/tile10_shape0/hvsync/hvsync/CounterY_0> <tiles/tile4_shape0/hvsync/hvsync/CounterY_0> <tiles/tile18_shape0/hvsync/hvsync/CounterY_0> <tiles/tile14_shape0/hvsync/hvsync/CounterY_0> <tiles/tile13_shape0/hvsync/hvsync/CounterY_0> <tiles/tile8_shape0/hvsync/hvsync/CounterY_0>
    <tiles/tile6_shape0/hvsync/hvsync/CounterY_0> <tiles/tile22_shape0/hvsync/CounterY_0> <tiles/tile7_shape0/hvsync/CounterY_0> <tiles/tile21_shape0/hvsync/hvsync/CounterY_0> <tiles/tile20_shape0/hvsync/hvsync/CounterY_0> <tiles/tile12_shape0/hvsync/hvsync/CounterY_0> <tiles/tile11_shape0/hvsync/hvsync/CounterY_0> 
 INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_1> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <tiles/selector/hvsync/CounterY_1> <tiles/tile24_shape0/hvsync/CounterY_1> <tiles/tile1_shape0/hvsync/CounterY_1> <tiles/tile25_shape0/hvsync/hvsync/CounterY_1> <tiles/tile19_shape0/hvsync/hvsync/CounterY_1> <tiles/tile16_shape0/hvsync/hvsync/CounterY_1> <tiles/tile15_shape0/hvsync/hvsync/CounterY_1> <tiles/tile9_shape0/hvsync/hvsync/CounterY_1> <tiles/tile5_shape0/hvsync/hvsync/CounterY_1> <tiles/tile3_shape0/hvsync/hvsync/CounterY_1> <tiles/tile2_shape0/hvsync/hvsync/CounterY_1> <tiles/tile23_shape0/hvsync/hvsync/CounterY_1> <tiles/tile17_shape0/hvsync/hvsync/CounterY_1> <tiles/tile10_shape0/hvsync/hvsync/CounterY_1> <tiles/tile4_shape0/hvsync/hvsync/CounterY_1> <tiles/tile18_shape0/hvsync/hvsync/CounterY_1> <tiles/tile14_shape0/hvsync/hvsync/CounterY_1> <tiles/tile13_shape0/hvsync/hvsync/CounterY_1> <tiles/tile8_shape0/hvsync/hvsync/CounterY_1>
@@ -1337,28 +1617,18 @@ INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_8> in Unit <mojo_top_0> is equiva
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 94.
-FlipFlop syncgen/CounterX_0 has been replicated 7 time(s)
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 96.
+FlipFlop syncgen/CounterX_0 has been replicated 6 time(s)
 FlipFlop syncgen/CounterX_1 has been replicated 6 time(s)
-FlipFlop syncgen/CounterX_2 has been replicated 6 time(s)
-FlipFlop syncgen/CounterX_3 has been replicated 8 time(s)
-FlipFlop syncgen/CounterX_4 has been replicated 6 time(s)
-FlipFlop syncgen/CounterX_5 has been replicated 2 time(s)
-FlipFlop syncgen/CounterX_6 has been replicated 1 time(s)
-FlipFlop syncgen/CounterX_8 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_0 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_1 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_2 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_3 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_4 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_5 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_6 has been replicated 2 time(s)
-FlipFlop syncgen/CounterY_7 has been replicated 2 time(s)
-FlipFlop tiles/M_selected_tile_q_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop tiles/M_selected_tile_q_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop tiles/M_selected_tile_q_FSM_FFd3 has been replicated 1 time(s)
-FlipFlop tiles/M_selected_tile_q_FSM_FFd4 has been replicated 1 time(s)
-FlipFlop tiles/M_selected_tile_q_FSM_FFd5 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_2 has been replicated 5 time(s)
+FlipFlop syncgen/CounterX_3 has been replicated 4 time(s)
+FlipFlop syncgen/CounterX_4 has been replicated 4 time(s)
+FlipFlop tiles/M_game_stage_q_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop tiles/M_selected_tile_q_FSM_FFd5 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -1366,8 +1636,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 500
- Flip-Flops                                            : 500
+# Registers                                            : 478
+ Flip-Flops                                            : 478
 
 =========================================================================
 
@@ -1390,24 +1660,24 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5118
-#      GND                         : 29
-#      INV                         : 140
-#      LUT1                        : 93
-#      LUT2                        : 376
-#      LUT3                        : 197
-#      LUT4                        : 569
-#      LUT5                        : 390
-#      LUT6                        : 1868
-#      MUXCY                       : 634
-#      MUXF7                       : 537
+# BELS                             : 5190
+#      GND                         : 32
+#      INV                         : 141
+#      LUT1                        : 94
+#      LUT2                        : 385
+#      LUT3                        : 209
+#      LUT4                        : 529
+#      LUT5                        : 404
+#      LUT6                        : 1903
+#      MUXCY                       : 666
+#      MUXF7                       : 540
 #      MUXF8                       : 184
-#      VCC                         : 29
+#      VCC                         : 31
 #      XORCY                       : 72
-# FlipFlops/Latches                : 1800
-#      FD                          : 150
-#      FDE                         : 250
-#      FDR                         : 100
+# FlipFlops/Latches                : 1778
+#      FD                          : 213
+#      FDE                         : 177
+#      FDR                         : 88
 #      LD                          : 1300
 # RAMS                             : 30
 #      RAMB16BWER                  : 15
@@ -1415,9 +1685,9 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 8
 #      BUFG                        : 7
 #      BUFGP                       : 1
-# IO Buffers                       : 19
+# IO Buffers                       : 16
 #      IBUF                        : 5
-#      OBUF                        : 14
+#      OBUF                        : 11
 
 Device utilization summary:
 ---------------------------
@@ -1426,21 +1696,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1795  out of  11440    15%  
- Number of Slice LUTs:                 3633  out of   5720    63%  
-    Number used as Logic:              3633  out of   5720    63%  
+ Number of Slice Registers:            1778  out of  11440    15%  
+ Number of Slice LUTs:                 3665  out of   5720    64%  
+    Number used as Logic:              3665  out of   5720    64%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5268
-   Number with an unused Flip Flop:    3473  out of   5268    65%  
-   Number with an unused LUT:          1635  out of   5268    31%  
-   Number of fully used LUT-FF pairs:   160  out of   5268     3%  
-   Number of unique control sets:       108
+ Number of LUT Flip Flop pairs used:   5308
+   Number with an unused Flip Flop:    3530  out of   5308    66%  
+   Number with an unused LUT:          1643  out of   5308    30%  
+   Number of fully used LUT-FF pairs:   135  out of   5308     2%  
+   Number of unique control sets:        89
 
 IO Utilization: 
- Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    102    19%  
-    IOB Flip Flops/Latches:               5
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    102    16%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               23  out of     32    71%  
@@ -1468,7 +1737,7 @@ Clock Information:
 ---------------------------------------------------------------+-------------------------------------------+-------+
 Clock Signal                                                   | Clock buffer(FF name)                     | Load  |
 ---------------------------------------------------------------+-------------------------------------------+-------+
-clk                                                            | BUFGP                                     | 530   |
+clk                                                            | BUFGP                                     | 508   |
 tiles/selector/base/_n0215<1>(tiles/selector/base/_n0215<1>1:O)| NONE(*)(tiles/selector/base/outdata_32)   | 25    |
 tiles/tile23_shape0/M_base_en(tiles/tile23_shape0/M_base_en1:O)| NONE(*)(tiles/tile23_shape0/base/bitmap_0)| 51    |
 tiles/tile18_shape0/M_base_en(tiles/tile18_shape0/M_base_en1:O)| NONE(*)(tiles/tile18_shape0/base/bitmap_0)| 51    |
@@ -1509,8 +1778,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 9.590ns (Maximum Frequency: 104.277MHz)
-   Minimum input arrival time before clock: 7.284ns
+   Minimum period: 9.596ns (Maximum Frequency: 104.210MHz)
+   Minimum input arrival time before clock: 8.606ns
    Maximum output required time after clock: 5.054ns
    Maximum combinational path delay: No path found
 
@@ -1520,62 +1789,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.590ns (frequency: 104.277MHz)
-  Total number of paths / destination ports: 35144 / 1085
+  Clock period: 9.596ns (frequency: 104.210MHz)
+  Total number of paths / destination ports: 52066 / 983
 -------------------------------------------------------------------------
-Delay:               9.590ns (Levels of Logic = 10)
-  Source:            syncgen/CounterX_1_1 (FF)
+Delay:               9.596ns (Levels of Logic = 10)
+  Source:            tiles/M_game_stage_q_FSM_FFd1_1 (FF)
   Destination:       vga_R (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: syncgen/CounterX_1_1 to vga_R
+  Data Path: tiles/M_game_stage_q_FSM_FFd1_1 to vga_R
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             17   0.525   1.485  CounterX_1_1 (CounterX_1_1)
-     end scope: 'syncgen:CounterX_1_1'
-     begin scope: 'tiles:CounterX_1_1'
-     begin scope: 'tiles/tile1_shape0:CounterX_1_1'
-     LUT5:I1->O           29   0.254   1.470  Msub_n0057_Madd_xor<0>51_1 (Msub_n0057_Madd_xor<0>51)
-     end scope: 'tiles/tile1_shape0:Msub_n0057_Madd_xor<0>51'
-     end scope: 'tiles:tiles/tile1_shape0/Msub_n0057_Madd_xor<0>51'
-     LUT6:I5->O            1   0.254   1.112  R_inv175 (R_inv175)
-     LUT6:I1->O            1   0.254   0.910  R_inv179 (R_inv179)
-     LUT6:I3->O            1   0.235   0.910  R_inv187 (R_inv187)
-     LUT3:I0->O            1   0.235   0.682  R_inv482_SW1_SW0 (N275)
-     LUT6:I5->O            1   0.254   0.682  R_inv482_SW1 (N257)
-     LUT6:I5->O            1   0.254   0.000  vga_R_rstpot (vga_R_rstpot)
+     FD:C->Q               1   0.525   1.137  M_game_stage_q_FSM_FFd1_1 (M_game_stage_q_FSM_FFd1_1)
+     LUT6:I0->O           11   0.254   1.039  M_selector_horizontaloffset<2>2 (M_selector_horizontaloffset<2>)
+     begin scope: 'tiles/selector:verticaloffset<2>'
+     LUT6:I5->O            2   0.254   0.726  Msub_n0037_Madd_cy<0>4 (Msub_n0037_Madd_cy<0>3)
+     LUT6:I5->O            6   0.254   0.876  Msub_n0037_Madd_xor<0>51 (Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_lut<3>)
+     LUT6:I5->O            2   0.254   0.725  Msub_GND_4_o_GND_4_o_sub_13_OUT<5:0>_xor<5>11 (GND_4_o_GND_4_o_sub_13_OUT<5>1)
+     MUXF7:S->O            1   0.185   0.682  BUS_0001_GND_4_o_AND_4_o1_SW0_SW0 (N151)
+     LUT6:I5->O            1   0.254   0.958  BUS_0001_GND_4_o_AND_4_o1_SW0 (N149)
+     end scope: 'tiles/selector:N149'
+     end scope: 'tiles:N149'
+     LUT6:I2->O            1   0.254   0.910  vga_R_rstpot_SW0 (N125)
+     LUT6:I3->O            1   0.235   0.000  vga_R_rstpot (vga_R_rstpot)
      FD:D                      0.074          vga_R
     ----------------------------------------
-    Total                      9.590ns (2.339ns logic, 7.251ns route)
-                                       (24.4% logic, 75.6% route)
+    Total                      9.596ns (2.543ns logic, 7.053ns route)
+                                       (26.5% logic, 73.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 297 / 166
+  Total number of paths / destination ports: 667 / 112
 -------------------------------------------------------------------------
-Offset:              7.284ns (Levels of Logic = 4)
+Offset:              8.606ns (Levels of Logic = 9)
   Source:            io_button<1> (PAD)
-  Destination:       tiles/M_tile1_orientation_q_2 (FF)
+  Destination:       tiles/M_tile1_orientation_q_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: io_button<1> to tiles/M_tile1_orientation_q_2
+  Data Path: io_button<1> to tiles/M_tile1_orientation_q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            70   1.328   2.406  io_button_1_IBUF (io_button_1_IBUF)
+     IBUF:I->O             5   1.328   1.296  io_button_1_IBUF (io_button_1_IBUF)
      begin scope: 'tiles:center'
-     LUT5:I0->O           32   0.254   1.975  center_M_counter_inc_state[0]_AND_457_o1 (center_M_counter_inc_state[0]_AND_457_o)
-     LUT6:I0->O            3   0.254   0.765  _n0931_inv1 (_n0931_inv)
-     FDE:CE                    0.302          M_tile17_orientation_q_0
+     begin scope: 'tiles/alu:io_button_1_IBUF'
+     begin scope: 'tiles/alu/adder8:io_button_1_IBUF'
+     begin scope: 'tiles/alu/adder8/adder1:io_button_1_IBUF'
+     LUT6:I0->O           79   0.254   2.476  Mxor_sum_0_xo<0>111 (Mxor_sum_0_xo<0>11)
+     end scope: 'tiles/alu/adder8/adder1:Mxor_sum_0_xo<0>11'
+     end scope: 'tiles/alu/adder8:Mxor_sum_0_xo<0>11'
+     end scope: 'tiles/alu:Mxor_sum_0_xo<0>11'
+     LUT6:I1->O           15   0.254   1.155  Mmux_M_alu_a15912 (M_alu_a<0>)
+     LUT6:I5->O           19   0.254   1.261  Mmux_M_alu_a11101 (Mmux_M_alu_a1110)
+     LUT6:I5->O            1   0.254   0.000  Mmux_M_alu_a171 (M_tile13_orientation_d<0>)
+     FD:D                      0.074          M_tile13_orientation_q_0
     ----------------------------------------
-    Total                      7.284ns (2.138ns logic, 5.146ns route)
-                                       (29.4% logic, 70.6% route)
+    Total                      8.606ns (2.418ns logic, 6.188ns route)
+                                       (28.1% logic, 71.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
 Offset:              5.054ns (Levels of Logic = 3)
   Source:            syncgen/vga_HS (FF)
@@ -1604,33 +1880,33 @@ Clock to Setup on destination clock clk
                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------+---------+---------+---------+---------+
-clk                          |    9.590|         |         |         |
-tiles/selector/base/_n0215<1>|         |    7.542|         |         |
-tiles/tile10_shape0/M_base_en|         |    7.382|         |         |
-tiles/tile11_shape0/M_base_en|         |    7.457|         |         |
-tiles/tile12_shape0/M_base_en|         |    7.278|         |         |
-tiles/tile13_shape0/M_base_en|         |    7.211|         |         |
-tiles/tile14_shape0/M_base_en|         |    7.106|         |         |
-tiles/tile15_shape0/M_base_en|         |    8.881|         |         |
-tiles/tile16_shape0/M_base_en|         |    7.419|         |         |
-tiles/tile17_shape0/M_base_en|         |    7.628|         |         |
-tiles/tile18_shape0/M_base_en|         |    7.315|         |         |
-tiles/tile19_shape0/M_base_en|         |    7.666|         |         |
-tiles/tile1_shape0/M_base_en |         |    6.704|         |         |
-tiles/tile20_shape0/M_base_en|         |    7.315|         |         |
-tiles/tile21_shape0/M_base_en|         |    9.194|         |         |
-tiles/tile22_shape0/M_base_en|         |    9.270|         |         |
-tiles/tile23_shape0/M_base_en|         |    7.554|         |         |
+clk                          |    9.596|         |         |         |
+tiles/selector/base/_n0215<1>|         |    7.747|         |         |
+tiles/tile10_shape0/M_base_en|         |    8.042|         |         |
+tiles/tile11_shape0/M_base_en|         |    7.641|         |         |
+tiles/tile12_shape0/M_base_en|         |    7.666|         |         |
+tiles/tile13_shape0/M_base_en|         |    7.498|         |         |
+tiles/tile14_shape0/M_base_en|         |    7.420|         |         |
+tiles/tile15_shape0/M_base_en|         |    7.641|         |         |
+tiles/tile16_shape0/M_base_en|         |    7.382|         |         |
+tiles/tile17_shape0/M_base_en|         |    7.591|         |         |
+tiles/tile18_shape0/M_base_en|         |    8.042|         |         |
+tiles/tile19_shape0/M_base_en|         |    7.468|         |         |
+tiles/tile1_shape0/M_base_en |         |    7.524|         |         |
+tiles/tile20_shape0/M_base_en|         |    7.468|         |         |
+tiles/tile21_shape0/M_base_en|         |    6.981|         |         |
+tiles/tile22_shape0/M_base_en|         |    7.432|         |         |
+tiles/tile23_shape0/M_base_en|         |    7.487|         |         |
 tiles/tile24_shape0/M_base_en|         |    7.278|         |         |
-tiles/tile25_shape0/M_base_en|         |    7.382|         |         |
-tiles/tile2_shape0/M_base_en |         |    8.688|         |         |
-tiles/tile3_shape0/M_base_en |         |    7.487|         |         |
-tiles/tile4_shape0/M_base_en |         |    7.487|         |         |
+tiles/tile25_shape0/M_base_en|         |    6.827|         |         |
+tiles/tile2_shape0/M_base_en |         |    7.536|         |         |
+tiles/tile3_shape0/M_base_en |         |    7.382|         |         |
+tiles/tile4_shape0/M_base_en |         |    6.551|         |         |
 tiles/tile5_shape0/M_base_en |         |    7.211|         |         |
-tiles/tile6_shape0/M_base_en |         |    7.420|         |         |
-tiles/tile7_shape0/M_base_en |         |    7.641|         |         |
-tiles/tile8_shape0/M_base_en |         |    7.314|         |         |
-tiles/tile9_shape0/M_base_en |         |    7.523|         |         |
+tiles/tile6_shape0/M_base_en |         |    7.938|         |         |
+tiles/tile7_shape0/M_base_en |         |    7.364|         |         |
+tiles/tile8_shape0/M_base_en |         |    8.146|         |         |
+tiles/tile9_shape0/M_base_en |         |    7.572|         |         |
 -----------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock tiles/selector/base/_n0215<1>
@@ -1638,7 +1914,7 @@ Clock to Setup on destination clock tiles/selector/base/_n0215<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |   12.525|         |
+clk            |         |         |   12.621|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock tiles/tile10_shape0/M_base_en
@@ -1844,14 +2120,14 @@ clk            |         |         |    2.817|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 34.00 secs
-Total CPU time to Xst completion: 33.50 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.70 secs
  
 --> 
 
-Total memory usage is 380748 kilobytes
+Total memory usage is 385868 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  472 (   0 filtered)
-Number of infos    :   41 (   0 filtered)
+Number of warnings :  516 (   0 filtered)
+Number of infos    :   77 (   0 filtered)
 

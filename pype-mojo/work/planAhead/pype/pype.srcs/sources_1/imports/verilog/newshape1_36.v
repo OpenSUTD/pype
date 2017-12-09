@@ -1,4 +1,4 @@
-module newshape1_34 (clk, en, orientation, address, bitmap); 
+module newshape1_36 (clk, en, orientation, address, bitmap); 
     input  clk;
     input   en;
     input wire [2:0] orientation;

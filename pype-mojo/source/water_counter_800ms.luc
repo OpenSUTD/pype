@@ -1,0 +1,29 @@
+module water_counter_800ms (
+    input clk,  // clock
+    output inc_state[6]
+ 
+  ) {
+
+  dff stateCounter[28](.clk(clk));
+  
+  always {
+      inc_state = 6b000000;
+    stateCounter.d = stateCounter.q + 1;
+    if (stateCounter.q < 28b0010011000100101101000000000) {
+      // <= 40million: 0
+      inc_state = 6b000000;
+    } 
+    if (stateCounter.q >= 28b0010011000100101101000000000 & stateCounter.q <= 28b0100110001001011010000000000) {
+    // between 40million and 80million: 1
+      inc_state = 6b001000;
+  }
+    if (stateCounter.q > 28b010011000100101101000000000 & stateCounter.q < 28b0111001001110000111000000000) {
+    // between 80million and 120 million: 2
+      inc_state = 6b010000;
+    }
+    
+   if (stateCounter.q == 28b0111001001110000111000000000) {
+    stateCounter.d = 0;
+    }
+   }
+  }

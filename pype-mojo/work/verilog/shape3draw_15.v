@@ -16,7 +16,7 @@ module shape3draw_15 (
   
   wire [11-1:0] M_hvsync_counterX;
   wire [9-1:0] M_hvsync_counterY;
-  hvsyncpass_33 hvsync (
+  hvsyncpass_35 hvsync (
     .clk(clk),
     .counterX(M_hvsync_counterX),
     .counterY(M_hvsync_counterY)
@@ -25,7 +25,7 @@ module shape3draw_15 (
   reg [1-1:0] M_base_en;
   reg [3-1:0] M_base_orientation;
   reg [6-1:0] M_base_address;
-  newshape3_51 base (
+  newshape3_53 base (
     .clk(clk),
     .en(M_base_en),
     .orientation(M_base_orientation),
