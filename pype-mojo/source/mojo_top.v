@@ -3,7 +3,13 @@
 
 module mojo_top(
 input clk,
-input[4:0] io_button,
+input rst_n,
+input left,
+input right,
+input up,
+input down,
+input rotate_left,
+input rotate_right,
 output reg[5:0] io_led,
 output vga_h_sync,
 output vga_v_sync,
@@ -19,8 +25,8 @@ wire [8:0] CounterY;
 hvsync_generator syncgen(.clk(clk), .vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), 
   .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
   
-tilesort tiles(.clk(clk),.debug1(d1),.led4(led4),.led5(led5),
-.debug_play(dp),.debug_winlevel(dwl),.debug_wingame(dwg),.left(io_button[3]),.right(io_button[4]),.up(io_button[0]),.down(io_button[2]),.center(io_button[1]),.selector_out(selector),.tile1_out(tile1),.tile2_out(tile2),.tile3_out(tile3),.tile4_out(tile4),.tile5_out(tile5),.tile6_out(tile6),.tile7_out(tile7),.tile8_out(tile8),.tile9_out(tile9),.tile10_out(tile10),.tile11_out(tile11),.tile12_out(tile12),.tile13_out(tile13),.tile14_out(tile14),.tile15_out(tile15),.tile16_out(tile16),.tile17_out(tile17),.tile18_out(tile18),.tile19_out(tile19),.tile20_out(tile20),.tile21_out(tile21),.tile22_out(tile22),.tile23_out(tile23),.tile24_out(tile24),.tile25_out(tile25));
+tilesort tiles(.clk(clk),.rst(rst),.debug1(d1),.led4(led4),.led5(led5),
+.debug_play(dp),.debug_winlevel(dwl),.debug_wingame(dwg),.left(left),.right(right),.up(up),.down(down),.rotate_left(rotate_left),.rotate_right(rotate_right),.selector_out(selector),.tile1_out(tile1),.tile2_out(tile2),.tile3_out(tile3),.tile4_out(tile4),.tile5_out(tile5),.tile6_out(tile6),.tile7_out(tile7),.tile8_out(tile8),.tile9_out(tile9),.tile10_out(tile10),.tile11_out(tile11),.tile12_out(tile12),.tile13_out(tile13),.tile14_out(tile14),.tile15_out(tile15),.tile16_out(tile16),.tile17_out(tile17),.tile18_out(tile18),.tile19_out(tile19),.tile20_out(tile20),.tile21_out(tile21),.tile22_out(tile22),.tile23_out(tile23),.tile24_out(tile24),.tile25_out(tile25));
 
 
 /////////////////////////////////////////////////////////////////
