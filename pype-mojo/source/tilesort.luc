@@ -240,11 +240,14 @@ module tilesort (
     if (tile25_orientation.q > 6) tile25_orientation.d = 1;
     else if (tile25_orientation.q < 1) tile25_orientation.d = 6;
     else tile25_orientation.d = tile25_orientation.q;
-       
+    
+    if (number_of_wins.q>1) number_of_wins.d = 0;   
     
     led4=0; led5=0;debug1=0; // debug1, led4 and led5 for debug
     //if (tile1_orientation.q == 4 && tile2_orientation.q == 3 && tile3_orientation.q == 4 && tile4_orientation.q == 4 && tile5_orientation.q == 4 && tile6_orientation.q == 2 && (tile7_orientation.q == 0 | tile7_orientation.q == 3) && tile8_orientation.q == 0 && tile9_orientation.q == 1 && tile10_orientation.q == 0 && tile11_orientation.q == 3 && tile12_orientation.q == 0 && tile13_orientation.q == 3 && tile14_orientation.q == 4 && tile15_orientation.q == 0 && tile16_orientation.q == 5 && tile17_orientation.q == 3 && tile18_orientation.q == 0 && tile19_orientation.q == 1 && tile20_orientation.q == 5 && tile21_orientation.q == 2 && (tile22_orientation.q == 0 | tile22_orientation.q == 3) && tile23_orientation.q == 1 && tile24_orientation.q == 3 && tile25_orientation.q == 0) {
     //led4=1;led5=1;is_correct_solution =1;} // check unique solution
+    if ((number_of_wins.q == 1) && (tile1_orientation.q == 4 && tile2_orientation.q == 6 && tile3_orientation.q == 6 && tile4_orientation.q == 4 && tile5_orientation.q == 6 && tile6_orientation.q == 4 && tile7_orientation.q == 2 && (tile8_orientation.q == 1|tile8_orientation.q == 4) && tile9_orientation.q == 2 && tile10_orientation.q == 6 && tile11_orientation.q == 4 && tile12_orientation.q == 6 && tile13_orientation.q == 4 && tile14_orientation.q == 5 && (tile15_orientation.q == 3|tile15_orientation.q == 6) && tile16_orientation.q == 4 && tile17_orientation.q == 1 && tile18_orientation.q == 5 && tile19_orientation.q == 3 && tile20_orientation.q == 6 && tile21_orientation.q == 3 && tile22_orientation.q == 2 && tile23_orientation.q == 1 && tile24_orientation.q == 2 && tile25_orientation.q == 1)) {
+    is_correct_solution = 1;}
     if ((number_of_wins.q == 0)&&(tile1_orientation.q == 4 && (tile2_orientation.q == 1 | tile2_orientation.q == 4) && tile3_orientation.q == 6 && tile4_orientation.q == 4 && tile5_orientation.q == 5 && tile6_orientation.q == 6 && tile7_orientation.q == 3 && tile8_orientation.q == 4 && tile9_orientation.q == 6 && tile10_orientation.q == 6 && tile11_orientation.q == 4 && tile12_orientation.q == 5 && (tile13_orientation.q == 2 | tile13_orientation.q == 5) && (tile14_orientation.q == 3|tile14_orientation.q == 6) && tile15_orientation.q == 2 && tile16_orientation.q == 6 && tile17_orientation.q == 2 && tile18_orientation.q == 3 && tile19_orientation.q == 6 && tile20_orientation.q == 6 && tile21_orientation.q == 3 && (tile22_orientation.q == 1 | tile22_orientation.q == 4) && (tile23_orientation.q == 1|tile23_orientation.q == 4) && tile24_orientation.q == 1 && tile25_orientation.q == 2)) {
     led4=1;led5=1;is_correct_solution =1;} // check unique solution
 
