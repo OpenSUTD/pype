@@ -124,6 +124,31 @@ module tilesort (
     
   }
   alu alu;
+  alu alutile1;
+  alu alutile2;
+  alu alutile3;
+  alu alutile4;
+  alu alutile5;
+  alu alutile6;
+  alu alutile7;
+  alu alutile8;
+  alu alutile9;
+  alu alutile10;
+  alu alutile11;
+  alu alutile12;
+  alu alutile13;
+  alu alutile14;
+  alu alutile15;
+  alu alutile16;
+  alu alutile17;
+  alu alutile18;
+  alu alutile19;
+  alu alutile20;
+  alu alutile21;
+  alu alutile22;
+  alu alutile23;
+  alu alutile24;
+  alu alutile25;
   sig is_correct_solution;
   rngesus rng(.clk(clk),.rst(rst));
   always {  
@@ -241,14 +266,63 @@ module tilesort (
     else if (tile25_orientation.q < 1) tile25_orientation.d = 6;
     else tile25_orientation.d = tile25_orientation.q;
     
-    if (number_of_wins.q>1) number_of_wins.d = 0;   
+    if (number_of_wins.q>1) number_of_wins.d = 0;
+    
+    alutile1.a = tile1_orientation.q;
+    alutile2.a = tile2_orientation.q;
+    alutile3.a = tile3_orientation.q;
+    alutile4.a = tile4_orientation.q;
+    alutile5.a = tile5_orientation.q;
+    alutile6.a = tile6_orientation.q;
+    alutile7.a = tile7_orientation.q;
+    alutile8.a = tile8_orientation.q;
+    alutile9.a = tile9_orientation.q;
+    alutile10.a = tile10_orientation.q;
+    alutile11.a = tile11_orientation.q;
+    alutile12.a = tile12_orientation.q;
+    alutile13.a = tile13_orientation.q;
+    alutile14.a = tile14_orientation.q;
+    alutile15.a = tile15_orientation.q;
+    alutile16.a = tile16_orientation.q;
+    alutile17.a = tile17_orientation.q;
+    alutile18.a = tile18_orientation.q;
+    alutile19.a = tile19_orientation.q;
+    alutile20.a = tile20_orientation.q;
+    alutile21.a = tile21_orientation.q;
+    alutile22.a = tile22_orientation.q;
+    alutile23.a = tile23_orientation.q;
+    alutile24.a = tile24_orientation.q;
+    alutile25.a = tile25_orientation.q;
+    
+    alutile1.alufn = 6b110011;
+    alutile2.alufn = 6b110011;
+    alutile3.alufn = 6b110011;
+    alutile4.alufn = 6b110011;
+    alutile5.alufn = 6b110011;
+    alutile6.alufn = 6b110011;
+    alutile7.alufn = 6b110011;
+    alutile8.alufn = 6b110011;
+    alutile9.alufn = 6b110011;
+    alutile10.alufn = 6b110011;
+    alutile11.alufn = 6b110011;
+    alutile12.alufn = 6b110011;
+    alutile13.alufn = 6b110011;
+    alutile14.alufn = 6b110011;
+    alutile15.alufn = 6b110011;
+    alutile16.alufn = 6b110011;
+    alutile17.alufn = 6b110011;
+    alutile18.alufn = 6b110011;
+    alutile19.alufn = 6b110011;
+    alutile20.alufn = 6b110011;
+    alutile21.alufn = 6b110011;
+    alutile22.alufn = 6b110011;
+    alutile23.alufn = 6b110011;
+    alutile24.alufn = 6b110011;
+    alutile25.alufn = 6b110011;
     
     led4=0; led5=0;debug1=0; // debug1, led4 and led5 for debug
-    //if (tile1_orientation.q == 4 && tile2_orientation.q == 3 && tile3_orientation.q == 4 && tile4_orientation.q == 4 && tile5_orientation.q == 4 && tile6_orientation.q == 2 && (tile7_orientation.q == 0 | tile7_orientation.q == 3) && tile8_orientation.q == 0 && tile9_orientation.q == 1 && tile10_orientation.q == 0 && tile11_orientation.q == 3 && tile12_orientation.q == 0 && tile13_orientation.q == 3 && tile14_orientation.q == 4 && tile15_orientation.q == 0 && tile16_orientation.q == 5 && tile17_orientation.q == 3 && tile18_orientation.q == 0 && tile19_orientation.q == 1 && tile20_orientation.q == 5 && tile21_orientation.q == 2 && (tile22_orientation.q == 0 | tile22_orientation.q == 3) && tile23_orientation.q == 1 && tile24_orientation.q == 3 && tile25_orientation.q == 0) {
-    //led4=1;led5=1;is_correct_solution =1;} // check unique solution
-    if ((number_of_wins.q == 1) && (tile1_orientation.q == 4 && tile2_orientation.q == 6 && tile3_orientation.q == 6 && tile4_orientation.q == 4 && tile5_orientation.q == 6 && tile6_orientation.q == 4 && tile7_orientation.q == 2 && (tile8_orientation.q == 1|tile8_orientation.q == 4) && tile9_orientation.q == 2 && tile10_orientation.q == 6 && tile11_orientation.q == 4 && tile12_orientation.q == 6 && tile13_orientation.q == 4 && tile14_orientation.q == 5 && (tile15_orientation.q == 3|tile15_orientation.q == 6) && tile16_orientation.q == 4 && tile17_orientation.q == 1 && tile18_orientation.q == 5 && tile19_orientation.q == 3 && tile20_orientation.q == 6 && tile21_orientation.q == 3 && tile22_orientation.q == 2 && tile23_orientation.q == 1 && tile24_orientation.q == 2 && tile25_orientation.q == 1)) {
-    is_correct_solution = 1;}
-    if ((number_of_wins.q == 0)&&(tile1_orientation.q == 4 && (tile2_orientation.q == 1 | tile2_orientation.q == 4) && tile3_orientation.q == 6 && tile4_orientation.q == 4 && tile5_orientation.q == 5 && tile6_orientation.q == 6 && tile7_orientation.q == 3 && tile8_orientation.q == 4 && tile9_orientation.q == 6 && tile10_orientation.q == 6 && tile11_orientation.q == 4 && tile12_orientation.q == 5 && (tile13_orientation.q == 2 | tile13_orientation.q == 5) && (tile14_orientation.q == 3|tile14_orientation.q == 6) && tile15_orientation.q == 2 && tile16_orientation.q == 6 && tile17_orientation.q == 2 && tile18_orientation.q == 3 && tile19_orientation.q == 6 && tile20_orientation.q == 6 && tile21_orientation.q == 3 && (tile22_orientation.q == 1 | tile22_orientation.q == 4) && (tile23_orientation.q == 1|tile23_orientation.q == 4) && tile24_orientation.q == 1 && tile25_orientation.q == 2)) {
+
+    if (alutile1.outalu[0] && alutile2.outalu[0] && alutile3.outalu[0] && alutile4.outalu[0] && alutile5.outalu[0] && alutile6.outalu[0] && alutile7.outalu[0] && alutile8.outalu[0] && alutile9.outalu[0] && alutile10.outalu[0] && alutile11.outalu[0] && alutile12.outalu[0] && alutile13.outalu[0] && alutile14.outalu[0] && alutile15.outalu[0] && alutile16.outalu[0] && alutile17.outalu[0] && alutile18.outalu[0] && alutile19.outalu[0] && alutile20.outalu[0] && alutile21.outalu[0] && alutile22.outalu[0] && alutile23.outalu[0] && alutile24.outalu[0] && alutile25.outalu[0])) {
     led4=1;led5=1;is_correct_solution =1;} // check unique solution
 
     case (game_stage.q){
@@ -418,6 +492,32 @@ module tilesort (
             tile23_out = shape1_d.bitout;
             tile24_out = shape1_e.bitout;
             tile25_out = shape1_f.bitout;
+            
+            alutile1.b = 6b000100;
+            alutile2.b = 6b000001;
+            alutile3.b = 6b000110;
+            alutile4.b = 6b000100;
+            alutile5.b = 6b000101;
+            alutile6.b = 6b000110;
+            alutile7.b = 6b000011;
+            alutile8.b = 6b000100;
+            alutile9.b = 6b000110;
+            alutile10.b = 6b000110;
+            alutile11.b = 6b000100;
+            alutile12.b = 6b000101;
+            alutile13.b = 6b000010;
+            alutile14.b = 6b000011;
+            alutile15.b = 6b000010;
+            alutile16.b = 6b000110;
+            alutile17.b = 6b000010;
+            alutile18.b = 6b000011;
+            alutile19.b = 6b000110;
+            alutile20.b = 6b000110;
+            alutile21.b = 6b000011;
+            alutile22.b = 6b000001;
+            alutile23.b = 6b000001;
+            alutile24.b = 6b000001;
+            alutile25.b = 6b000010;
 
             
           default:shape3_a.horizontaloffset = 0;
@@ -569,6 +669,32 @@ module tilesort (
                   tile23_out = shape0_e.bitout;
                   tile24_out = shape1_g.bitout;
                   tile25_out = shape3_f.bitout;
+                  
+                  alutile1.b = 6b000100;
+                  alutile2.b = 6b000110;
+                  alutile3.b = 6b000110;
+                  alutile4.b = 6b000100;
+                  alutile5.b = 6b000110;
+                  alutile6.b = 6b000100;
+                  alutile7.b = 6b000010;
+                  alutile8.b = 6b000001;
+                  alutile9.b = 6b000010;
+                  alutile10.b = 6b000110;
+                  alutile11.b = 6b000100;
+                  alutile12.b = 6b000110;
+                  alutile13.b = 6b000100;
+                  alutile14.b = 6b000101;
+                  alutile15.b = 6b000011;
+                  alutile16.b = 6b000100;
+                  alutile17.b = 6b000001;
+                  alutile18.b = 6b000101;
+                  alutile19.b = 6b000011;
+                  alutile20.b = 6b000110;
+                  alutile21.b = 6b000011;
+                  alutile22.b = 6b000010;
+                  alutile23.b = 6b000001;
+                  alutile24.b = 6b000010;
+                  alutile25.b = 6b000001;
           
           }
                                     
